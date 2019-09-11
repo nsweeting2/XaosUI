@@ -7204,7 +7204,7 @@ function UI.UpdateLabels()
 end
 
 function UI.ConfigLoad()
-	local luaFiles = {[[boons]], [[boonsDetail]], [[casting]], [[character]],
+	luaFiles = {[[boons]], [[boonsDetail]], [[casting]], [[character]],
 		[[colors]], [[defenses]],	[[equipment]], [[items]],	[[name]],
 		[[offense]], [[theme]], [[traits]], [[traitsDetail]],}
 	for i = 1, #luaFiles do
