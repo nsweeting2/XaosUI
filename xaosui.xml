@@ -10767,7 +10767,7 @@ function installUpdate()
 	uninstallPackage("xaosui")
 	installPackage(path)
 	cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been installed, continuing with boot.")
-	temptimer(2,[[raiseEvent("bootUI")]])
+	tempTimer(2,[[raiseEvent("bootUI")]])
 end
 
 function downloadUpdate()
