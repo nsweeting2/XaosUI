@@ -10717,7 +10717,10 @@ profilePath = profilePath:gsub("\\","/")
 
 downloadPath = "https://raw.githubusercontent.com/nsweeting2/XaosUI/master"
 
-files = {[[/ui.lua]], [[/xaosui.xml]], [[/scripter.lua]], [[/xPrompt.lua]]}
+files = {[[/boons.lua]], [[/boonsDetail.lua]], [[/casting.lua]], [[/character.lua]],
+ 	[[/colors.lua]], [[/defenses.lua]],	[[/equipment.lua]],	[[/items.lua]],	[[/name.lua]],
+	[[/offense.lua]], [[/scripter.lua]], [[/theme.lua]], [[/traits.lua]],
+	[[/traitsDetail.lua]], [[/xPrompt.lua]], [[/xaosui.xml]],}
 
 registerAnonymousEventHandler("sysConnectionEvent", "eventHandler")
 registerAnonymousEventHandler("sysDownloadDone", "eventHandler")

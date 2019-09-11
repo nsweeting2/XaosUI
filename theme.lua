@@ -1,0 +1,16 @@
+return {{
+  [ [[Font]] ] = [[Consolas]],
+  [ [[FontSize]] ] = [[10]],
+  [ [[FontColor]] ] = [[black]],
+  [ [[BorderRadius]] ] = [[5]],
+  [ [[BorderWidth]] ] = [[1]],
+  [ [[BorderStyle]] ] = [[Solid]],
+  [ [[Margin]] ] = [[5]],
+  [ [[Padding]] ] = [[5]],
+  [ [[Color1]] ] = [[DimGrey]],
+  [ [[Color2]] ] = [[LightGrey]],
+  [ [[Color3]] ] = [[white]],
+  [ [[Color4]] ] = [[black]],
+  [ [[Color5]] ] = [[yellow]],
+  [ [[Color6]] ] = [[DarkGoldenrod]],
+},}

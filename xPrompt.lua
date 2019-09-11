@@ -12,5 +12,5 @@ return {{
   [ [[time]] ] = [[Afternoon]],
   [ [[vnum]] ] = [[1000]],
   [ [[area]] ] = [[Visari]],
-  [ [[tell]] ] = [[Noax tells you 'Idle check!']]
-}}
+  [ [[tell]] ] = [[Noax tells you 'Idle check!']],
+},}

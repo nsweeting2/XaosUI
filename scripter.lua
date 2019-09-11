@@ -15,4 +15,4 @@ return {{
   [ [[Butcher]] ] = [[false]],
   [ [[Soup]] ] = [[true]],
   [ [[Skin]] ] = [[false]],
-}}
+},}
