@@ -7204,14 +7204,25 @@ function UI.UpdateLabels()
 end
 
 function UI.ConfigLoad()
-	local path = profilePath .. "/ui/ui.lua"
-	if io.exists(path) then
-		table.load(path, UI)
+local luaFiles = {[[boons]], [[boonsDetail]], [[casting]], [[character]],
+ 	[[colors]], [[defenses]],	[[equipment]], [[items]],	[[name]],
+	[[offense]], [[theme]], [[traits]], [[traitsDetail]],}
+
+for i = 1, #luaFiles do
+
+	UI[luaFiles[i]] = UI[luaFiles[i]] or {}
+
+	if io.exists(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua") then
+		table.load(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua",UI[luaFiles[i]])
+
 	else
-		ncom("Missing Component: /ui.lua")
+		acom("Missing Component: " .. luaFiles[i] .. ".lua")
 		loadError = true
 		return
+
 	end
+
+end
 end
 
 function UI.ConfigSave()
