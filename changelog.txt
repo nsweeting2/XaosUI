@@ -1,0 +1,70 @@
+2.0.0.1 Known Issues
+-Equipment lines expand past window
+-affects does not support all spells
+-scripter is unfinished
+-questing is unfinished
+-feed is not started
+-party is not started
+-need to add super gain into scripter
+-no regex for afflictions under 1 year
+-DISARM variable nil
+-Affects variable nil
+-Treasure loot flat out doesn't work
+-Alacrity bugs out Affects
+-dual wields don't auto detect for disarm
+-disarm trigger is meh
+
+
+2.0.0.1 Tester Report
+-Prehero levels are unsupported
+-negative hero points unsupported
+-request to add an alias to force update interval
+-empower tab showing nothing / canceled by tester
+-affliction detection issues
+
+___________________________________________________________________
+2.0.0.2 - General Fixes and Progress
+
+2.0.0.2 Fixes
+-Fixed matches typo in treasure loot (Prob still will not work)
+-added dual wield to disarm auto detection
+	-made scripterdisarm arg disable disarm auto detection
+	-added scripterdisarm auto to turn disarm detection back on
+-Fixed nil DISARM Var with 'or "none"'
+-might have fixed AFFECT nil by checking for table value prior to entry
+	-This coulud fix Alacrity Bug
+-fixed perhero level line regex
+-fixed hero points regex to allow negative hero points
+-Affliction detection fixed, reset code moved to name tigger.
+
+2.0.0.2 Adds
+-Created a base installer as version 2.0.0.0
+-Automatic Updates!!!!
+-Alias UIForce to force UI Update
+-Feed minicolsole and label added to UI initalization
+	-feed.lua file now required for initilaization
+-Feed displays Session Start Time
+-Feed displays Elaspsed Time
+-Alias UISession reset to reset session time
+-Alias's questingOn and questingOff added for Questing module control
+	-questingHelp now shows useage of above commands
+	-questing module set to off as a default
+
+2.0.0.2 Changes
+-Feed miniconsole will no longer track exp per kill (Spammy)
+
+2.0.0.2 Known Issues
+-Equipment lines expand past window
+-All Prompt line Triggers need to get collapsed into one
+-affects does not support a majority of affects
+-scripter is unfinished
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain into scripter
+-no regex for afflictions under 1 year
+-disarm trigger is still meh
+-Feed time session lacks leading zeros's
+
+2.0.0.2 Tester Report
+-Pending
