@@ -7204,17 +7204,18 @@ function UI.UpdateLabels()
 end
 
 function UI.ConfigLoad()
-local luaFiles = {[[boons]], [[boonsDetail]], [[casting]], [[character]],
- 	[[colors]], [[defenses]],	[[equipment]], [[items]],	[[name]],
-	[[offense]], [[theme]], [[traits]], [[traitsDetail]],}
-for i = 1, #luaFiles do
-	UI[luaFiles[i]] = UI[luaFiles[i]] or {}
-	if io.exists(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua") then
-		table.load(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua",UI[luaFiles[i]])
-	else
-		acom("Missing Component: " .. luaFiles[i] .. ".lua")
-		loadError = true
-		return
+	local luaFiles = {[[boons]], [[boonsDetail]], [[casting]], [[character]],
+		[[colors]], [[defenses]],	[[equipment]], [[items]],	[[name]],
+		[[offense]], [[theme]], [[traits]], [[traitsDetail]],}
+	for i = 1, #luaFiles do
+		UI[luaFiles[i]] = UI[luaFiles[i]] or {}
+		if io.exists(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua") then
+			table.load(getMudletHomeDir().. "/" .. luaFiles[i] .. ".lua",UI[luaFiles[i]])
+		else
+			acom("Missing Component: " .. luaFiles[i] .. ".lua")
+			loadError = true
+			return
+		end
 	end
 end
 
