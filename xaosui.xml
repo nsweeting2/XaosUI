@@ -10810,37 +10810,24 @@ end
 function eventHandler(event,...)
 	if event == "sysConnectionEvent" then
 		downloadVersions()
-	elseif event == "bootUI" then
-		bootUI()
 	elseif event == "sysDownloadDone" then
 		local file = arg[1]
 		if string.ends(file, "/versions.lua") then
 			checkVersions()
-		elseif string.ends(file, "/ui.lua") then
+		for k, v in pairs(files) do
+			if string.ends(file, v) then
 			coreDownloadFinished()
-		elseif string.ends(file, "/xaosui.xml") then
-			coreDownloadFinished()
-		elseif string.ends(file, "/scripter.lua") then
-			coreDownloadFinished()
-		elseif string.ends(file, "/xPrompt.lua") then
-			coreDownloadFinished()
-		elseif string.ends(file, "/questingWithNoax.lua") then
-			coreDownloadFinished()
+			break
 		end
 	elseif event == "sysDownloadError" then
     	local file = arg[1]
 		if string.ends(file, "/versions.lua") then
 			coreDownloadFailed(file)
-		elseif string.ends(file, "/ui.lua") then
+		end
+		for k, v in pairs(files) do
+			if string.ends(file, v) then
 			coreDownloadFailed(file)
-		elseif string.ends(file, "/xaosui.xml") then
-			coreDownloadFailed(file)
-		elseif string.ends(file, "/scripter.lua") then
-			coreDownloadFailed(file)
-		elseif string.ends(file, "/xPrompt.lua") then
-			coreDownloadFailed(file)
-		elseif string.ends(file, "/questingWithNoax.lua") then
-			coreDownloadFailed(file)
+			break
 		end
 	end
 end
