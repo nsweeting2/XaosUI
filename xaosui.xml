@@ -115,7 +115,7 @@ questing.QuestOptimal = matches[3]
 
 if matches[4] ~= nil then
 	questing.QuestFading = matches[4]
-	
+
 end
 
 --Loop to check Banned Quests
@@ -436,7 +436,7 @@ command = "notMeh"</script>
 					<name>is here!</name>
 					<script>if scripter.Kill then
 	send("kill " .. scripter.Target)
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -879,7 +879,7 @@ UI.scripter.Auto = command
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -942,25 +942,25 @@ end</script>
 					<script>if matches[3] ~= nil then
 
 	local wornObject = matches[3]
-	
+
 	local bannedWords = {[[(Artifact)]], [[(Glowing)]], [[(Humming)]], [[(Magic)]], [[(Spiked)]], [[(Visored)]],
 		[[(Bound)]], [[a]], [[an]], [[the]]}
-	
+
 	for k,v in pairs(bannedWords) do
 		wornObject = string.gsub(wornObject, v, "")
-	
+
 	end
 
 	local words = {}
-  
+
 	for w in string.gmatch(wornObject,"%w+") do
   	table.insert(words, w)
-	
+
 	end
 
 	scripter.Disarm = words[1]
 	UI.scripter.Disarm = words[1]
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1024,7 +1024,7 @@ appendBuffer("UI.OOC")
 if tostring(UI.CurrentComms) ~= "OOC" then
 
 	enableTimer("OOCFlash")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1056,7 +1056,7 @@ appendBuffer("UI.Room")
 if tostring(UI.CurrentComms) ~= "Room" then
 
 	enableTimer("RoomFlash")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1112,7 +1112,7 @@ appendBuffer("UI.Group")
 if tostring(UI.CurrentComms) ~= "Group" then
 
 	enableTimer("GroupFlash")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1144,7 +1144,7 @@ appendBuffer("UI.IC")
 if tostring(UI.CurrentComms) ~= "IC" then
 
 	enableTimer("ICFlash")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1176,7 +1176,7 @@ appendBuffer("UI.Tell")
 if tostring(UI.CurrentComms) ~= "Tell" then
 
 	enableTimer("TellFlash")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -1224,7 +1224,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1251,7 +1251,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1279,7 +1279,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1306,7 +1306,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1334,7 +1334,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1362,7 +1362,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1389,7 +1389,7 @@ appendBuffer("UI.Who")
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1514,7 +1514,7 @@ end</script>
 					<script>deleteLine()
 if UI.booted == true then
 	cinsertText("\nYour command:")
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -2696,7 +2696,7 @@ UI.items.ArtifactsMax = "?"
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -2718,7 +2718,7 @@ end</script>
 						<name>NoVars</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2758,7 +2758,7 @@ UI.defenses.ArmorPerc = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2788,7 +2788,7 @@ UI.defenses.WardingPerc = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2818,7 +2818,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2848,7 +2848,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2878,7 +2878,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2904,7 +2904,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2930,7 +2930,7 @@ UI.offense.DefenseBreak = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2956,7 +2956,7 @@ UI.offense.Damage = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2981,7 +2981,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3007,7 +3007,7 @@ UI.offense.CritDamage = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3033,7 +3033,7 @@ UI.offense.TotalSpeed = matches[3]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3058,7 +3058,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3083,7 +3083,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3108,7 +3108,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3135,7 +3135,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3160,7 +3160,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3187,7 +3187,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3212,7 +3212,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3239,7 +3239,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3264,7 +3264,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3289,7 +3289,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3313,16 +3313,16 @@ end</script>
 						<script>if matches[2] == "Base Dodge" then
 	UI.defenses.BaseOrCombat = "Base"
 	UI.defenses.Dodge = matches[3]
-	
+
 elseif matches[2] == "Combat Dodge" then
 	UI.defenses.BaseOrCombat = "Combat"
 	UI.defenses.Dodge = matches[3]
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3349,7 +3349,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3376,7 +3376,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3403,7 +3403,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3430,7 +3430,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3459,7 +3459,7 @@ UI.defenses.ShieldRecharge = matches[4]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3483,7 +3483,7 @@ end</script>
 						<script>--= matches[2]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3508,7 +3508,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end
 </script>
 						<triggerType>0</triggerType>
@@ -3533,7 +3533,7 @@ end
 						<script>--= matches[2]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3558,7 +3558,7 @@ end</script>
 UI.items.ArtifactsMax = matches[3]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3617,7 +3617,7 @@ end</script>
 						<name>ScoreNew</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3651,7 +3651,7 @@ end
 --= matches[7]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3676,7 +3676,7 @@ UI.name.Class = matches[3]
 UI.character.Religion = matches[4]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3702,7 +3702,7 @@ UI.name.Race = matches [3]
 UI.character.Caste = matches[4]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3727,7 +3727,7 @@ end</script>
 UI.character.Favor = matches[3]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3754,14 +3754,14 @@ end</script>
 	if matches[4] ~= nil then
 		UI.character.AfflictionTime = matches[4]
 	end
-	
+
 	if gagmode == true then
 		deleteLine()
-	
+
 	end
-	
+
 	--character.Name = tostring(UI.score.characterName) .. " the " .. tostring(UI.score.afflictName)
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3787,7 +3787,7 @@ end</script>
 						<name>AttributesSatus</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -3814,7 +3814,7 @@ UI.character.Str = matches[3]
 --= matches[6]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3842,7 +3842,7 @@ UI.character.Int = matches[3]
 UI.character.Trains = matches[6]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3868,7 +3868,7 @@ UI.character.Dex = matches[3]
 --= matches[4]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3899,7 +3899,7 @@ end
 --= matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3924,7 +3924,7 @@ end</script>
 UI.defenses.HPRegen = matches[3]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3952,7 +3952,7 @@ UI.character.Thirst = matches[5]
 UI.defenses.ManaRegen = matches[6]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -3980,7 +3980,7 @@ UI.character.Wis = matches[3]
 UI.defenses.Saves= matches[6]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4004,10 +4004,10 @@ end</script>
 							<script>local traitsString = string.trim(matches[2])
 local traitsTable = string.split(traitsString, " ")
 UI.traits = traitsTable
- 
+
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4031,7 +4031,7 @@ end</script>
 						<name>Items</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4057,7 +4057,7 @@ UI.items.ItemsMax = matches[4]
 --= matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4084,7 +4084,7 @@ UI.items.eqWeightMax = matches[4]
 --= matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4108,7 +4108,7 @@ end</script>
 						<name>Defenses</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4130,7 +4130,7 @@ end</script>
 							<name>DefTitles</name>
 							<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4157,7 +4157,7 @@ UI.defenses.PierceRes= matches[10]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4184,7 +4184,7 @@ UI.defenses.MentalRes= matches[10]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4211,7 +4211,7 @@ UI.defenses.MentalRes= matches[10]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4238,7 +4238,7 @@ UI.defenses.LightningRes= matches[10]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4265,7 +4265,7 @@ UI.defenses.PoisonRes= matches[10]
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4290,7 +4290,7 @@ end</script>
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4314,7 +4314,7 @@ end</script>
 						<name>SpellCasting</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4340,7 +4340,7 @@ UI.casting.Abjur = matches[4]
 UI.casting.Alter = matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4367,7 +4367,7 @@ UI.casting.Divin = matches[4]
 UI.casting.illus = matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4394,7 +4394,7 @@ UI.casting.Relih = matches[4]
 UI.casting.Malad = matches[5]
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4417,7 +4417,7 @@ end</script>
 							<name>blankCasting</name>
 							<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -4473,12 +4473,12 @@ UI.equipment.FloatCount = 0
 
 for i = 1,23 do
 	UI.equipment[i] = "None"
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -4511,26 +4511,26 @@ UI.equipment.RingCount = tonumber(UI.equipment.RingCount) + 1
 if tonumber(UI.equipment.RingCount) == 1 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[1] = "Nothing"
-	
+
 	else
 		UI.equipment[1] = wornObject
 
 	end
-	
+
 elseif tonumber(UI.equipment.RingCount) == 2 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[2] = "Nothing"
-	
+
 	else
 		UI.equipment[2] = wornObject
 
 	end
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4564,26 +4564,26 @@ UI.equipment.NeckCount = tonumber(UI.equipment.NeckCount) + 1
 if tonumber(UI.equipment.NeckCount) == 1 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[3] = "Nothing"
-	
+
 	else
 		UI.equipment[3] = wornObject
 
 end
-	
+
 elseif tonumber(UI.equipment.NeckCount) == 2 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[4] = "Nothing"
-	
+
 	else
 		UI.equipment[4] = wornObject
 
 	end
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4614,7 +4614,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[5] = "Nothing"
-	
+
 else
 	UI.equipment[5] = wornObject
 
@@ -4622,7 +4622,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4653,7 +4653,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[6] = "Nothing"
-	
+
 else
 	UI.equipment[6] = wornObject
 
@@ -4661,7 +4661,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4692,7 +4692,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[7] = "Nothing"
-	
+
 else
 	UI.equipment[7] = wornObject
 
@@ -4700,7 +4700,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4731,7 +4731,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[8] = "Nothing"
-	
+
 else
 	UI.equipment[8] = wornObject
 
@@ -4739,7 +4739,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4770,7 +4770,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[9] = "Nothing"
-	
+
 else
 	UI.equipment[9] = wornObject
 
@@ -4778,7 +4778,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4809,7 +4809,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[10] = "Nothing"
-	
+
 else
 	UI.equipment[10] = wornObject
 
@@ -4817,7 +4817,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4848,7 +4848,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[11] = "Nothing"
-	
+
 else
 	UI.equipment[11] = wornObject
 
@@ -4856,7 +4856,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4890,26 +4890,26 @@ UI.equipment.WristCount = tonumber(UI.equipment.WristCount) + 1
 if tonumber(UI.equipment.WristCount) == 1 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[12] = "Nothing"
-	
+
 	else
 		UI.equipment[12] = wornObject
 
 end
-	
+
 elseif tonumber(UI.equipment.WristCount) == 2 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[13] = "Nothing"
-	
+
 	else
 		UI.equipment[13] = wornObject
 
 	end
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4940,7 +4940,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[14] = "Nothing"
-	
+
 else
 	UI.equipment[14] = wornObject
 
@@ -4948,7 +4948,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -4979,7 +4979,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[15] = "Nothing"
-	
+
 else
 	UI.equipment[15] = wornObject
 
@@ -4987,7 +4987,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5018,7 +5018,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[16] = "Nothing"
-	
+
 else
 	UI.equipment[16] = wornObject
 
@@ -5026,7 +5026,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5060,26 +5060,26 @@ UI.equipment.FloatCount = tonumber(UI.equipment.FloatCount) + 1
 if tonumber(UI.equipment.FloatCount) == 1 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[17] = "Nothing"
-	
+
 	else
 		UI.equipment[17] = wornObject
 
 end
-	
+
 elseif tonumber(UI.equipment.FloatCount) == 2 then
 	if tostring(matches[2]) == "Nothing" then
 		UI.equipment[21] = "Nothing"
-	
+
 	else
 		UI.equipment[21] = wornObject
 
 	end
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5110,7 +5110,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[18] = "Nothing"
-	
+
 else
 	UI.equipment[18] = wornObject
 
@@ -5118,7 +5118,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5149,7 +5149,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[19] = "Nothing"
-	
+
 else
 	UI.equipment[19] = wornObject
 
@@ -5157,7 +5157,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5188,7 +5188,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[20] = "Nothing"
-	
+
 else
 	UI.equipment[20] = wornObject
 
@@ -5196,7 +5196,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5250,7 +5250,7 @@ local wornObject = string.gsub(wornObject, "Bound", "&lt;span style=\"color: tea
 
 if tostring(matches[2]) == "Nothing" then
 	UI.equipment[14] = "Nothing"
-	
+
 else
 	UI.equipment[14] = wornObject
 
@@ -5258,7 +5258,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5285,7 +5285,7 @@ affect = nil
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -5328,7 +5328,7 @@ end</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>PermTopLine</name>
 						<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 setTriggerStayOpen("PermTopLine",0)
@@ -5341,15 +5341,15 @@ local timer = "&lt;" .. C2 .. "&gt;permanently"
 
 if UI.affects[affect] == nil then
 	UI.affects[affect] = {tostring(stat)..","..tostring(amount).."," .. tostring(timer)}
-	
+
 else
 	table.insert(UI.affects[affect], tostring(stat)..","..tostring(amount).. "," .. tostring(timer))
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5370,7 +5370,7 @@ end</script>
 						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>PermExtraLines</name>
 							<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 local stat = "&lt;" .. C2 .. "&gt;modifies&lt;" .. C1 .. "&gt; " .. matches[2]
@@ -5381,7 +5381,7 @@ table.insert(UI.affects[affect], tostring(stat)..","..tostring(amount).. "," .. 
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -5404,7 +5404,7 @@ end</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>TimerTopLine</name>
 						<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 setTriggerStayOpen("PermTopLine",0)
@@ -5423,24 +5423,24 @@ local formatedTimer = "&lt;" .. C2 .. "&gt;"
 
 if tonumber(formatedHours) ~= nil then
 	formatedTimer = formatedTimer .. formatedHours .."h:"
-	
+
 end
 
 if tonumber(formatedMinutes) ~= nil then
 	formatedTimer = formatedTimer .. formatedMinutes .. "m:"
-	
+
 end
 
 if tonumber(formatedSeconds) ~= nil then
 	formatedTimer = formatedTimer .. formatedSeconds .."s"
-	
+
 end
 
 UI.affects[affect] = {tostring(stat)..","..tostring(amount)..","..tostring(formatedTimer)}
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5461,7 +5461,7 @@ end</script>
 						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>TimerExtraLine</name>
 							<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 local stat = "&lt;" .. C2 .. "&gt;modifies&lt;" .. C1 .. "&gt; " .. matches[2]
@@ -5476,24 +5476,24 @@ local formatedTimer = "&lt;" .. C2 .. "&gt;"
 
 if tonumber(formatedHours) ~= nil then
 	formatedTimer = formatedTimer .. formatedHours .."h:"
-	
+
 end
 
 if tonumber(formatedMinutes) ~= nil then
 	formatedTimer = formatedTimer .. formatedMinutes .. "m:"
-	
+
 end
 
 if tonumber(formatedSeconds) ~= nil then
 	formatedTimer = formatedTimer .. formatedSeconds .."s"
-	
+
 end
 
 table.insert(UI.affects[affect], tostring(stat)..","..tostring(amount)..","..tostring(formatedTimer))
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -5531,7 +5531,7 @@ end</script>
 						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>Wyrm Strength</name>
 							<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 setTriggerStayOpen("PermTopLine",0)
@@ -5546,7 +5546,7 @@ UI.affects[affect] = {tostring(stat)..","..tostring(amount)..","..tostring(timer
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -5568,7 +5568,7 @@ end</script>
 						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>Irregular Warfare</name>
 							<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 setTriggerStayOpen("PermTopLine",0)
@@ -5583,7 +5583,7 @@ UI.affects[affect] = {tostring(stat)..","..tostring(amount)..","..tostring(timer
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -5605,7 +5605,7 @@ end</script>
 						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>Steel Veil</name>
 							<script>local C1 = UI.theme.Color2
-	
+
 local C2 = UI.theme.Color6
 
 setTriggerStayOpen("PermTopLine",0)
@@ -5620,7 +5620,7 @@ UI.affects[affect] = {tostring(stat)..","..tostring(amount)..","..tostring(timer
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -5650,7 +5650,7 @@ UI.ItemsList:resetAutoWrap ()
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -5687,7 +5687,7 @@ end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5739,7 +5739,7 @@ setTriggerStayOpen("InventoryNew",0)
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
@@ -5763,21 +5763,21 @@ end</script>
 	local empower1 = matches[4]
 	local empower2 = matches[8]
 	local empower3 = matches[12]
-	
+
 	UI.empowers[empower1] = ((tonumber(matches[2])/40)-1)*tonumber(matches[3])
 	UI.empowers[empower2] = ((tonumber(matches[6])/40)-1)*tonumber(matches[7])
-	UI.empowers[empower3] = ((tonumber(matches[10])/40)-1)*tonumber(matches[11])	
+	UI.empowers[empower3] = ((tonumber(matches[10])/40)-1)*tonumber(matches[11])
 
 elseif tonumber(#matches) == 4 then
 	local empower1 = matches[4]
-	
+
 	UI.empowers[empower1] = ((tonumber(matches[2])/40)-1)*tonumber(matches[3])
-	
+
 end
 
 if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5820,7 +5820,7 @@ end</script>
 						<name>key line</name>
 						<script>if gagmode == true then
 	deleteLine()
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5921,9 +5921,9 @@ for k,v in pairs(corpses) do
 	if rex.match(grabbedFrom, v) == ture then
 		isLoot = true
 		break
-		
+
 	end
-	
+
 end
 
 if isLoot == true then
@@ -5933,13 +5933,13 @@ if isLoot == true then
 			if tostring(message) ~= tostring(UI.feedlastmessage) then
 				UI.feedlastmessage = message
 				echo("UI.FeedList",message .. tostring(getTime(true,"hh:mm:ssap")))
-			
+
 			end
-			
+
 		end
-			
+
 	end
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -5986,11 +5986,11 @@ end</script>
 		if tostring(message) ~= tostring(UI.feedlastmessage) then
 			UI.feedlastmessage = message
 			echo("UI.FeedList",message .. tostring(getTime(true,"hh:mm:ssap")))
-		
+
 		end
-	
+
 	end
-	
+
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -6304,7 +6304,7 @@ tempTimer(5,function()
 	UI.Char2Click(UI.CurrentChar2)
 	UI.Char3Click(UI.CurrentChar3)
 	UI.ExtrasClick(UI.CurrentExtras)
-	
+
 end)</script>
 					<command></command>
 					<packageName></packageName>
@@ -6333,15 +6333,15 @@ end</script>
 	if scripter.On == true then
 		if tonumber(xPrompt.hp) &gt;= 85 then
 			send("hunt " .. scripter.Target)
-	
+
 		else
 			ncom("Scripter is waiting on for hp regen")
 			send("\n",false)
-	
+
 		end
-	
+
 	end
-	
+
 end</script>
 				<command></command>
 				<packageName></packageName>
@@ -6390,9 +6390,9 @@ combat = false</script>
 			<regex></regex>
 			<Alias isActive="yes" isFolder="no">
 				<name>UIHelp</name>
-				<script>local message = [[UI commands: &lt;white&gt;UIForce&lt;DarkSlateGrey&gt;, &lt;white&gt;UIAck&lt;DarkSlateGrey&gt;, &lt;white&gt;UITheme, &lt;white&gt;UIPrompt&lt;DarkSlateGrey&gt;, &lt;white&gt;UIColors&lt;DarkSlateGrey&gt;, &lt;white&gt;UILoad&lt;DarkSlateGrey&gt;, 
+				<script>local message = [[UI commands: &lt;white&gt;UIForce&lt;DarkSlateGrey&gt;, &lt;white&gt;UIAck&lt;DarkSlateGrey&gt;, &lt;white&gt;UITheme, &lt;white&gt;UIPrompt&lt;DarkSlateGrey&gt;, &lt;white&gt;UIColors&lt;DarkSlateGrey&gt;, &lt;white&gt;UILoad&lt;DarkSlateGrey&gt;,
            &lt;white&gt;UISave&lt;DarkSlateGrey&gt;, &lt;white&gt;UIModules&lt;DarkSlateGrey&gt;, &lt;white&gt;UISession&lt;DarkSlateGrey&gt;, and &lt;white&gt;UIHelp]]
-		
+
 ncom(message)</script>
 				<command></command>
 				<packageName></packageName>
@@ -6451,7 +6451,7 @@ tempTimer(5,function()
 	UI.Char2Click(UI.CurrentChar2)
 	UI.Char3Click(UI.CurrentChar3)
 	UI.ExtrasClick(UI.CurrentExtras)
-	
+
 end)</script>
 				<command></command>
 				<packageName></packageName>
@@ -6476,41 +6476,41 @@ local matched3 = false
 local message = "Error: "
 
 for k,v in pairs(UI.colors) do
-	
+
 	if string.lower(color1) == string.lower(v) then
 		matched1 = true
 		color1 = tostring(v)
-			
+
 	end
-		
+
 	if string.lower(color2) == string.lower(v) then
 		matched2 = true
 		color2 = tostring(v)
-			
+
 	end
-		
+
 	if string.lower(color3) == string.lower(v) then
 		matched3 = true
 		color3 = tostring(v)
-			
+
 	end
-			
+
 end
 
-if matched1 == false or matched2 == false or matched3 == false then 
+if matched1 == false or matched2 == false or matched3 == false then
 
 	if matched1 == false then
 		message = tostring(message) .. tostring(color1) .. ", "
-	
+
 	end
 
 	if matched2 == false then
-		message = tostring(message) .. tostring(color2) .. ", "	
+		message = tostring(message) .. tostring(color2) .. ", "
 
 	end
 
 	if matched3 == false then
-		message = tostring(message) .. tostring(color3) .. ", "	
+		message = tostring(message) .. tostring(color3) .. ", "
 
 	end
 
@@ -6549,7 +6549,7 @@ if tostring(theme) == "custom" then
 	cecho("\n&lt;DarkSlateGrey&gt;           Rule 1\: If it is a two word color camel case it. E.G. DarkBlue")
 	cecho("\n&lt;DarkSlateGrey&gt;           Rule 2\: If it is a one word color leave it all lowercase. E.G. blue")
 	cecho("\n&lt;DarkSlateGrey&gt;           Rule 3\: If it has an underscore remove it and follow rule 1.")
-	
+
 else
 	UI.Theme(theme)
 
@@ -6563,27 +6563,27 @@ end</script>
 					<script>local message = "&lt;DarkSlateGrey&gt;Available Colors: "
 
 for k,v in pairs(UI.colors) do
-	
+
 	if tonumber(k) % 6 == 0 then
 		if tostring(v) == "black" then
 			message = tostring(message) .. "\n           &lt;grey&gt;" .. v .. "&lt;FloralWhite&gt;, "
-			
+
 		else
 			message = tostring(message) .. "\n           &lt;" .. v .. "&gt;" .. v .. "&lt;FloralWhite&gt;, "
-			
+
 		end
-		
+
 	else
 		if tostring(v) == "black" then
 			message = tostring(message) .. "&lt;grey&gt;" .. v .. "&lt;FloralWhite&gt;, "
-			
+
 		else
 			message = tostring(message) .. "&lt;" .. v .. "&gt;" .. v .. "&lt;FloralWhite&gt;, "
 
 		end
-		
+
 	end
-	
+
 end
 
 ncom(message)</script>
@@ -6604,25 +6604,25 @@ ncom(message)</script>
 
 	if tostring(prompt) == "noax" then
 		send("prompt %c^rHP %h ^bMana %m ^gMove %v ^yExp %X^o, ^wStyle:^o %C^w Room:^o %r ^wExits:^o %e%c^^")
-	
+
 	elseif tostring(prompt) == "marcho" then
 		send("prompt %c^rHEALTH %h ^bMANA %m ^gMVM %v ^wSTIL ^o%C ^yXP %X ^wDirections  ^o%e  ^wHungry  ^o%B %c^^")
-	
+
 	elseif tostring(prompt) == "obsc" then
 		send("prompt %c^w&lt;^r%hhp ^b%mmn ^g%vmv^w&gt; &lt;^o%t^w&gt; &lt;^o%C^w&gt; &lt;^y%X^w&gt;%c^^")
 
 	elseif tostring(prompt) == "newbie" then
 		send("prompt %c^w&lt;^r%h^r/ hp ^b%m/ m ^g%v/ mv^w&gt; [^y%X^w]%c^^")
-	
+
 	elseif tostring(prompt) == "all" then
 		send("prompt %c^w&lt;^r%hhp ^b%mm ^g%vmv^w&gt;%c^^")
-	
+
 	elseif tostring(prompt) == "creation" then
 		send("prompt %c^r%h Life ^b%m Mana ^g%v Moves^o,^y%X XP/lvl^o&gt;%c^^")
-	
+
 	else
 		ncom(tostring(prompt).. " -is invalid, Check your selections and try again.")
-	
+
 	end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6657,15 +6657,15 @@ cecho("\n&lt;DarkSlateGrey&gt;           Syntax: &lt;white&gt;UIPrompt \&lt;Prom
 
 if string.lower(reset) == "reset" then
 	UI.Session = getTime()
-	
+
 	if tostring(UI.CurrentExtras) == "Feed" then
 		UI.UpdateLabelFeed()
-		
-	end	
-	
+
+	end
+
 else
 	ncom("Syntax: &lt;white&gt;UISession\&lt;reset\&gt;")
-	
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6690,17 +6690,17 @@ end</script>
 				<name>scripterOn</name>
 				<script>if scripter.On == true then
 	ncom("scripter is already &lt;white&gt;ON")
-	
+
 else
 	UI.scripter.On = true
 	scripter.On = true
 	ncom("scripter is now &lt;white&gt;ON")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 				<command></command>
 				<packageName></packageName>
@@ -6710,17 +6710,17 @@ end</script>
 				<name>scripterOff</name>
 				<script>if scripter.On == false then
 	ncom("scripter is already &lt;white&gt;Off")
-	
+
 else
 	UI.scripter.On = false
 	scripter.On = false
 	ncom("scripter is now &lt;white&gt;Off")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 				<command></command>
 				<packageName></packageName>
@@ -6763,7 +6763,7 @@ ncom("scripter target has been set to &lt;white&gt;" .. target)
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6784,7 +6784,7 @@ if string.lower(arg) == "on" then
 	scripter.Kill = true
 	UI.scripter.Kill = true
 	ncom("Scripters Kill mode is now &lt;white&gt;On")
-	
+
 elseif string.lower(arg) == "off" then
 	scripter.Kill = false
 	UI.scripter.Kill = false
@@ -6792,12 +6792,12 @@ elseif string.lower(arg) == "off" then
 
 else
 	ncom("Syntax: &lt;white&gt;scripterKill \&lt;On|Off\&gt;")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6836,7 +6836,7 @@ end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6882,7 +6882,7 @@ end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6914,7 +6914,7 @@ end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6947,17 +6947,17 @@ end</script>
 
 if string.lower(arg) == "auto" then
 	enableTrigger("wield detection")
-	
+
 else
 	disableTrigger("wield detection")
 	scripter.Disarm = arg
 	UI.scripter.Disarm = arg
-	
-end	
+
+end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -6988,14 +6988,14 @@ if tostring(command) == "clear" then
 else
 	scripter.OffAuto = command
 	UI.scripter.OffAuto = command
-	
+
 end
 
 ncom("OffAuto command has been set to &lt;white&gt; " .. command)
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -7015,15 +7015,15 @@ end</script>
 local message = "&lt;DarkSlateGrey&gt;Available Areas: "
 
 for k,v in pairs(scripter.allowedAreas) do
-	
+
 	if tonumber(k) % 6 == 0 then
 		message = tostring(message) .. "\n           &lt;white&gt;" .. v .. "&lt;DarkSlateGrey&gt;, "
-				
+
 	else
 		message = tostring(message) .. "&lt;white&gt;" .. v .. "&lt;DarkSlateGrey&gt;, "
-		
+
 	end
-	
+
 end
 
 echo("\n")
@@ -7048,19 +7048,19 @@ for k,v in pairs(scripter.allowedAreas) do
 		ncom("scripter area has been set to &lt;white&gt;" .. area)
 		matched = true
 		break
-		
+
 	end
-	
+
 end
 
 if matched == false then
 	ncom("Unknown area input, try again.")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
-		
+
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -7087,18 +7087,18 @@ ncom(message)</script>
 				<name>questingOn</name>
 				<script>if questing.On == true then
 	ncom("Now You're Questing With Noax is already &lt;white&gt;On")
-	
+
 else
 	questing.On = true
 	enableTimer("questingWithNoax")
 	enableTrigger("questingWithNoax")
 	ncom("Now You're Questing With Noax is now &lt;white&gt;On")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Questing" then
 	--ScripterLabel Update
-			
+
 end</script>
 				<command></command>
 				<packageName></packageName>
@@ -7108,18 +7108,18 @@ end</script>
 				<name>questingOff</name>
 				<script>if questing.On == false then
 	ncom("Now You're Questing With Noax is already &lt;white&gt;Off")
-	
+
 else
 	questing.On = false
 	disableTimer("questingWithNoax")
 	disableTrigger("questingWithNoax")
 	ncom("Now You're Questing With Noax is now &lt;white&gt;Off")
-	
+
 end
 
 if tostring(UI.CurrentExtras) == "Questing" then
 	--ScripterLabel Update
-			
+
 end</script>
 				<command></command>
 				<packageName></packageName>
@@ -7182,7 +7182,7 @@ function UI.Initialized()
 			UI.booted = true
 			send("\n")
 		]])
-	elseif loadError == true then 
+	elseif loadError == true then
 		tempTimer(1,[[
 			cecho("\n")
 			ncom("Boot process has failed, Please check your alerts and try again.")
@@ -7191,15 +7191,15 @@ function UI.Initialized()
 end
 
 function UI.UpdateLabels()
-	UI.UILeftUpdate()	
-	UI.UIRightUpdate()	
-	UI.UIBottomUpdate()	
-	UI.UICommsUpdate()	
-	UI.UINameUpdate()	
-	UI.UICharUpdate()	
-	UI.UIExtrasUpdate()	
-	UI.UIChar2Update()	
-	UI.UIChar3Update()	
+	UI.UILeftUpdate()
+	UI.UIRightUpdate()
+	UI.UIBottomUpdate()
+	UI.UICommsUpdate()
+	UI.UINameUpdate()
+	UI.UICharUpdate()
+	UI.UIExtrasUpdate()
+	UI.UIChar2Update()
+	UI.UIChar3Update()
 	UI.UINameDisplay()
 end
 
@@ -7221,7 +7221,7 @@ end
 function UI.UpdateGuages()
 	if UI.name.Name == "Tim" then
 		return
-	end	
+	end
 	UI.HPBar:setValue(tonumber(xPrompt.hp), 100, nil)
 	UI.HPBar:setText("&lt;center&gt;&lt;strong&gt;" .. tostring(xPrompt.hp) .. "% HP")
 	UI.ManaBar:setValue(tonumber(xPrompt.mana), 100, nil)
@@ -7282,7 +7282,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 1.5px;			
+			margin-bottom: 1.5px;
 	]])
 	UI.HPBar.back:setStyleSheet(
 	  [[background-color: DarkRed;
@@ -7293,7 +7293,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 1.5px;					
+			margin-bottom: 1.5px;
 	]])
 	UI.ManaBar = Geyser.Gauge:new({
 		name = "UI.ManaBar",}
@@ -7307,7 +7307,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 1.5px;					
+			margin-bottom: 1.5px;
 	]])
 	UI.ManaBar.back:setStyleSheet(
   	[[background-color: DarkBlue;
@@ -7318,7 +7318,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 1.5px;				
+			margin-bottom: 1.5px;
 	]])
 	UI.MoveBar = Geyser.Gauge:new({
 		name = "UI.MoveBar",}
@@ -7332,7 +7332,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 3px;					
+			margin-bottom: 3px;
 	]])
 	UI.MoveBar.back:setStyleSheet(
   	[[background-color: DarkGreen;
@@ -7343,7 +7343,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 	UI.ExpBar = Geyser.Gauge:new({
 		name = "UI.ExpBar",}
@@ -7357,7 +7357,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 	UI.ExpBar.back:setStyleSheet(
   	[[background-color: DarkGoldenrod;
@@ -7368,9 +7368,9 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
   	]])
-  UI.UpdateGuages()  
+  UI.UpdateGuages()
 end</script>
 					<eventHandlerList />
 				</Script>
@@ -7396,7 +7396,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 1.5px;	
+			margin-bottom: 1.5px;
 	]])
 	UI.HPBar.back:setStyleSheet(
 	  [[background-color: DarkRed;
@@ -7407,9 +7407,9 @@ end</script>
 			margin-top: 3px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 1.5px;	
+			margin-bottom: 1.5px;
 	]])
-	
+
 	UI.ManaBar.front:setStyleSheet(
 	  [[background-color: Blue;
 	    border-width: ]] .. UI.theme.BorderWidth .. [[px;
@@ -7419,7 +7419,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 1.5px;	
+			margin-bottom: 1.5px;
 	]])
 	UI.ManaBar.back:setStyleSheet(
   	[[background-color: DarkBlue;
@@ -7430,7 +7430,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 1.5px;	
+			margin-bottom: 1.5px;
 	]])
 
 	UI.MoveBar.front:setStyleSheet(
@@ -7442,7 +7442,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 	UI.MoveBar.back:setStyleSheet(
   	[[background-color: DarkGreen;
@@ -7453,7 +7453,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 1.5px;
 			margin-left: 3px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 
 	UI.ExpBar.front:setStyleSheet(
@@ -7465,7 +7465,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 	UI.ExpBar.back:setStyleSheet(
   	[[background-color: DarkGoldenrod;
@@ -7476,7 +7476,7 @@ end</script>
 			margin-top: 1.5px;
 			margin-right: 3px;
 			margin-left: 1.5px;
-			margin-bottom: 3px;	
+			margin-bottom: 3px;
 	]])
 
 end</script>
@@ -7528,7 +7528,7 @@ end</script>
 		gagmode = true
 		send("who",false)
 		tempTimer(1.5,[[gagmode = false]])
-		
+
 	end
 
 	UI[UI.CurrentComms]:hide()
@@ -7547,9 +7547,9 @@ end</script>
     	padding: 0px;
     	margin: 0.5%;
 		]])
-		
+
 	end
-	
+
 	UI[UI.CurrentComms]:show()
 	disableTimer(UI.CurrentComms.."Flash")
 	UI[UI.CurrentComms.."tab"]:setStyleSheet(
@@ -7575,7 +7575,7 @@ end</script>
 						<script>function UI.UIComms()
 
 	UI.CommsTabs = {"Room","Group","OOC","IC","Tell","Who",}
-	
+
 	UI.CurrentComms = UI.CurrentComms or UI.CommsTabs[1]
 
 	UI.CommsHeader = Geyser.HBox:new({
@@ -7585,7 +7585,7 @@ end</script>
 		height = "5%",
 		width = "97%",
 	},UI.RTop)
-		
+
 	UI.CommsFooter = Geyser.Container:new({
 		name = "UI.CommsFooter",
 		x = "1%",
@@ -7593,9 +7593,9 @@ end</script>
 		height = "94%",
 		width = "98%",
 	},UI.RTop)
-	
+
 	for k,v in pairs(UI.CommsTabs) do
-	
+
 		UI[v.."tab"] = Geyser.Label:new({
 			name = "UI."..v.."tab",
 		},UI.CommsHeader)
@@ -7614,11 +7614,11 @@ end</script>
 		]])
 		UI[v.."tab"]:echo("&lt;center&gt;&lt;strong&gt;" .. tostring(v))
 		UI[v.."tab"]:setClickCallback("UI.CommsClick", v)
-		
+
 		UI[v] = Geyser.MiniConsole:new({
 			x = "1%",
 			y = 0,
-			height = "98%", 
+			height = "98%",
 			width = "98%",
 			name = "UI."..v,
 			color = "black",
@@ -7627,11 +7627,11 @@ end</script>
 			font = UI.theme.Font,
 			fontSize = tonumber(UI.theme.FontSize) -2,
 		},UI.CommsFooter)
-		
+
 		UI[v]:hide()
-		
+
 	end
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -7641,7 +7641,7 @@ end</script>
 						<script>function UI.UICommsUpdate()
 
 	for k,v in pairs(UI.CommsTabs) do
-	
+
 		UI[v.."tab"]:setStyleSheet(
   	[[background-color: rgba(45,45,45,100%);
 			border-top-left-radius: ]] .. UI.theme.BorderRadius .. [[px;
@@ -7655,7 +7655,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 		]])
-		
+
 	end
 
 	UI.CommsClick(UI.CurrentComms)
@@ -7675,7 +7675,7 @@ end</script>
 						<script>function UI.UIExtras()
 
 	UI.ExtrasTabs = {"Feed", "Party", "Questing", "Scripter"}
-	
+
 	UI.CurrentExtras = UI.CurrentExtras or UI.ExtrasTabs[1]
 
 	UI.ExtrasHeader = Geyser.HBox:new({
@@ -7685,7 +7685,7 @@ end</script>
 		height = "10%",
 		width = "97%",
 	},UI.RBot)
-		
+
 	UI.ExtrasFooter = Geyser.Container:new({
 		name = "UI.ExtrasFooter",
 		x = "1%",
@@ -7693,9 +7693,9 @@ end</script>
 		height = "87%",
 		width = "98%",
 	},UI.RBot)
-	
+
 	for k,v in pairs(UI.ExtrasTabs) do
-	
+
 		UI[v.."tab"] = Geyser.Label:new({
 			name = "UI."..v.."tab",
 		},UI.ExtrasHeader)
@@ -7714,11 +7714,11 @@ end</script>
 		]])
 		UI[v.."tab"]:echo("&lt;center&gt;&lt;strong&gt;" .. tostring(v))
 		UI[v.."tab"]:setClickCallback("UI.ExtrasClick", v)
-		
+
 		UI[v] = Geyser.Label:new({
 			x = "1%",
 			y = 0,
-			height = "98%", 
+			height = "98%",
 			width = "98%",
 			name = "UI."..v,
 		},UI.ExtrasFooter)
@@ -7728,11 +7728,11 @@ end</script>
     		border-color: black;
     		border-style: ]] .. UI.theme.BorderStyle .. [[;
 		]])
-		
+
 		UI[v]:hide()
-		
+
 	end
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -7757,23 +7757,23 @@ end</script>
     	padding: 0px;
     	margin: 0.5%;
 		]])
-		
+
 	end
-	
+
 	if tostring(UI.CurrentExtras) == "Feed" then
 		UI.UpdateLabelFeed()
-	
+
 	elseif tostring(UI.CurrentExtras) == "Party" then
 		--UI.UpdateLabelParty()
-		
+
 	elseif tostring(UI.CurrentExtras) == "Questing" then
 		--UI.UpdateLabelQuesting()
-		
+
 	elseif tostring(UI.CurrentExtras) == "Scripter" then
 		UI.UpdateLabelScripter()
-		
+
 	end
-	
+
 	UI[UI.CurrentExtras]:show()
 	UI[UI.CurrentExtras.."tab"]:setStyleSheet(
   	[[background-color: Black;
@@ -7798,7 +7798,7 @@ end</script>
 						<script>function UI.UIExtrasUpdate()
 
 	for k,v in pairs(UI.ExtrasTabs) do
-	
+
 		UI[v.."tab"]:setStyleSheet(
   	[[background-color: rgba(45,45,45,100%);
 			border-top-left-radius: ]] .. UI.theme.BorderRadius .. [[px;
@@ -7812,7 +7812,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 		]])
-		
+
 	end
 
 	UI.ExtrasClick(UI.CurrentExtras)
@@ -7827,7 +7827,7 @@ end</script>
 
 	UI.FeedList = Geyser.MiniConsole:new({
   	name = "UI.FeedList",
-		x = "2.5%", 
+		x = "2.5%",
 		y = "2.5%",
   	width = "95%",
   	height = "80%",
@@ -7837,7 +7837,7 @@ end</script>
 		font = UI.theme.Font,
 		fontSize = tonumber(UI.theme.FontSize) -2,
 	},UI.Feed)
-	
+
 	UI.FeedDetails = Geyser.Label:new({
   	name = "UI.FeedDetails",
 		x = "2.5%",
@@ -7848,7 +7848,7 @@ end</script>
 	UI.FeedDetails:setStyleSheet(
   	[[background-color: black;
 	]])
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -7860,77 +7860,77 @@ end</script>
 		return
 	end
 
-	
+
 	local ON = "OFF"
-	
+
 	if UI.scripter.On == true then
 		ON = "ON"
-		
+
 	else
 		ON = "OFF"
-		
+
 	end
-	
+
 	local AREA = UI.scripter.Area
-	
+
 	local TARGET = UI.scripter.Target
-	
+
 	local KILL = "off"
-	
+
 	if UI.scripter.Kill == true then
 		KILL = "On"
-		
+
 	else
 		KILL = "Off"
-		
+
 	end
-	
+
 	local BUTCHER = "off"
-	
+
 	if UI.scripter.Butcher == true then
 		BUTCHER = "On"
-		
+
 	else
 		BUTCHER = "Off"
-		
+
 	end
-	
+
 	local SKIN = "off"
-	
+
 	if UI.scripter.Skin == true then
 		SKIN = "On"
-		
+
 	else
 		SKIN = "Off"
-		
+
 	end
-	
+
 	local SOUP = "off"
-	
+
 	if UI.scripter.Soup == true then
 		SOUP = "On"
-		
+
 	else
 		SOUP = "Off"
-		
+
 	end
-	
+
 	local DISARM = UI.scripter.Disarm or "none"
-	
+
 	local AUTO = UI.scripter.Auto or "none"
-	
+
 	local OFF = UI.scripter.OffAuto or "none"
-	
+
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local ScripterCard = {}
-	
+
 	local StatusCard = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Scripting is &lt;span style=\"color: " .. C2 .. ";\"&gt;" .. ON .. "&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -7943,7 +7943,7 @@ end</script>
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	local AutomationCard = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Automation&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -7971,13 +7971,13 @@ end</script>
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	local StatsCard = {};
-	
+
 	table.insert (ScripterCard, table.concat(StatusCard,""))
 	table.insert (ScripterCard, table.concat(AutomationCard,""))
 	table.insert (ScripterCard, table.concat(StatsCard,""))
-	
+
 	echo("UI.Scripter", table.concat(ScripterCard,""))
 
 end</script>
@@ -7991,37 +7991,37 @@ end</script>
 		return
 	end
 
-	
+
 	local SESSION = UI.Session
-	
+
 	local CURRENT = getTime()
-	
+
 	local DAYS = tonumber(CURRENT.day) - tonumber(SESSION.day)
-	
+
 	local HOURS = tonumber(CURRENT.hour) - tonumber(SESSION.hour)
-	
+
 	if tonumber(HOURS) &lt; 0 then
 		DAYS = tonumber(DAYS) - 1
 		HOURS = tonumber(HOURS) + 24
-	
+
 	end
-	
+
 	local MINUTES = tonumber(CURRENT.min) - tonumber(SESSION.min)
-	
+
 	if tonumber(MINUTES) &lt; 0 then
 		HOURS = tonumber(HOURS) - 1
 		MINUTES = tonumber(MINUTES) + 60
-	
+
 	end
-	
+
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local FeedCard = {
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
@@ -8033,7 +8033,7 @@ end</script>
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	echo("UI.FeedDetails", table.concat(FeedCard,""))
 
 end</script>
@@ -8044,7 +8044,7 @@ end</script>
 					<name>UI.UIRightUpdate</name>
 					<packageName></packageName>
 					<script>function UI.UIRightUpdate()
-	
+
 	UI.RTop:setStyleSheet(
   	[[background-color: ]] .. UI.theme.Color1 .. [[;
     	border-width: ]] .. UI.theme.BorderWidth .. [[;
@@ -8053,7 +8053,7 @@ end</script>
     	border-radius: ]] .. UI.theme.BorderRadius .. [[;
     	margin: 1.5px;
 	]])
-	
+
 	UI.RBot:setStyleSheet(
   	[[background-color: ]] .. UI.theme.Color1 .. [[;
     	border-width: ]] .. UI.theme.BorderWidth .. [[;
@@ -8062,7 +8062,7 @@ end</script>
     	border-radius: ]] .. UI.theme.BorderRadius .. [[;
     	margin: 1.5px;
 	]])
-	
+
 end</script>
 					<eventHandlerList />
 				</Script>
@@ -8089,19 +8089,19 @@ end</script>
 		v_stretch_factor=0.5,
 		},UI.Left)
 	UI.NamePlate:setStyleSheet(UI.StyleSheet)
-	
+
 	UI.LTop = Geyser.Label:new({
   	name = "UI.LTop",
 		v_stretch_factor=2.0,
 		},UI.Left)
 	UI.LTop:setStyleSheet(UI.StyleSheet)
-	
+
 	UI.LMid = Geyser.Label:new({
   	name = "UI.LMid",
 		v_stretch_factor=2.0,
 		},UI.Left)
 	UI.LMid:setStyleSheet(UI.StyleSheet)
-		
+
 	UI.LBot = Geyser.Label:new({
   	name = "UI.LBot",
 		v_stretch_factor=2.0,
@@ -8122,7 +8122,7 @@ end</script>
 						<script>function UI.UIChar()
 
 	UI.CharTabs = {"Character", "Equipment", "Items"}
-	
+
 	UI.CurrentChar = UI.CurrentChar or UI.CharTabs[1]
 
 	UI.CharHeader = Geyser.HBox:new({
@@ -8132,7 +8132,7 @@ end</script>
 		height = "10%",
 		width = "97%",
 	},UI.LTop)
-		
+
 	UI.CharFooter = Geyser.Container:new({
 		name = "UI.CharFooter",
 		x = "1%",
@@ -8140,9 +8140,9 @@ end</script>
 		height = "87%",
 		width = "98%",
 	},UI.LTop)
-	
+
 	for k,v in pairs(UI.CharTabs) do
-	
+
 		UI[v.."tab"] = Geyser.Label:new({
 			name = "UI."..v.."tab",
 		},UI.CharHeader)
@@ -8161,11 +8161,11 @@ end</script>
 		]])
 		UI[v.."tab"]:echo("&lt;center&gt;&lt;strong&gt;" .. tostring(v))
 		UI[v.."tab"]:setClickCallback("UI.CharClick", v)
-		
+
 		UI[v] = Geyser.Label:new({
 			x = "1%",
 			y = 0,
-			height = "98%", 
+			height = "98%",
 			width = "98%",
 			name = "UI."..v,
 		},UI.CharFooter)
@@ -8175,11 +8175,11 @@ end</script>
     		border-color: black;
     		border-style: ]] .. UI.theme.BorderStyle .. [[;
 		]])
-		
+
 		UI[v]:hide()
-		
+
 	end
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -8204,20 +8204,20 @@ end</script>
     	padding: 0px;
     	margin: 0.5%;
 		]])
-		
+
 	end
-	
+
 	if tostring(UI.CurrentChar) == "Character" then
 		UI.UpdateLabelCharacter()
-		
+
 	elseif tostring(UI.CurrentChar) == "Equipment" then
 		UI.UpdateLabelEquipment()
-		
+
 	elseif tostring(UI.CurrentChar) == "Items" then
 		UI.UpdateLabelItems()
-		
+
 	end
-		
+
 	UI[UI.CurrentChar]:show()
 	UI[UI.CurrentChar.."tab"]:setStyleSheet(
   	[[background-color: Black;
@@ -8278,7 +8278,7 @@ end</script>
 	local HUNGERMAX = UI.character.HungerMax
 
 	local THIRSTMAX = UI.character.ThirstMax
-	
+
 	local HEROPOINTS = UI.character.HeroPoints
 
 	local TRAINS = UI.character.Trains
@@ -8288,19 +8288,19 @@ end</script>
 	local CASTE = UI.character.Caste
 
 	local FAVOR = UI.character.Favor
-	
+
 	local AFFLICTION = UI.character.Affliction
-	
+
 	local AFFLICTIONTIER = UI.character.AfflictionTier
-	
+
 	local AFFLICTIONTIME = UI.character.AfflictionTime
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
 
 	local CharacterCard = {
@@ -8319,7 +8319,7 @@ end</script>
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Characteristics&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
-    		"&lt;tr&gt;",				
+    		"&lt;tr&gt;",
 				  "&lt;td align=\"center\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Age&lt;span style=\"color: " .. C1 .. ";\"&gt;:".. AGE .."&lt;/td&gt;",
 					"&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
 					"&lt;td align=\"center\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Sex&lt;span style=\"color: " .. C1 .. ";\"&gt;:".. SEX .."&lt;/td&gt;",
@@ -8356,10 +8356,10 @@ end</script>
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	if tostring(AFFLICTION) ~= "none" then
 		table.insert(CharacterCard, 14, "&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;Affliction&amp;nbsp;&lt;span style=\"color: " .. C1 .. ";\"&gt;" .. AFFLICTION .. "&lt;span style=\"color: " .. C2 .. ";\"&gt;,&amp;nbsp;&lt;span style=\"color: " .. C1 .. ";\"&gt;" .. AFFLICTIONTIER .. "&lt;span style=\"color: " .. C2 .. ";\"&gt;&amp;nbsp;for&amp;nbsp;&lt;span style=\"color: " .. C1 .. ";\"&gt;" .. AFFLICTIONTIME .. "&lt;span style=\"color: " .. C2 .. ";\"&gt;&amp;nbsp;years&lt;/center&gt;&lt;/span&gt;")
-	
+
 	end
 
 	echo("UI.Character", table.concat(CharacterCard,""))
@@ -8382,462 +8382,462 @@ end</script>
 	 "&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. UI.theme.Color2 .. "; Font-family: " .. UI.theme.Font .. "; font-size: " .. UI.theme.FontSize .. "px; font-weight: bold; padding:0%\"&gt;",
 	};
-	
+
 	local EquipmentCardTableStop = {
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;",
 	};
-	
+
 	table.insert (EquipmentCard, table.concat(EquipmentCardTableStart,""))
-	
+
 	for i = 1, #UI.equipment do
-	
+
 		if tonumber(i) == 1 then  --right finger
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;finger&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
 
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;finger&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-	
+
 			end
 
 		elseif tonumber(i) == 2 then --left finger
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;finger&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;finger&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 3 then --neck 1
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;neck&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;neck&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-	
+
 			end
-		
+
 		elseif tonumber(i) == 4 then --neck 2
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;neck&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;neck&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 5 then --torso
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;torso&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;torso&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 6 then --head
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;head&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;head&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 7 then --legs
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;legs&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;legs&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 8 then --feet
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;feet&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;feet&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
 
 		elseif tonumber(i) == 9 then --hands
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;hands&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;hands&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 10 then --body
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;body&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;body&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 11 then --waist
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;waist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;waist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 12 then --left wrist
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;wrist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;wrist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-			
+
 		elseif tonumber(i) == 13 then --right wrist
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;wrist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;wrist&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-			
+
 		elseif tonumber(i) == 14 then --right hand (How will I handle dual wields??)
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;right hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;right hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 15 then --left hand
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;left hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;left hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 16 then --tail weild
-			
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;tail wield&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;tail wield&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 17 then --float
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 18 then --tail
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;tail&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;tail&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 19 then --lower left hand
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"lower left hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;lower left hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 20 then --lower right hand
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;lower right hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;lower right hand&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		elseif tonumber(i) == 21 then --float 2
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-			
+
 		elseif tonumber(i) == 22 then --float 3
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-			
+
 		elseif tonumber(i) == 23 then --float arti(4)
-		
+
 			if tostring(UI.equipment[i]) == "Nothing" then
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt; nothing &lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-			
+
 			elseif tostring(UI.equipment[i]) == "None" then
 				--echo("You lack this equipemnt slot")
-		
+
 			else
 				table.insert (EquipmentCard,"&lt;tr&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" align=\"right\"&gt;&lt;span style=\"color: " .. UI.theme.Color6 .. ";\"&gt;floating&lt;span style=\"color: " .. UI.theme.Color2 .. ";\"&gt;:&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;td \"width: 15%;\" &gt;"..tostring(UI.equipment[i]).."&lt;/td&gt;")
 				table.insert (EquipmentCard,"&lt;/tr&gt;")
-				
+
 			end
-		
+
 		end
-	
+
 	end
-	
+
 	table.insert (EquipmentCard, table.concat(EquipmentCardTableStop,""))
-	
+
 	echo("UI.Equipment", table.concat(EquipmentCard,""))
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -8850,27 +8850,27 @@ end</script>
 	end
 
 	local ITEMS = UI.items.Items
-	
+
 	local ITEMSMAX = UI.items.ItemsMax
-	
+
 	local EQWEIGHT = UI.items.eqWeight
-	
+
 	local EQWEIGHTMAX = UI.items.eqWeightMax
-	
+
 	local GOLD = UI.items.Gold
-	
+
 	local SILVER = UI.items.Silver
-	
+
 	local ARTIFACTS = UI.items.Artifacts
-	
+
 	local ARTIFACTSMAX = UI.items.ArtifactsMax
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
 
 	local ItemsCard = {
@@ -8890,7 +8890,7 @@ end</script>
 					"&lt;td \"width: 5%;\" &gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Artifacts&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
     			"&lt;td \"width: 5%;\" &gt;" .. ARTIFACTS .. "&lt;/td&gt;",
     			"&lt;td \"width: 5%;\" &gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;\/&lt;/td&gt;",
-					"&lt;td \"width: 5%;\" &gt;" .. ARTIFACTSMAX .. "&lt;/td&gt;",					
+					"&lt;td \"width: 5%;\" &gt;" .. ARTIFACTSMAX .. "&lt;/td&gt;",
 				"&lt;/tr&gt;",
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;",
@@ -8901,14 +8901,14 @@ end</script>
     			"&lt;td \"width: 5%;\" &gt;" .. GOLD .. "&lt;/td&gt;",
 					"&lt;td \"width: 5%;\" &gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;",
 					"&lt;td \"width: 5%;\" &gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Silver&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
-    			"&lt;td \"width: 5%;\" &gt;" .. SILVER.. "&lt;/td&gt;",		
+    			"&lt;td \"width: 5%;\" &gt;" .. SILVER.. "&lt;/td&gt;",
 				"&lt;/tr&gt;",
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;",
 	};
-	
+
 	echo("UI.ItemsDetails", table.concat(ItemsCard,""))
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -8919,7 +8919,7 @@ end</script>
 
 	UI.ItemsList = Geyser.MiniConsole:new({
   	name = "UI.ItemsList",
-		x = "2.5%", 
+		x = "2.5%",
 		y = "2.5%",
   	width = "95%",
   	height = "70%",
@@ -8929,7 +8929,7 @@ end</script>
 		font = UI.theme.Font,
 		fontSize = tonumber(UI.theme.FontSize) -2,
 	},UI.Items)
-	
+
 	UI.ItemsDetails = Geyser.Label:new({
   	name = "UI.ItemsDetails",
 		x = "2.5%",
@@ -8940,7 +8940,7 @@ end</script>
 	UI.ItemsDetails:setStyleSheet(
   	[[background-color: black;
 	]])
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -8950,7 +8950,7 @@ end</script>
 						<script>function UI.UICharUpdate()
 
 	for k,v in pairs(UI.CharTabs) do
-	
+
 		UI[v.."tab"]:setStyleSheet(
   	[[background-color: rgba(45,45,45,100%);
 			border-top-left-radius: ]] .. UI.theme.BorderRadius .. [[px;
@@ -8964,7 +8964,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 		]])
-		
+
 	end
 
 	UI.CharClick(UI.CurrentChar)
@@ -8984,7 +8984,7 @@ end</script>
 						<script>function UI.UIChar2()
 
 	UI.Char2Tabs = {"Defense", "Offense", "Casting"}
-	
+
 	UI.CurrentChar2 = UI.CurrentChar2 or UI.Char2Tabs[1]
 
 	UI.Char2Header = Geyser.HBox:new({
@@ -8994,7 +8994,7 @@ end</script>
 		height = "10%",
 		width = "97%",
 	},UI.LMid)
-		
+
 	UI.Char2Footer = Geyser.Container:new({
 		name = "UI.Char2Footer",
 		x = "1%",
@@ -9002,9 +9002,9 @@ end</script>
 		height = "87%",
 		width = "98%",
 	},UI.LMid)
-	
+
 	for k,v in pairs(UI.Char2Tabs) do
-	
+
 		UI[v.."tab"] = Geyser.Label:new({
 			name = "UI."..v.."tab",
 		},UI.Char2Header)
@@ -9023,11 +9023,11 @@ end</script>
 		]])
 		UI[v.."tab"]:echo("&lt;center&gt;&lt;strong&gt;" .. tostring(v))
 		UI[v.."tab"]:setClickCallback("UI.Char2Click", v)
-		
+
 		UI[v] = Geyser.Label:new({
 			x = "1%",
 			y = 0,
-			height = "98%", 
+			height = "98%",
 			width = "98%",
 			name = "UI."..v,
 		},UI.Char2Footer)
@@ -9037,11 +9037,11 @@ end</script>
     		border-color: black;
     		border-style: ]] .. UI.theme.BorderStyle .. [[;
 		]])
-		
+
 		UI[v]:hide()
-		
+
 	end
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9066,20 +9066,20 @@ end</script>
     	padding: 0px;
     	margin: 0.5%;
 		]])
-		
+
 	end
-	
+
 	if tostring(UI.CurrentChar2) == "Offense" then
 		UI.UpdateLabelOffense()
-	
+
 	elseif tostring(UI.CurrentChar2) == "Defense" then
 		UI.UpdateLabelDefense()
-		
+
 	elseif tostring(UI.CurrentChar2) == "Casting" then
 		UI.UpdateLabelCasting()
-		
+
 	end
-	
+
 	UI[UI.CurrentChar2]:show()
 	UI[UI.CurrentChar2.."tab"]:setStyleSheet(
   	[[background-color: Black;
@@ -9107,85 +9107,85 @@ end</script>
 	end
 
 	local ARMORCLASS = UI.defenses.ArmorClass
-	
+
 	local ARMORPERCENT = UI.defenses.ArmorPerc
-	
+
 	local WARDING = UI.defenses.Warding
-	
+
 	local WARDINGPERCENT = UI.defenses.WardingPerc
-	
+
 	local SAVES = UI.defenses.Saves
-	
+
 	local SLASHRES = UI.defenses.SlashRes
-	
+
 	local BASHRES = UI.defenses.BashRes
 
 	local PIERCERES = UI.defenses.PierceRes
-	
+
 	local FIRERES = UI.defenses.FireRes
 
 	local COLDRES = UI.defenses.ColdRes
 
 	local MENTALRES = UI.defenses.MentalRes
-	
+
 	local MAGICRES = UI.defenses.MagicRes
-	
+
 	local LIGHTRES = UI.defenses.LightRes
-	
+
 	local NEGATIVERES = UI.defenses.NegativeRes
-	
+
 	local HOLYRES = UI.defenses.HolyRes
-	
+
 	local UNHOLYRES = UI.defenses.UnholyRes
-	
+
 	local LIGHTNINGRES = UI.defenses.LightningRes
-	
+
 	local SOUNDRES = UI.defenses.SoundRes
-	
+
 	local ACIDRES = UI.defenses.AcidRes
-	
+
 	local POISONRES = UI.defenses.PoisonRes
-	
+
 	local DISEASERES = UI.defenses.DiseaseRes
 
 	local DODGE = UI.defenses.Dodge
-	
+
 	local UNARMEDBLOCK = UI.defenses.UnarmedBlock
-	
+
 	local PRIMARYPARRY = UI.defenses.Parry
-	
+
 	local SECONDARYPARRY = UI.defenses.SecondaryParry
-	
+
 	local TAILPARRY = UI.defenses.TailParry
-	
+
 	local LOWERLEFTPARRY = UI.defenses.LowerLeftParry
-	
+
 	local LOWERRIGHTPARRY = UI.defenses.LowerRightParry
-	
+
 	local SHIELDBLOCK = UI.defenses.ShieldBlock
-	
+
 	local PHASE = UI.defenses.Phase
-	
+
 	local SHIELDCAPACITY = UI.defenses.ShieldCapacity
-	
+
 	local SHIELDRECHARGE = UI.defenses.ShieldRecharge
-	
+
 	local SHIELDREDUCTION = UI.defenses.ShieldReduction
-	
+
 	local HPREGEN = UI.defenses.HPRegen
-	
+
 	local HEALMODIFIER = UI.defenses.HealMod
-	
+
 	local MANAREGEN = UI.defenses.ManaRegen
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local DefenseCard = {}
 
 	local DefenseCardArmor = {
@@ -9205,8 +9205,8 @@ end</script>
   		"&lt;/tbody&gt;",
   	"&lt;/table&gt;&lt;/center&gt;",
   };
-	
-	local DefenseCardResist = {	
+
+	local DefenseCardResist = {
   	"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Damage Resistance&lt;/span&gt;&lt;/center&gt;",
   	"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
   		"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
@@ -9249,7 +9249,7 @@ end</script>
 					"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Lightning&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   				"&lt;td&gt;" .. LIGHTNINGRES .. "%&lt;/td&gt;",
   			"&lt;/tr&gt;",
-  			"&lt;tr&gt;",			
+  			"&lt;tr&gt;",
   				"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Sound&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   				"&lt;td&gt;" .. SOUNDRES .. "%&lt;/td&gt;",
   				"&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;",
@@ -9265,27 +9265,27 @@ end</script>
   		"&lt;/tbody&gt;",
   	"&lt;/table&gt;&lt;/center&gt;",
   	};
-	
+
 	local DodgeRoll = {
 		"&lt;tr&gt;",
 			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Dodge&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   		"&lt;td&gt;" .. DODGE .. "&lt;/td&gt;",
 	};
-	
+
 	local UnarmedBlockRoll = {
 			"&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
 			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Unarmed Block&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   		"&lt;td&gt;" .. UNARMEDBLOCK .. "&lt;/td&gt;",
 		"&lt;/tr&gt;",
 	};
-	
+
 	local PrimaryParryRoll = {
 			"&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
 			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Parry&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   		"&lt;td&gt;" .. PRIMARYPARRY .. "&lt;/td&gt;",
 		"&lt;/tr&gt;",
 	};
-	
+
 	local SecondaryParryRoll = {
 			"&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
 			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Parry&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
@@ -9295,33 +9295,33 @@ end</script>
   		"&lt;td&gt;" .. SECONDARYPARRY .. "&lt;/td&gt;",
 		"&lt;/tr&gt;",
 	};
-	
+
 	local TailParryRoll = {
 		"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Tail Parry&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   	"&lt;td&gt;" .. TAILPARRY .. "&lt;/td&gt;",
 	};
-	
+
 	local LowerLeftParryRoll = {
 		"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Lower Left Parry&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   	"&lt;td&gt;" .. LOWERLEFTPARRY .. "&lt;/td&gt;",
 	};
-	
+
 	local LowerRightParryRoll = {
 		"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Lower Right Parry&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   	"&lt;td&gt;" .. LOWERRIGHTPARRY .. "&lt;/td&gt;",
 	};
-	
+
 	local ShieldBlockRoll = {
 		"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Shield Block&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   	"&lt;td&gt;" .. SHIELDBLOCK .. "&lt;/td&gt;",
 	};
-	
+
 	local PhaseRoll = {
 		"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;Phase&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;",
   	"&lt;td&gt;" .. PHASE .. "&lt;/td&gt;",
 	};
-	
-		
+
+
 	local DefenseCardDefenses = {
   	"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Defense Rolls&lt;/span&gt;&lt;/center&gt;",
 	  "&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9329,35 +9329,35 @@ end</script>
   		"&lt;/tbody&gt;",
   	"&lt;/table&gt;&lt;/center&gt;",
   };
-	
+
 	if tonumber(PHASE) &gt;= 1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(PhaseRoll,""))
-	
+
 	end
-	
+
 	if tonumber(SHIELDBLOCK) &gt;= 1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(ShieldBlockRoll,""))
-	
+
 	end
-	
+
 	if tonumber(PRIMARYPARRY) &gt;= 1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(PrimaryParryRoll,""))
-		
+
 	elseif tonumber(SECONDARYPARRY) &gt;=1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(SecondaryParryRoll,""))
-	
+
 	end
-	
+
 	if tonumber(UNARMEDBLOCK) &gt;= 1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(UnarmedBlockRoll,""))
-	
+
 	end
-	
+
 	if tonumber(DODGE) &gt;= 1 then
 		table.insert (DefenseCardDefenses, 4, table.concat(DodgeRoll,""))
-	
+
 	end
-	
+
 	local DefenseCardShield = {
   	"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Shielding Unit&lt;/span&gt;&lt;/center&gt;",
 	  "&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9375,18 +9375,18 @@ end</script>
   		"&lt;/tbody&gt;",
   	"&lt;/table&gt;&lt;/center&gt;",
   };
-	
+
 	table.insert (DefenseCard, table.concat(DefenseCardArmor,""))
 	table.insert (DefenseCard, table.concat(DefenseCardResist,""))
 	table.insert (DefenseCard, table.concat(DefenseCardDefenses,""))
-	
-	if tonumber(SHIELDCAPACITY) &gt;= 1 then 
+
+	if tonumber(SHIELDCAPACITY) &gt;= 1 then
 		table.insert (DefenseCard, table.concat(DefenseCardShield,""))
-		
+
 	end
-		
+
 	echo("UI.Defense", table.concat(DefenseCard,""))
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9400,39 +9400,39 @@ end</script>
 
 
 	local HITROLL = UI.offense.Hitroll
-	
+
 	local DEFENSEBREAK = UI.offense.DefenseBreak
-	
+
 	local DAMROLL = UI.offense.Damroll
-	
+
 	local DAMAGE = UI.offense.Damage
-	
+
 	local SPEED = UI.offense.Speed
 
 	local TOTALSPEED = UI.offense.TotalSpeed
-	
+
 	local STYLE = UI.offense.Style
-	
+
 	local TACTICS = UI.offense.Tactics
-	
+
 	local CRITCHANCE = UI.offense.CritChance
-	
+
 	local CRITDAMAGE = UI.offense.CritDamage
-	
+
 	local MELEEDAMAGE = UI.offense.CharacterDamage
-	
+
 	local SPELLDAMAGE = UI.offense.SpellDamage
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local OffenseCard = {}
-	
+
 	local OffenseCardAttack = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Attack Rolls&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9454,7 +9454,7 @@ end</script>
 			"&lt;/tbody&gt;",
 		"&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	local OffenseCardDamage = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Damage&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9479,7 +9479,7 @@ end</script>
 		"&lt;/tbody&gt;",
 	"&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	local OffenseCardStyle = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Combat&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9494,13 +9494,13 @@ end</script>
 			"&lt;/tbody&gt;",
 		"&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	table.insert (OffenseCard, table.concat(OffenseCardAttack,""))
 	table.insert (OffenseCard, table.concat(OffenseCardDamage,""))
 	table.insert (OffenseCard, table.concat(OffenseCardStyle,""))
-	
+
 	echo("UI.Offense", table.concat(OffenseCard,""))
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9513,37 +9513,37 @@ end</script>
 	end
 
 	local BASE = UI.casting.Base
-	
+
 	local NECRO = UI.casting.Necro
-	
+
 	local ABJUR = UI.casting.Abjur
-	
+
 	local ALTER = UI.casting.Alter
-	
+
 	local CONJU = UI.casting.Conju
-	
+
 	local ENCHA = UI.casting.Encha
-	
+
 	local DIVIN = UI.casting.Divin
-	
+
 	local ILLUS = UI.casting.Illus
-	
+
 	local INVOC = UI.casting.Invoc
-	
+
 	local BEGUI = UI.casting.Begui
-	
+
 	local RELIG = UI.casting.Relig
-	
+
 	local MALAD = UI.casting.Malad
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local CastingCard = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;Casting Levels&lt;/span&gt;&lt;/center&gt;",
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
@@ -9590,9 +9590,9 @@ end</script>
 		"&lt;/tbody&gt;",
 	"&lt;/table&gt;&lt;/center&gt;",
 	}
-	
+
 	echo("UI.Casting", table.concat(CastingCard,""))
-	
+
 end
 </script>
 						<eventHandlerList />
@@ -9603,7 +9603,7 @@ end
 						<script>function UI.UIChar2Update()
 
 	for k,v in pairs(UI.Char2Tabs) do
-	
+
 		UI[v.."tab"]:setStyleSheet(
   	[[background-color: rgba(45,45,45,100%);
 			border-top-left-radius: ]] .. UI.theme.BorderRadius .. [[px;
@@ -9617,7 +9617,7 @@ end
 			margin-top: 3px;
 			margin-right: 3px;
 		]])
-		
+
 	end
 
 	UI.Char2Click(UI.CurrentChar2)
@@ -9652,23 +9652,23 @@ end</script>
     	padding: 0px;
     	margin: 0.5%;
 		]])
-		
+
 	end
-	
+
 	if tostring(UI.CurrentChar3) == "Affects" then
 		UI.UpdateLabelAffects()
-	
+
 	elseif tostring(UI.CurrentChar3) == "Empowers" then
 		UI.UpdateLabelEmpowers()
-		
+
 	elseif tostring(UI.CurrentChar3) == "Traits" then
 		UI.UpdateLabelTraits()
-	
+
 	elseif tostring(UI.CurrentChar3) == "Boons" then
 		UI.UpdateLabelBoons()
-		
+
 	end
-	
+
 	UI[UI.CurrentChar3]:show()
 	UI[UI.CurrentChar3.."tab"]:setStyleSheet(
   	[[background-color: Black;
@@ -9693,7 +9693,7 @@ end</script>
 						<script>function UI.UIChar3()
 
 	UI.Char3Tabs = {"Affects","Empowers", "Traits", "Boons"}
-	
+
 	UI.CurrentChar3 = UI.CurrentChar3 or UI.Char3Tabs[1]
 
 	UI.Char3Header = Geyser.HBox:new({
@@ -9703,7 +9703,7 @@ end</script>
 		height = "10%",
 		width = "97%",
 	},UI.LBot)
-		
+
 	UI.Char3Footer = Geyser.Container:new({
 		name = "UI.Char3Footer",
 		x = "1%",
@@ -9711,9 +9711,9 @@ end</script>
 		height = "87%",
 		width = "98%",
 	},UI.LBot)
-	
+
 	for k,v in pairs(UI.Char3Tabs) do
-	
+
 		UI[v.."tab"] = Geyser.Label:new({
 			name = "UI."..v.."tab",
 		},UI.Char3Header)
@@ -9732,11 +9732,11 @@ end</script>
 		]])
 		UI[v.."tab"]:echo("&lt;center&gt;&lt;strong&gt;" .. tostring(v))
 		UI[v.."tab"]:setClickCallback("UI.Char3Click", v)
-		
+
 		UI[v] = Geyser.Label:new({
 			x = "1%",
 			y = 0,
-			height = "98%", 
+			height = "98%",
 			width = "98%",
 			name = "UI."..v,
 		},UI.Char3Footer)
@@ -9746,11 +9746,11 @@ end</script>
     		border-color: black;
     		border-style: ]] .. UI.theme.BorderStyle .. [[;
 		]])
-		
+
 		UI[v]:hide()
-		
+
 	end
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9760,7 +9760,7 @@ end</script>
 						<script>function UI.UIChar3Update()
 
 	for k,v in pairs(UI.Char3Tabs) do
-	
+
 		UI[v.."tab"]:setStyleSheet(
   	[[background-color: rgba(45,45,45,100%);
 			border-top-left-radius: ]] .. UI.theme.BorderRadius .. [[px;
@@ -9774,7 +9774,7 @@ end</script>
 			margin-top: 3px;
 			margin-right: 3px;
 		]])
-		
+
 	end
 
 	UI.Char3Click(UI.CurrentChar3)
@@ -9791,33 +9791,33 @@ end</script>
 	end
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
 
 	local BoonsCard = {}
-	
+
 	local BoonsCardTableStart = {
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
 	};
-	
+
 	local BoonsCardTableStop = {
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-	
+
 	table.insert (BoonsCard, table.concat(BoonsCardTableStart,""))
-	
+
 	for i = 1, #UI.boons do
-	
+
 		local matched = false
-	
+
 		for k, v in pairs(UI.boonsDetail) do
-	
+
 			if tostring(UI.boons[i]) == tostring(k) then
 				matched = true
 				table.insert (BoonsCard,"&lt;tr&gt;")
@@ -9825,28 +9825,28 @@ end</script>
 				table.insert (BoonsCard,"&lt;td&gt;".. v .. "&lt;/td&gt;")
 				table.insert (BoonsCard,"&lt;/tr&gt;")
 				break
-				
+
 			else
 				matched = false
-				
+
 			end
-			
+
 		end
-		
+
 		if matched == false then
 			table.insert (BoonsCard,"&lt;tr&gt;")
 			table.insert (BoonsCard,"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;" .. UI.boons[i] .."&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;")
 			table.insert (BoonsCard,"&lt;td&gt;The effects of this boon are unknown.&lt;/td&gt;")
 			table.insert (BoonsCard,"&lt;/tr&gt;")
-				
+
 		end
-		
+
 	end
-	
+
 	table.insert (BoonsCard, table.concat(BoonsCardTableStop,""))
-	
+
 	echo("UI.Boons", table.concat(BoonsCard,""))
-		
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9859,33 +9859,33 @@ end</script>
 	end
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
 
 	local TraitsCard = {}
-	
+
 	local TraitsCardTableStart = {
 		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
 	};
-	
+
 	local TraitsCardTableStop = {
     	"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-		
+
 	table.insert (TraitsCard, table.concat(TraitsCardTableStart,""))
-		
+
 	for i = 1, #UI.traits do
-	
+
 		local matched = false
-	
+
 		for k, v in pairs(UI.traitsDetail) do
-	
+
 			if string.lower(UI.traits[i]) == tostring(k) then
 				matched = true
 				table.insert (TraitsCard,"&lt;tr&gt;")
@@ -9893,28 +9893,28 @@ end</script>
 				table.insert (TraitsCard,"&lt;td&gt;" .. v .. "&lt;/td&gt;")
 				table.insert (TraitsCard,"&lt;/tr&gt;")
 				break
-			
+
 			else
 				matched = false
-				
+
 			end
-			
+
 		end
-		
+
 		if matched == false then
 			table.insert (TraitsCard,"&lt;tr&gt;")
 			table.insert (TraitsCard,"&lt;td align=\"right\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;" .. UI.traits[i] .. "&lt;span style=\"color: " .. C1 .. ";\"&gt;:&lt;/td&gt;")
 			table.insert (TraitsCard,"&lt;td&gt;The effects of this trait are unknown.&lt;/td&gt;")
 			table.insert (TraitsCard,"&lt;/tr&gt;")
-				
-		end	
-		
+
+		end
+
 	end
-	
+
 	table.insert (TraitsCard, table.concat(TraitsCardTableStop,""))
-	
+
 	echo("UI.Traits", table.concat(TraitsCard,""))
-		
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9935,7 +9935,7 @@ end</script>
 		font = UI.theme.Font,
 		fontSize = tonumber(UI.theme.FontSize) -2,
 	},UI.Affects)
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -9948,13 +9948,13 @@ end</script>
 	end
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local EmpowersOrder = {[[hitpoints]], [[mana]], [[regen hp]], [[regen mana]], [[armor class]],
 		[[warding]], [[saves]], [[hit roll]], [[damage roll]], [[speed]],
 		[[resist slash]], [[resist blunt]], [[resist pierce]], [[resist fire]],
@@ -9966,58 +9966,58 @@ end</script>
 		[[illusional casting]], [[invocational casting]], [[beguilery casting]],
 		[[religion casting]], [[maladictive casting]],
 	}
-	
+
 	local EmpowersCard = {}
-	
+
 	local EmpowersCardTableStart = {
 		"&lt;center&gt;&lt;span style=\"color: " .. C2 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 2 .. "px; font-weight: bold;\"&gt;You have been empowered with&lt;/span&gt;&lt;/center&gt;",
  		"&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. SIZE .. "px; font-weight: bold;\"&gt;",
 				"&lt;tr&gt;",
 	};
-	
+
 	local EmpowersCardTableStop = {
     		"&lt;/tr&gt;",
 			"&lt;/tbody&gt;",
     "&lt;/table&gt;&lt;/center&gt;",
 	};
-		
+
 	table.insert (EmpowersCard, table.concat(EmpowersCardTableStart,""))
-	
+
 	if UI.empowers == nil then
 		return
-		
+
 	end
-	
+
 	local count = 0
-		
+
 	for k,v in pairs(EmpowersOrder) do
-	
+
 		if tonumber(UI.empowers[v]) ~= 0 then
-			
+
 			count = tonumber(count) + 1
-		
+
 			if tonumber(count) % 3 == 0 then
 				table.insert (EmpowersCard,"&lt;td align=\"right\"&gt;" .. UI.empowers[v] .. "&amp;nbsp;&lt;/td&gt;")
 				table.insert (EmpowersCard,"&lt;td align=\"left\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;" .. v .. "&lt;/td&gt;")
 				table.insert (EmpowersCard,"&lt;/tr&gt;")
 				table.insert (EmpowersCard,"&lt;tr&gt;")
-			
+
 			else
 				table.insert (EmpowersCard,"&lt;td align=\"right\"&gt;" .. UI.empowers[v] .. "&amp;nbsp;&lt;/td&gt;")
 				table.insert (EmpowersCard,"&lt;td align=\"left\"&gt;&lt;span style=\"color: " .. C2 .. ";\"&gt;" .. v .. "&lt;/td&gt;")
 				table.insert (EmpowersCard,"&lt;td&gt;&amp;nbsp;&lt;/td&gt;")
-				
+
 			end
-			
+
 		end
-			
+
 	end
-	
+
 	table.insert (EmpowersCard, table.concat(EmpowersCardTableStop,""))
-	
+
 	echo("UI.Empowers", table.concat(EmpowersCard,""))
-		
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -10030,44 +10030,44 @@ end</script>
 	end
 
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	clearWindow("UI.AffectsList")
 	UI.AffectsList:resetAutoWrap ()
-	
+
 	cecho("UI.AffectsList", "&lt;" .. C1 .. "&gt;You are affected by:\n")
-	
+
 	if UI.affects == nil then
 		return
-		
+
 	end
-	
+
 	for k1,v1 in pairs(UI.affects) do
-	
+
 		for k2,v2 in pairs(UI.affects[k1]) do
-		
-			local affect = k1			
+
+			local affect = k1
 			local stat = rex.match(tostring(v2), [[^(.*)\,.*\,.*$]])
-			local amount = rex.match(tostring(v2), [[^.*\,(.*)\,.*$]])			
+			local amount = rex.match(tostring(v2), [[^.*\,(.*)\,.*$]])
 			local timer = rex.match(tostring(v2), [[^.*\,.*\,(.*)$]])
-			
+
 			if tonumber(k2) == 1 then
 				local line = "&lt;" .. C1 .. "&gt;" .. affect .. " " .. stat .. " " .. amount .. ", " .. timer .. "\n"
-				
+
 				cecho("UI.AffectsList", line)
-				
+
 			else
 				local line = "                  " .. stat .. " " .. amount .. ", " .. timer .. "\n"
-				
+
 				cecho("UI.AffectsList", line)
-				
+
 			end
-			
+
 		end
-	
+
 	end
-		
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -10096,7 +10096,7 @@ end</script>
     	border-style: ]] .. UI.theme.BorderStyle .. [[;
 			border-radius: ]] .. UI.theme.BorderRadius .. [[;
 	]])
-	
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -10111,7 +10111,7 @@ end</script>
     	border-color: black;
     	border-style: ]] .. UI.theme.BorderStyle .. [[;
 	]])
-		
+
 end</script>
 						<eventHandlerList />
 					</Script>
@@ -10119,29 +10119,29 @@ end</script>
 						<name>UI.UINameDisplay</name>
 						<packageName></packageName>
 						<script>function UI.UINameDisplay()
-						
+
 	if UI.name.Name == "Tim" then
 		return
 	end
 
 	local NAME = UI.name.Name
-	
+
 	local CLASS = UI.name.Class
-	
+
 	local RACE = UI.name.Race
-	
+
 	local LEVEL = UI.name.Level
-	
+
 	local PERCENT = UI.name.PercToLevel
-	
+
 	local C1 = UI.theme.Color2
-	
+
 	local C2 = UI.theme.Color6
-	
+
 	local FONT = UI.theme.Font
-	
+
 	local SIZE = UI.theme.FontSize
-	
+
 	local NameCard = {
 		"&lt;center&gt;&lt;table width=\"95%\"&gt;",
     	"&lt;tbody style=\"color: " .. C1 .. "; Font-family: " .. FONT .. "; font-size: " .. tonumber(SIZE) + 5 .. "px; font-weight: bold;\"&gt;",
@@ -10178,7 +10178,7 @@ end</script>
     	border-radius: ]] .. UI.theme.BorderRadius .. [[;
     	margin: 1.5px;
 	]])
-	
+
 	UI.LMid:setStyleSheet(
   	[[background-color: ]] .. UI.theme.Color1 .. [[;
     	border-width: ]] .. UI.theme.BorderWidth .. [[;
@@ -10196,7 +10196,7 @@ end</script>
     	border-radius: ]] .. UI.theme.BorderRadius .. [[;
     	margin: 1.5px;
 	]])
-	
+
 	UI.NamePlate:setStyleSheet(
   	[[background-color: ]] .. UI.theme.Color1 .. [[;
     	border-width: ]] .. UI.theme.BorderWidth .. [[;
@@ -10216,13 +10216,13 @@ end</script>
 				<script>function UI.ThemeCustom(color1, color2, color3)
 
 	UI.theme.Color1 = color1
-	
+
 	UI.theme.Color5 = color3
-	
+
 	UI.theme.Color6 = color2
 
 	UI.UpdateLabels()
-	
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10230,67 +10230,67 @@ end</script>
 				<name>UI.Theme</name>
 				<packageName></packageName>
 				<script>function UI.Theme(theme)
-	
+
 	if tostring(theme) == "xaos" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "yellow"
 		UI.theme.Color6 = "DarkGoldenrod"
-		
+
 	elseif tostring(theme) == "reldi" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "red"
 		UI.theme.Color6 = "firebrick"
-		
+
 	elseif tostring(theme) == "blue" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "blue"
 		UI.theme.Color6 = "MidnightBlue"
-		
+
 	elseif tostring(theme) == "green" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "green"
 		UI.theme.Color6 = "DarkGreen"
-		
+
 	elseif tostring(theme) == "purple" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "DarkViolet"
 		UI.theme.Color6 = "purple"
-		
+
 	elseif tostring(theme) == "turquoise" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "turquoise"
 		UI.theme.Color6 = "CadetBlue"
-		
+
 	elseif tostring(theme) == "grey" then
 		UI.theme.Color1 = "DimGrey"
 		UI.theme.Color5 = "LightGrey"
 		UI.theme.Color6 = "DimGrey"
-		
+
 	elseif tostring(theme) == "noax" then
 		UI.theme.Color1 = "firebrick"
 		UI.theme.Color5 = "MidnightBlue"
 		UI.theme.Color6 = "red"
-		
+
 	elseif tostring(theme) == "gobs" then
 		UI.theme.Color1 = "white"
 		UI.theme.Color5 = "orange"
 		UI.theme.Color6 = "DarkOrange"
-		
+
 	elseif tostring(theme) == "solious" then
 		UI.theme.Color1 = "red"
 		UI.theme.Color5 = "red"
 		UI.theme.Color6 = "white"
-		
+
 	elseif tostring(theme) == "white" then
 		UI.theme.Color1 = "white"
 		UI.theme.Color5 = "white"
 		UI.theme.Color6 = "white"
-		
+
 	elseif tostring(theme) == "black" then
 		UI.theme.Color1 = "black"
 		UI.theme.Color5 = "black"
 		UI.theme.Color6 = "DimGrey"
-		
+
 	elseif tostring(theme) == "random" then
 		local color1 = math.random(1,#UI.colors)
 		local color2 = math.random(1,#UI.colors)
@@ -10298,14 +10298,14 @@ end</script>
 		UI.theme.Color1 = UI.colors[color1]
 		UI.theme.Color5 = UI.colors[color2]
 		UI.theme.Color6 = UI.colors[color3]
-		
+
 	else
 		ncom("Invalid theme selection.")
-		
+
 	end
-	
+
 	UI.UpdateLabels()
-	
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10389,11 +10389,11 @@ end</script>
 function resizeEventHandler( event, x, y )
 	--Seems like nosense to diable a timer then to enable it but it allows
 	--for rappid firing of sysWindowResizeEvent thus avoiding lagg during the event.
-	
+
 	disableTimer("resizeTimer")
-	
+
 	enableTimer("resizeTimer")
-	
+
 end
 registerAnonymousEventHandler("sysWindowResizeEvent","resizeEventHandler")</script>
 				<eventHandlerList />
@@ -10409,7 +10409,7 @@ registerAnonymousEventHandler("sysWindowResizeEvent","resizeEventHandler")</scri
 				<packageName></packageName>
 				<script>function acom(message)
 	cecho("\n&lt;:red&gt;&lt;black&gt;[ Alert ] - "..message)
-	
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10418,7 +10418,7 @@ end</script>
 				<packageName></packageName>
 				<script>function ncom(message)
 	cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - "..message)
-	
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10468,21 +10468,21 @@ end</script>
 	--questing.QuestGoals = {}
 	--questing.QuestGoalsComplete = true
 	--questing.show = false
-	
+
 	--questing.MenuBuild()
-	
+
 	--questing.show = false
 	--questing.toggle = false
-	
+
 	--if io.exists(getMudletHomeDir().."/questing.lua") then
 		--table.load(getMudletHomeDir().."/questing.lua",questing)
-	
+
 	--else
 		--acom("Missing Component: questing.lua")
 		--UI.error = true
-			
+
 	--end
-		
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10512,7 +10512,7 @@ end</script>
     padding: ]] .. UI.theme.Padding .. [[px;
 		margin: ]] .. UI.theme.Margin .. [[%;;
 	]])
-	
+
 	questing.BLQuest:setStyleSheet([[
   	background-color: ]] .. UI.theme.Color1 .. [[;
     border-width: ]] .. UI.theme.BorderWidth .. [[px;
@@ -10555,7 +10555,7 @@ end</script>
   	x="25%", y=0,
 		width = "43.5%", height="100%",
 	})
-	
+
 	questing.Title = Geyser.Label:new({
   	name = "questing.Title",
   	x = "0%", y ="18%",
@@ -10588,7 +10588,7 @@ end</script>
 	]])
 	questing.ToggleButton:echo("Enable", UI.theme.FontColor, "c" .. UI.theme.FontSize)
 	questing.ToggleButton:setClickCallback("questing.Toggle")
-	
+
 	questing.BLQuest = Geyser.Label:new({
   	name = "questing.BLQuest",
   	x = "25%", y ="24%",
@@ -10652,7 +10652,7 @@ end</script>
 		disableTrigger("questingWithNoax")
 		disableTimer("questingWithNoax")
 		ncom("You're no longer Questing with Noax...")
-		
+
 	elseif questing.toggle == false then
 		questing.ToggleButton:echo("Disable", UI.theme.FontColor, "c" .. UI.theme.FontSize)
 		questing.toggle = true
@@ -10661,7 +10661,7 @@ end</script>
 		ncom("Now You're Questing with Noax!")
 
 	end
-		
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10674,7 +10674,7 @@ end</script>
 	questing.BLQuest:hide()
 	questing.BLQuestmaster:hide()
 	questing.AboutButton:hide()
-		
+
 end</script>
 				<eventHandlerList />
 			</Script>
@@ -10689,7 +10689,7 @@ end</script>
 				<packageName></packageName>
 				<script>function scripter.Initialize()
 	scripter.ConfigLoad()
-	scripter.allowedAreas = { [[twistedfae]], [[champsofkoruk]], [[gremlinwoods]], [[sparkchasm]], [[cryocorridor]], 
+	scripter.allowedAreas = { [[twistedfae]], [[champsofkoruk]], [[gremlinwoods]], [[sparkchasm]], [[cryocorridor]],
 		[[bloodcave]], [[flamecave]], [[blackmountan]], [[chaoscaves]],
 	}
 end
@@ -10752,7 +10752,8 @@ function installUpdate()
 	disableAlias("installui")
 	uninstallPackage("xaosui")
 	installPackage(path)
-	cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been installed!")	
+	cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been installed, continuing with boot.")
+	temptimer(2,[[raiseEvent("bootUI")]])
 end
 
 function downloadUpdate()
@@ -10763,7 +10764,7 @@ function downloadUpdate()
 	local path = profilePath .."/ui"
 	--cecho("\n           &lt;DarkSlateGrey&gt;Getting ")
 	for k,v in pairs(files) do
-		--cecho("&lt;DarkSlateGrey&gt;"..v..", ")   
+		--cecho("&lt;DarkSlateGrey&gt;"..v..", ")
 		downloadFile(path..v, downloadPath..v)
 	end
 	--cecho("&lt;DarkSlateGrey&gt;from\n           "..downloadPath)
@@ -10771,7 +10772,7 @@ end
 
 function coreDownloadFinished()
 	coreFiles = tonumber(coreFiles) + 1
-	if coreFiles == 5 then
+	if coreFiles == tonumber(#files) then
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been downloaded, proceeding with install!")
 		 installUpdate()
 	 end
@@ -10811,7 +10812,7 @@ function eventHandler(event,...)
 			coreDownloadFinished()
 		elseif string.ends(file, "/questingWithNoax.lua") then
 			coreDownloadFinished()
-		end	
+		end
 	elseif event == "sysDownloadError" then
     	local file = arg[1]
 		if string.ends(file, "/versions.lua") then
@@ -10826,8 +10827,8 @@ function eventHandler(event,...)
 			coreDownloadFailed(file)
 		elseif string.ends(file, "/questingWithNoax.lua") then
 			coreDownloadFailed(file)
-		end	
-	end	
+		end
+	end
 end
 </script>
 			<eventHandlerList />
