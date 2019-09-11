@@ -542,15 +542,7 @@ end</script>
 				</Trigger>
 				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 					<name>KillTimer</name>
-					<script>if matches[2] == scripter.target then
-	killTimer(CatchupTimer)
-	scripter.catchup = false
-	killTimer(scripter.huntdelay)
-	killTimer(scripter.rangeTimer)
-	scripter.inRange = true
-	scripter.followstatus = true
-end
-</script>
+					<script></script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
@@ -570,8 +562,7 @@ end
 				</Trigger>
 				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 					<name>Catchup</name>
-					<script>scripter.catchup = true
-send("scan")</script>
+					<script></script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
@@ -622,13 +613,7 @@ send("scan")</script>
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>Follows you</name>
-						<script>if not scripter.statusFollowing then
-  send("party form")
-  send("party invite "..matches[2])
-  scripter.statusFollowing = false
-else
-	send("point "..followTarget)
-end</script>
+						<script></script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -650,11 +635,7 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>You follow</name>
-						<script>scripter.statusFollowing = true
-scripter.followTarget = matches[2]
-if scripter.killing then
-	expandAlias(KillClick)
-end</script>
+						<script></script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -674,7 +655,7 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>You stop following</name>
-						<script>scripter.statusFollowing = false</script>
+						<script></script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -699,7 +680,7 @@ end</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>Invited</name>
 						<script>send("party join "..matches[2]..";follow "..matches[2])
-scripter.Target = matches[2]</script>
+</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -875,7 +856,6 @@ enableTimer("disarmed")</script>
 					<script>local command = matches[2]
 
 scripter.Auto = command
-UI.scripter.Auto = command
 
 if tostring(UI.CurrentExtras) == "Scripter" then
 	UI.UpdateLabelScripter()
@@ -959,7 +939,6 @@ end</script>
 	end
 
 	scripter.Disarm = words[1]
-	UI.scripter.Disarm = words[1]
 
 end</script>
 					<triggerType>0</triggerType>
@@ -5980,18 +5959,7 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>Prompt Data</name>
-						<script>if scripter.On == true then
-	if tonumber(xPrompt.hp) &lt; 85 then
-		local message = "Your HP has fallen below scripters threshold"
-		if tostring(message) ~= tostring(UI.feedlastmessage) then
-			UI.feedlastmessage = message
-			echo("UI.FeedList",message .. tostring(getTime(true,"hh:mm:ssap")))
-
-		end
-
-	end
-
-end</script>
+						<script></script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -6692,7 +6660,6 @@ end</script>
 	ncom("scripter is already &lt;white&gt;ON")
 
 else
-	UI.scripter.On = true
 	scripter.On = true
 	ncom("scripter is now &lt;white&gt;ON")
 
@@ -6712,7 +6679,6 @@ end</script>
 	ncom("scripter is already &lt;white&gt;Off")
 
 else
-	UI.scripter.On = false
 	scripter.On = false
 	ncom("scripter is now &lt;white&gt;Off")
 
@@ -6754,8 +6720,6 @@ ncom(message)</script>
 					<name>scripterTarget target</name>
 					<script>local target = matches[16]
 
-UI.scripter.Area = "none"
-UI.scripter.Target = target
 scripter.Area = "none"
 scripter.Target = target
 
@@ -6782,12 +6746,10 @@ end</script>
 
 if string.lower(arg) == "on" then
 	scripter.Kill = true
-	UI.scripter.Kill = true
 	ncom("Scripters Kill mode is now &lt;white&gt;On")
 
 elseif string.lower(arg) == "off" then
 	scripter.Kill = false
-	UI.scripter.Kill = false
 	ncom("Scripters Kill mode is now &lt;white&gt;Off")
 
 else
@@ -6823,11 +6785,9 @@ end</script>
 
 if string.lower(arg) == "on" then
 	scripter.Butcher = true
-	UI.scripter.Butcher = true
 
 elseif string.lower(arg) == "off" then
 	scripter.Butcher = false
-	UI.scripter.Butcher = false
 
 else
 	ncom("Syntax: &lt;white&gt;scripterButcher \&lt;On\|Off\&gt;")
@@ -6869,11 +6829,9 @@ end</script>
 
 if string.lower(arg) == "on" then
 	scripter.Skin = true
-	UI.scripter.Skin = true
 
 elseif string.lower(arg) == "off" then
 	scripter.Skin = false
-	UI.scripter.Skin = false
 
 else
 	ncom("Syntax: &lt;white&gt;scripterSkin \&lt;On\|Off\&gt;")
@@ -6901,11 +6859,9 @@ end</script>
 
 if string.lower(arg) == "on" then
 	scripter.Soup = true
-	UI.scripter.Soup = true
 
 elseif string.lower(arg) == "off" then
 	scripter.Soup = false
-	UI.scripter.Soup = false
 
 else
 	ncom("Syntax: &lt;white&gt;scripterSoup \&lt;On\|Off\&gt;")
@@ -6951,7 +6907,6 @@ if string.lower(arg) == "auto" then
 else
 	disableTrigger("wield detection")
 	scripter.Disarm = arg
-	UI.scripter.Disarm = arg
 
 end
 
@@ -6983,11 +6938,9 @@ end</script>
 
 if tostring(command) == "clear" then
 	scripter.OffAuto = "none"
-	UI.scripter.OffAuto = "none"
 
 else
 	scripter.OffAuto = command
-	UI.scripter.OffAuto = command
 
 end
 
@@ -7041,8 +6994,6 @@ local matched = false
 
 for k,v in pairs(scripter.allowedAreas) do
 	if tostring(v) == tostring(area) then
-		UI.scripter.Area = area
-		UI.scripter.Target = area
 		scripter.Area = area
 		scripter.Target = area
 		ncom("scripter area has been set to &lt;white&gt;" .. area)
@@ -7868,7 +7819,7 @@ end</script>
 
 	local ON = "OFF"
 
-	if UI.scripter.On == true then
+	if scripter.On == true then
 		ON = "ON"
 
 	else
@@ -7876,13 +7827,13 @@ end</script>
 
 	end
 
-	local AREA = UI.scripter.Area
+	local AREA = scripter.Area
 
-	local TARGET = UI.scripter.Target
+	local TARGET = scripter.Target
 
-	local KILL = "off"
+	local KILL = "Off"
 
-	if UI.scripter.Kill == true then
+	if scripter.Kill == true then
 		KILL = "On"
 
 	else
@@ -7892,7 +7843,7 @@ end</script>
 
 	local BUTCHER = "off"
 
-	if UI.scripter.Butcher == true then
+	if scripter.Butcher == true then
 		BUTCHER = "On"
 
 	else
@@ -7902,7 +7853,7 @@ end</script>
 
 	local SKIN = "off"
 
-	if UI.scripter.Skin == true then
+	if scripter.Skin == true then
 		SKIN = "On"
 
 	else
@@ -7912,7 +7863,7 @@ end</script>
 
 	local SOUP = "off"
 
-	if UI.scripter.Soup == true then
+	if scripter.Soup == true then
 		SOUP = "On"
 
 	else
@@ -7920,11 +7871,11 @@ end</script>
 
 	end
 
-	local DISARM = UI.scripter.Disarm or "none"
+	local DISARM = scripter.Disarm or "none"
 
-	local AUTO = UI.scripter.Auto or "none"
+	local AUTO = scripter.Auto or "none"
 
-	local OFF = UI.scripter.OffAuto or "none"
+	local OFF = scripter.OffAuto or "none"
 
 	local C1 = UI.theme.Color2
 
@@ -10772,6 +10723,8 @@ end
 
 function bootUI()
 	loadError = false
+	disableTimer("resizeTimer")
+	enableTimer("resizeTimer")
 	tempTimer(.25,[[xPrompt.Initialize()]])
 	tempTimer(.75,[[UI.Initialize()]])
 	tempTimer(1,[[questing.Initialize()]])
