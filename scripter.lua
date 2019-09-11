@@ -1,0 +1,18 @@
+return {{
+  [ [[On]] ] = [[false]],
+  [ [[Kill]] ] = [[false]],
+  [ [[Target]] ] = [[none]],
+  [ [[Area]] ] = [[none]],
+  [ [[Rate]] ] = [[4]],
+  [ [[Threshold]] ] = [[85]],
+  [ [[Bugout]] ] = [[45]],
+  [ [[EmergencyTrigger]] ] = [[50]],
+  [ [[EmergencyAction]] ] = [[flee]],
+  [ [[Auto]] ] = [[none]],
+  [ [[OffAuto]] ] = [[none]],
+  [ [[OffRate]] ] = [[60]],
+  [ [[Disarm]] ] = [[none]],
+  [ [[Butcher]] ] = [[false]],
+  [ [[Soup]] ] = [[true]],
+  [ [[Skin]] ] = [[false]],
+}}
