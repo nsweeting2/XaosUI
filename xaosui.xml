@@ -10814,20 +10814,23 @@ function eventHandler(event,...)
 		local file = arg[1]
 		if string.ends(file, "/versions.lua") then
 			checkVersions()
+		end
 		for k, v in pairs(files) do
 			if string.ends(file, v) then
-			coreDownloadFinished()
-			break
+				coreDownloadFinished()
+				break
+			end
 		end
 	elseif event == "sysDownloadError" then
-    	local file = arg[1]
+		local file = arg[1]
 		if string.ends(file, "/versions.lua") then
 			coreDownloadFailed(file)
 		end
 		for k, v in pairs(files) do
 			if string.ends(file, v) then
-			coreDownloadFailed(file)
-			break
+				coreDownloadFailed(file)
+				break
+			end
 		end
 	end
 end
