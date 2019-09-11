@@ -10782,7 +10782,8 @@ function coreDownloadFinished()
 	coreFiles = tonumber(coreFiles) + 1
 	if coreFiles == tonumber(#files) then
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been downloaded, proceeding with install!")
-		 installUpdate()
+		killTimer("downloadTimeout")
+		installUpdate()
 	 end
 end
 
@@ -10804,6 +10805,8 @@ end
 function eventHandler(event,...)
 	if event == "sysConnectionEvent" then
 		downloadVersions()
+	elseif event == "bootUI" then
+		bootUI()
 	elseif event == "sysDownloadDone" then
 		local file = arg[1]
 		if string.ends(file, "/versions.lua") then
