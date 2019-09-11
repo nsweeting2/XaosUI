@@ -10382,29 +10382,6 @@ end</script>
 			</Script>
 		</ScriptGroup>
 		<ScriptGroup isActive="yes" isFolder="yes">
-			<name>Resize Manager</name>
-			<packageName></packageName>
-			<script></script>
-			<eventHandlerList />
-			<Script isActive="yes" isFolder="no">
-				<name>resizeEventHandler</name>
-				<packageName></packageName>
-				<script>--Do NOT Rename or disable this script, it will break the function
-
-function resizeEventHandler( event, x, y )
-	--Seems like nosense to diable a timer then to enable it but it allows
-	--for rappid firing of sysWindowResizeEvent thus avoiding lagg during the event.
-
-	disableTimer("resizeTimer")
-
-	enableTimer("resizeTimer")
-
-end
-registerAnonymousEventHandler("sysWindowResizeEvent","resizeEventHandler")</script>
-				<eventHandlerList />
-			</Script>
-		</ScriptGroup>
-		<ScriptGroup isActive="yes" isFolder="yes">
 			<name>Comms</name>
 			<packageName></packageName>
 			<script></script>
@@ -10730,6 +10707,7 @@ files = {[[/boons.lua]], [[/boonsDetail.lua]], [[/casting.lua]], [[/character.lu
 registerAnonymousEventHandler("sysConnectionEvent", "eventHandler")
 registerAnonymousEventHandler("sysDownloadDone", "eventHandler")
 registerAnonymousEventHandler("sysDownloadError", "eventHandler")
+registerAnonymousEventHandler("sysWindowResizeEvent","eventHandler")
 registerAnonymousEventHandler("bootUI", "eventHandler")
 
 function downloadVersions()
@@ -10782,7 +10760,7 @@ function coreDownloadFinished()
 	coreFiles = tonumber(coreFiles) + 1
 	if coreFiles == tonumber(#files) then
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI has been downloaded, proceeding with install!")
-		killTimer("downloadTimeout")
+		killTimer(downloadTimeout)
 		installUpdate()
 	 end
 end
@@ -10805,6 +10783,9 @@ end
 function eventHandler(event,...)
 	if event == "sysConnectionEvent" then
 		downloadVersions()
+	elseif event == "sysWindowResizeEvent" then
+		disableTimer("resizeTimer")
+		enableTimer("resizeTimer")
 	elseif event == "bootUI" then
 		bootUI()
 	elseif event == "sysDownloadDone" then
