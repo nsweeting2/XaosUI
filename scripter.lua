@@ -5,8 +5,9 @@ return {{
   [ [[Area]] ] = [[none]],
   [ [[Rate]] ] = [[4]],
   [ [[Threshold]] ] = [[85]],
-  [ [[Bugout]] ] = [[45]],
-  [ [[EmergencyTrigger]] ] = [[50]],
+  [ [[Wimpy]] ] = [[50]]
+  [ [[Bugout]] ] = [[40]],
+  [ [[EmergencyTrigger]] ] = [[60]],
   [ [[EmergencyAction]] ] = [[flee]],
   [ [[Auto]] ] = [[none]],
   [ [[OffAuto]] ] = [[none]],

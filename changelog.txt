@@ -55,7 +55,6 @@ ___________________________________________________________________
 
 2.0.0.2 Known Issues
 -Equipment lines expand past window
--All Prompt line Triggers need to get collapsed into one
 -affects does not support a majority of affects
 -scripter is unfinished
 -questing is unfinished
@@ -65,6 +64,38 @@ ___________________________________________________________________
 -no regex for afflictions under 1 year
 -disarm trigger is still meh
 -Feed time session lacks leading zeros's
+-no install eq support
 
 2.0.0.2 Tester Report
--Pending
+-skipped
+
+___________________________________________________________________
+2.0.0.3 - General Fixes and Heavy Scripter work
+
+2.0.0.3 Adds
+-scripter hunt rate
+-scripter offauto rate
+-scripter bugout, wimpy, and emergency readouts
+-scripter label formatting updated for above
+-logon logoff detection
+-added support for 7 affects
+
+2.0.0.3 Changes
+-heavy code refactoring
+-merged isXaosPrompt() trigger calls into a single trigger
+
+2.0.0.3 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-scripter is unfinished
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-no install eq support
+
+2.0.0.3 Tester Report
+-pending
