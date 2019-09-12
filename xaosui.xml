@@ -10983,7 +10983,7 @@ function checkVersions()
 	table.load(path, versions)
 	local pos = table.index_of(versions, version) or 0
 	if pos ~= #versions then
-		enableAlias("installui")
+		enableAlias("updateui")
 		cecho("\n&amp;lt;BlueViolet&amp;gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is out of date, enter &lt;white&gt;updateui&lt;DarkSlateGrey&gt; to install!")
 	else
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is up to date, continuing with boot.")
