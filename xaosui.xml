@@ -8158,23 +8158,23 @@ end</script>
 	end
 
 	local DISARM = scripter.Disarm or "none"
-	
+
 	local RATE = scripter.Rate or 0
-	
+
 	local THRESHOLD = scripter.Threshold or 0
-	
+
 	local WIMPY = scripter.Wimpy or 0
-	
+
 	local BUGOUT = scripter.Bugout or 0
-	
+
 	local EMERGENCYACTION = scripter.EmergencyAction or "none"
-	
+
 	local EMERGENCYTRIGGER = scripter.EmergencyTrigger or 0
 
 	local AUTO = scripter.Auto or "none"
 
 	local OFF = scripter.OffAuto or "none"
-	
+
 	local OFFRATE = scripter.OffRate or 0
 
 	local C1 = UI.theme.Color2
@@ -10950,7 +10950,7 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>uiLauncher</name>
 			<packageName></packageName>
-			<script>version = "2.0.0.2"
+			<script>version = "2.0.0.3"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")
