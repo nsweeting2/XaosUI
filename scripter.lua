@@ -16,4 +16,5 @@ return {{
   [ [[Butcher]] ] = [[false]],
   [ [[Soup]] ] = [[true]],
   [ [[Skin]] ] = [[false]],
+  [ [[Party]] ] = [[Off]],
 },}

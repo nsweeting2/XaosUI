@@ -22,4 +22,9 @@ return {{
   [[something wavy]],
   [[something bobby]],
   [[something artifacty]],
+  [[something installed]],
+  [[something upgraded]],
+  [[something techy]],
+  [[something mechanical]],
+  [[something roboty]],
 },}

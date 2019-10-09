@@ -96,6 +96,48 @@ ___________________________________________________________________
 -disarm trigger is still meh, but getting better
 -Feed time session lacks leading zeros's
 -no install eq support
+-entering the scripts menu crashes mudlet sometimes
 
 2.0.0.3 Tester Report
+-pending
+
+___________________________________________________________________
+2.0.0.4 - General Fixes and Heavy Scripter work
+
+2.0.0.4 Adds
+-scripterRate alias
+-scripterOffRate alias
+-scripterPledge alias
+-scripter pledge under automation
+-scripterParty Alias
+-scripter Party under automation
+-Scripter is now in what I consider its final state
+-Feed now shows all scripter events
+-support for install eq
+-added support for 4 affects
+
+2.0.0.4 Changes
+-more heavy code refactoring
+-disarm auto checks for Nothing instead of not nil
+
+2.0.0.4 Fixes
+-Negative Resist showing incorrect Value
+
+2.0.0.4 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.4 Tester Report
 -pending
