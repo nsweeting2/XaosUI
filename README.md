@@ -1,7 +1,7 @@
 #XaosUI
 
 Installation:
-1. Download and install latest version of MudletUI.
+1. Download and install latest version of Mudlet.
   https://www.mudlet.org/download/
 2. Setup Profile for xaosmud.org port 5000.
 3. Use Package Manager to uninstall generic_mapper.
