@@ -141,3 +141,37 @@ ___________________________________________________________________
 
 2.0.0.4 Tester Report
 -pending
+
+___________________________________________________________________
+2.0.0.5 - General UI Fixes
+
+
+2.0.0.5 Adds
+-added support for Fragments & Souls affects
+
+2.0.0.5 Changes
+-Updated Score Report to reflect In Game Score Changes
+-Who List now captures Newbies (N Flag)
+
+2.0.0.5 Fixes
+-Negative Resist now showing as Negatives on defenses card
+-Score now grabs weight for non-religious
+
+2.0.0.5 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.5 Tester Report
+-pending
