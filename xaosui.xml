@@ -10848,7 +10848,6 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. PRIMARYPARRY .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
     };
   local SecondaryParryRoll =
     {
@@ -10866,7 +10865,6 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. SECONDARYPARRY .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
     };
   local TailParryRoll =
     {
