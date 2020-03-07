@@ -175,3 +175,35 @@ ___________________________________________________________________
 
 2.0.0.5 Tester Report
 -pending
+
+
+___________________________________________________________________
+2.0.0.6 - General UI Fixes
+
+
+2.0.0.6 Adds
+-added support bootUI command to bypass updateUI
+- Phase to Defense card.
+
+2.0.0.6 Fixes
+-Who List now captures Newbies (N Flag)(* actually included the updated tigger)
+-Scripter Skinning now functions properly
+
+2.0.0.6 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.6 Tester Report
+-pending

@@ -17,7 +17,7 @@
 			<colorTriggerBgColor>#000000</colorTriggerBgColor>
 			<regexCodeList />
 			<regexCodePropertyList />
-			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>questingWithNoax</name>
 				<script></script>
 				<triggerType>0</triggerType>
@@ -706,7 +706,7 @@ disableTrigger("emergencyaction arg")</script>
   if scripter.Butcher then
     send("butcher cor")
   end
-  if scripter.Butcher then
+  if scripter.Skin then
     send("skin cor")
   end
 end</script>
@@ -1576,7 +1576,7 @@ end</script>
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
-								<string>^  (\[(HCRP|\sRP\s|\s{4})\])\s.+$</string>
+								<string>^( N|  )(\[(HCRP|\sRP\s|\s{4})\])\s.+$</string>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
@@ -2763,7 +2763,7 @@ expandAlias("scripterOff")</script>
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>$Alas\, all good things must come to an end\.$</string>
+							<string>^Alas\, all good things must come to an end\.$</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
@@ -2772,6 +2772,7 @@ expandAlias("scripterOff")</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>login</name>
 						<script>loggedin = true
+UI.equipment = {}
 ncom("Sorry about this ugly data pull, Ill fix it in the future")
 enableTimer("StupidDataPull")
 expandAlias("UIForce")
@@ -2800,6 +2801,7 @@ send("bugout", false)</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>reconnect</name>
 						<script>loggedin = true
+UI.equipment = {}
 ncom("Sorry about this ugly data pull, Ill fix it in the future")
 enableTimer("StupidDataPull")
 expandAlias("UIForce")
@@ -4193,6 +4195,29 @@ end</script>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Phase</name>
+							<script>UI.defenses.Phase = matches[4]
+if gagmode == true then
+  deleteLine()
+end</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^\|\s+((Base|Combat) Phase)\:\s+(\d+)\s+\|$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
 								<integer>1</integer>
 							</regexCodePropertyList>
 						</Trigger>
@@ -6663,7 +6688,7 @@ end</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
-					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>ding gained</name>
 						<script>feedManager("You gained a level!")</script>
 						<triggerType>0</triggerType>
@@ -6730,7 +6755,7 @@ end</script>
 			<command></command>
 			<packageName>xaosui</packageName>
 			<time></time>
-			<TimerGroup isActive="no" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+			<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
 				<name>questingWithNoax</name>
 				<script></script>
 				<command></command>
@@ -6855,7 +6880,7 @@ disableTimer("atQuestmaster")</script>
 						<time>00:00:02.000</time>
 					</Timer>
 				</TimerGroup>
-				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>StupidDataPull</name>
 					<script>if loggedin then
   gagmode = true
@@ -6887,7 +6912,7 @@ end</script>
 					<packageName></packageName>
 					<time>00:01:00.000</time>
 				</Timer>
-				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>resizeTimer</name>
 					<script>--This should be disabled by default
 --Get window size
@@ -7002,7 +7027,7 @@ end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.000</time>
-					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>HourlyReport</name>
 						<script>local total = expPerTerm(3600)
 local dings = math.floor(tonumber(total) / 100000)
@@ -7123,6 +7148,13 @@ r(f())</script>
 				<command></command>
 				<packageName></packageName>
 				<regex>^(U|u)(P|p)(D|d)(A|a)(T|t)(E|e)(U|u)(I|i)$</regex>
+			</Alias>
+			<Alias isActive="no" isFolder="no">
+				<name>bootui</name>
+				<script>bootUI()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^(B|b)(O|o)(O|o)(T|t)(U|u)(I|i)$</regex>
 			</Alias>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>UI</name>
@@ -7329,6 +7361,15 @@ ncom(message)</script>
 						<command></command>
 						<packageName></packageName>
 						<regex>^(u|U)(i|I)(c|C)(o|O)(l|L)(o|O)(r|R)(s|S)$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>UIFontSize</name>
+						<script>local fontSize = matches[12]
+UI.theme.FontSize = fontSize
+expandAlias(UIForce)</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(u|U)(i|I)(f|F)(o|O)(n|N)(t|T)(s|S)(i|i)(z|Z)(e|E)\s(\d+)$</regex>
 					</Alias>
 				</AliasGroup>
 				<AliasGroup isActive="yes" isFolder="yes">
@@ -8078,7 +8119,7 @@ end</script>
 --[[
 	Deletes old profiles/maps in the "current"/"map" folders of the Mudlet home directory.
 	The following files are NOT deleted:
-	- Files newer than the amount of days specified as an argument to deleteOldProfiles(), or 31 days if not specified.	
+	- Files newer than the amount of days specified as an argument to deleteOldProfiles(), or 31 days if not specified.
 	- One file for every month before that. Specifically: The first available file of every month prior to this.
 	Setting the second argument to true will delete maps instead of profiles. (e.g. deleteOldProfiles(10, true))
 --]]
@@ -10837,7 +10878,6 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. UNARMEDBLOCK .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
     };
   local PrimaryParryRoll =
     {
@@ -10848,6 +10888,7 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. PRIMARYPARRY .. "&lt;/td&gt;",
+
     };
   local SecondaryParryRoll =
     {
@@ -10893,9 +10934,10 @@ end</script>
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. LOWERRIGHTPARRY .. "&lt;/td&gt;",
     };
-  local ShieldBlockRoll =
+   local ShieldBlockRoll =
     {
-      "&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
+      "&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
+			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
       C2 ..
       ";\"&gt;Shield Block&lt;span style=\"color: " ..
       C1 ..
@@ -10904,6 +10946,7 @@ end</script>
     };
   local PhaseRoll =
     {
+      "&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
       "&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
       C2 ..
       ";\"&gt;Phase&lt;span style=\"color: " ..
@@ -12092,7 +12135,7 @@ end</script>
 			<Script isActive="no" isFolder="no">
 				<name>uiLauncher</name>
 				<packageName></packageName>
-				<script>version = "2.0.0.5"
+				<script>version = "2.0.0.6"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")
@@ -12116,6 +12159,8 @@ function downloadVersions()
 	if not io.exists(path) then lfs.mkdir(path) end
 	downloading = true
 	downloadFile(path .. file, downloadPath .. file)
+
+
 end
 
 function checkVersions()
@@ -12125,8 +12170,10 @@ function checkVersions()
 	table.load(path, versions)
 	local pos = table.index_of(versions, version) or 0
 	if pos ~= #versions then
-		enableAlias("installui")
+		enableAlias("updateui")
+    enableAlias("bootui")
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is out of date, enter &lt;white&gt;updateui&lt;DarkSlateGrey&gt; to install!")
+    cecho("\n&lt;BlueViolet&gt;[ Reldi ]&lt;DarkSlateGrey&gt; - To continue using the current version, enter &lt;white&gt;bootui&lt;DarkSlateGrey&gt; to boot!")
 	else
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is up to date, continuing with boot.")
 		raiseEvent("bootUI")
@@ -12156,6 +12203,8 @@ function downloadUpdate()
 		downloadFile(path..v, downloadPath..v)
 	end
 	--cecho("&lt;DarkSlateGrey&gt;from\n           "..downloadPath)
+  disableAlias("updateui")
+  disableAlias("bootui")
 end
 
 function coreDownloadFinished()
@@ -12181,7 +12230,8 @@ function bootUI()
 	tempTimer(1,[[questing.Initialize()]])
 	tempTimer(1.25,[[scripter.Initialize()]])
 	tempTimer(1.5,[[UI.Initialized()]])
-
+	disableAlias("updateui")
+  disableAlias("bootui")
 end
 
 function eventHandler(event,...)
