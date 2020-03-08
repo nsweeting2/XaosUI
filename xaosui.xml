@@ -10913,13 +10913,22 @@ end</script>
 
     minuteexp = expPerTerm(3600)
     minutedings = math.floor(tonumber(minuteexp) / 100000)
-
+		if not minuteexp then
+			minuteexp = 0
+			minutedings = 0
+		end
     tenexp = expPerTerm(3600)
     tendings = math.floor(tonumber(tenexp) / 100000)
-
+		if not tenexp then
+			tenexp = 0
+			tendings = 0
+		end
     sixtyexp = expPerTerm(3600)
     sixtydings = math.floor(tonumber(sixtyexp) / 100000)
-
+		if not sixtyexp then
+			sixtyexp = 0
+			sixtydings = 0
+		end
 
     local DPSCard = {}
     local DPSCard = {
