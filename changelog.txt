@@ -1,27 +1,182 @@
-2.0.0.1 Known Issues
+___________________________________________________________________
+2.0.0.7 - Big UI Updates
+
+
+2.0.0.7 Adds
+-	Party now pulled via stupid data pull
+- DPS Counter Added
+-	qolWithReldi added
+	- Warrior Added
+		- Berserk Hack Added
+		- Warcry Hack Added
+		- Center Hack Added
+	-Mobs
+		- Maze
+		- Misery
+		- Fae Forest
+-Yakone added to acceptable pledges, enables Yakone's Hack
+-UIReporting added - Players can now choose to report damage to the Admin staff
+ 		on an hourly basis. Players must enable this option using UIReporting ON,
+		option is off by default.
+
+2.0.0.7 Fixes
+- Afflictions now get Time Terms passed to Character Card
+		(Afflicts under 1 year fix)
+
+
+2.0.0.7 Known Issues
 -Equipment lines expand past window
--affects does not support all spells
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-need to add super gain somewhere...
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.6 Tester Report
+-pending
+
+___________________________________________________________________
+2.0.0.6 - General UI Fixes
+
+
+2.0.0.6 Adds
+-added support bootUI command to bypass updateUI
+- Phase to Defense card.
+
+2.0.0.6 Fixes
+-Who List now captures Newbies (N Flag)(* actually included the updated tigger)
+-Scripter Skinning now functions properly
+
+2.0.0.6 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.6 Tester Report
+-pending
+
+___________________________________________________________________
+2.0.0.5 - General UI Fixes
+
+
+2.0.0.5 Adds
+-added support for Fragments & Souls affects
+
+2.0.0.5 Changes
+-Updated Score Report to reflect In Game Score Changes
+-Who List now captures Newbies (N Flag)
+
+2.0.0.5 Fixes
+-Negative Resist now showing as Negatives on defenses card
+-Score now grabs weight for non-religious
+
+2.0.0.5 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.5 Tester Report
+-pending
+
+___________________________________________________________________
+2.0.0.4 - General Fixes and Heavy Scripter work
+
+2.0.0.4 Adds
+-scripterRate alias
+-scripterOffRate alias
+-scripterPledge alias
+-scripter pledge under automation
+-scripterParty Alias
+-scripter Party under automation
+-Scripter is now in what I consider its final state
+-Feed now shows all scripter events
+-support for install eq
+-added support for 4 affects
+
+2.0.0.4 Changes
+-more heavy code refactoring
+-disarm auto checks for Nothing instead of not nil
+
+2.0.0.4 Fixes
+-Negative Resist showing incorrect Value
+
+2.0.0.4 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
+-questing is unfinished
+-feed is unfinished
+-party is not started
+-need to add super gain somewhere...
+-no regex for afflictions under 1 year
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-entering the scripts menu crashes mudlet sometimes (This is a big issue)
+-having generic_mapper installed causes extra initializations
+-Save function needs to be rewriten to allow data to survive an update.
+-invis disarms causing a perm disarmed state
+-Session time can show -days due to date time math errors
+
+2.0.0.4 Tester Report
+-pending
+___________________________________________________________________
+2.0.0.3 - General Fixes and Heavy Scripter work
+
+2.0.0.3 Adds
+-scripter hunt rate
+-scripter offauto rate
+-scripter bugout, wimpy, and emergency readouts
+-scripter label formatting updated for above
+-logon logoff detection
+-added support for 7 affects
+
+2.0.0.3 Changes
+-heavy code refactoring
+-merged isXaosPrompt() trigger calls into a single trigger
+
+2.0.0.3 Known Issues
+-Equipment lines expand past window
+-affects does not support a some of affects
 -scripter is unfinished
 -questing is unfinished
--feed is not started
+-feed is unfinished
 -party is not started
--need to add super gain into scripter
+-need to add super gain somewhere...
 -no regex for afflictions under 1 year
--DISARM variable nil
--Affects variable nil
--Treasure loot flat out doesn't work
--Alacrity bugs out Affects
--dual wields don't auto detect for disarm
--disarm trigger is meh
+-disarm trigger is still meh, but getting better
+-Feed time session lacks leading zeros's
+-no install eq support
+-entering the scripts menu crashes mudlet sometimes
 
-
-2.0.0.1 Tester Report
--Prehero levels are unsupported
--negative hero points unsupported
--request to add an alias to force update interval
--empower tab showing nothing / canceled by tester
--affliction detection issues
-
+2.0.0.3 Tester Report
+-pending
 ___________________________________________________________________
 2.0.0.2 - General Fixes and Progress
 
@@ -68,142 +223,27 @@ ___________________________________________________________________
 
 2.0.0.2 Tester Report
 -skipped
-
 ___________________________________________________________________
-2.0.0.3 - General Fixes and Heavy Scripter work
-
-2.0.0.3 Adds
--scripter hunt rate
--scripter offauto rate
--scripter bugout, wimpy, and emergency readouts
--scripter label formatting updated for above
--logon logoff detection
--added support for 7 affects
-
-2.0.0.3 Changes
--heavy code refactoring
--merged isXaosPrompt() trigger calls into a single trigger
-
-2.0.0.3 Known Issues
+2.0.0.1 Known Issues
 -Equipment lines expand past window
--affects does not support a some of affects
+-affects does not support all spells
 -scripter is unfinished
 -questing is unfinished
--feed is unfinished
+-feed is not started
 -party is not started
--need to add super gain somewhere...
+-need to add super gain into scripter
 -no regex for afflictions under 1 year
--disarm trigger is still meh, but getting better
--Feed time session lacks leading zeros's
--no install eq support
--entering the scripts menu crashes mudlet sometimes
-
-2.0.0.3 Tester Report
--pending
-
-___________________________________________________________________
-2.0.0.4 - General Fixes and Heavy Scripter work
-
-2.0.0.4 Adds
--scripterRate alias
--scripterOffRate alias
--scripterPledge alias
--scripter pledge under automation
--scripterParty Alias
--scripter Party under automation
--Scripter is now in what I consider its final state
--Feed now shows all scripter events
--support for install eq
--added support for 4 affects
-
-2.0.0.4 Changes
--more heavy code refactoring
--disarm auto checks for Nothing instead of not nil
-
-2.0.0.4 Fixes
--Negative Resist showing incorrect Value
-
-2.0.0.4 Known Issues
--Equipment lines expand past window
--affects does not support a some of affects
--questing is unfinished
--feed is unfinished
--party is not started
--need to add super gain somewhere...
--no regex for afflictions under 1 year
--disarm trigger is still meh, but getting better
--Feed time session lacks leading zeros's
--entering the scripts menu crashes mudlet sometimes (This is a big issue)
--having generic_mapper installed causes extra initializations
--Save function needs to be rewriten to allow data to survive an update.
--invis disarms causing a perm disarmed state
--Session time can show -days due to date time math errors
-
-2.0.0.4 Tester Report
--pending
-
-___________________________________________________________________
-2.0.0.5 - General UI Fixes
+-DISARM variable nil
+-Affects variable nil
+-Treasure loot flat out doesn't work
+-Alacrity bugs out Affects
+-dual wields don't auto detect for disarm
+-disarm trigger is meh
 
 
-2.0.0.5 Adds
--added support for Fragments & Souls affects
-
-2.0.0.5 Changes
--Updated Score Report to reflect In Game Score Changes
--Who List now captures Newbies (N Flag)
-
-2.0.0.5 Fixes
--Negative Resist now showing as Negatives on defenses card
--Score now grabs weight for non-religious
-
-2.0.0.5 Known Issues
--Equipment lines expand past window
--affects does not support a some of affects
--questing is unfinished
--feed is unfinished
--party is not started
--need to add super gain somewhere...
--no regex for afflictions under 1 year
--disarm trigger is still meh, but getting better
--Feed time session lacks leading zeros's
--entering the scripts menu crashes mudlet sometimes (This is a big issue)
--having generic_mapper installed causes extra initializations
--Save function needs to be rewriten to allow data to survive an update.
--invis disarms causing a perm disarmed state
--Session time can show -days due to date time math errors
-
-2.0.0.5 Tester Report
--pending
-
-
-___________________________________________________________________
-2.0.0.6 - General UI Fixes
-
-
-2.0.0.6 Adds
--added support bootUI command to bypass updateUI
-- Phase to Defense card.
-
-2.0.0.6 Fixes
--Who List now captures Newbies (N Flag)(* actually included the updated tigger)
--Scripter Skinning now functions properly
-
-2.0.0.6 Known Issues
--Equipment lines expand past window
--affects does not support a some of affects
--questing is unfinished
--feed is unfinished
--party is not started
--need to add super gain somewhere...
--no regex for afflictions under 1 year
--disarm trigger is still meh, but getting better
--Feed time session lacks leading zeros's
--entering the scripts menu crashes mudlet sometimes (This is a big issue)
--having generic_mapper installed causes extra initializations
--Save function needs to be rewriten to allow data to survive an update.
--invis disarms causing a perm disarmed state
--Session time can show -days due to date time math errors
-
-2.0.0.6 Tester Report
--pending
+2.0.0.1 Tester Report
+-Prehero levels are unsupported
+-negative hero points unsupported
+-request to add an alias to force update interval
+-empower tab showing nothing / canceled by tester
+-affliction detection issues
