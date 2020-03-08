@@ -8492,7 +8492,7 @@ tempTimer(
 )
 tempTimer(5, [[gagmode = false]])
 tempTimer(
-  ,
+5,
   function()
     UI.UINameDisplay()
     UI.CharClick(UI.CurrentChar)
