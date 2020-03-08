@@ -7780,7 +7780,7 @@ end</script>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
 								<string>^.+ your .+\. \((\d+) dam\)$</string>
-								<string>^.= you\. \((\d+) dam\)$</string>
+								<string>^.+ you\. \((\d+) dam\)$</string>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
