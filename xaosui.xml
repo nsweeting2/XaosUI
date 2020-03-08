@@ -706,7 +706,7 @@ disableTrigger("emergencyaction arg")</script>
   if scripter.Butcher then
     send("butcher cor")
   end
-  if scripter.Butcher then
+  if scripter.Skin then
     send("skin cor")
   end
 end</script>
@@ -1576,7 +1576,7 @@ end</script>
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
-								<string>^  (\[(HCRP|\sRP\s|\s{4})\])\s.+$</string>
+								<string>^( N|  )(\[(HCRP|\sRP\s|\s{4})\])\s.+$</string>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
@@ -2763,7 +2763,7 @@ expandAlias("scripterOff")</script>
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>$Alas\, all good things must come to an end\.$</string>
+							<string>^Alas\, all good things must come to an end\.$</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
@@ -2772,6 +2772,7 @@ expandAlias("scripterOff")</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>login</name>
 						<script>loggedin = true
+UI.equipment = {}
 ncom("Sorry about this ugly data pull, Ill fix it in the future")
 enableTimer("StupidDataPull")
 expandAlias("UIForce")
@@ -2800,6 +2801,7 @@ send("bugout", false)</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>reconnect</name>
 						<script>loggedin = true
+UI.equipment = {}
 ncom("Sorry about this ugly data pull, Ill fix it in the future")
 enableTimer("StupidDataPull")
 expandAlias("UIForce")
@@ -4193,6 +4195,29 @@ end</script>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Phase</name>
+							<script>UI.defenses.Phase = matches[4]
+if gagmode == true then
+  deleteLine()
+end</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^\|\s+((Base|Combat) Phase)\:\s+(\d+)\s+\|$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
 								<integer>1</integer>
 							</regexCodePropertyList>
 						</Trigger>
@@ -6663,7 +6688,7 @@ end</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
-					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>ding gained</name>
 						<script>feedManager("You gained a level!")</script>
 						<triggerType>0</triggerType>
@@ -6730,7 +6755,7 @@ end</script>
 			<command></command>
 			<packageName>xaosui</packageName>
 			<time></time>
-			<TimerGroup isActive="no" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+			<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
 				<name>questingWithNoax</name>
 				<script></script>
 				<command></command>
@@ -6855,7 +6880,7 @@ disableTimer("atQuestmaster")</script>
 						<time>00:00:02.000</time>
 					</Timer>
 				</TimerGroup>
-				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>StupidDataPull</name>
 					<script>if loggedin then
   gagmode = true
@@ -6887,7 +6912,7 @@ end</script>
 					<packageName></packageName>
 					<time>00:01:00.000</time>
 				</Timer>
-				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>resizeTimer</name>
 					<script>--This should be disabled by default
 --Get window size
@@ -6950,7 +6975,7 @@ end</script>
 					<packageName></packageName>
 					<time>00:01:15.000</time>
 				</Timer>
-				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>hunt</name>
 					<script>local threshold = scripter.Threshold
 local current = xPrompt.hp
@@ -7002,7 +7027,7 @@ end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.000</time>
-					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>HourlyReport</name>
 						<script>local total = expPerTerm(3600)
 local dings = math.floor(tonumber(total) / 100000)
@@ -7032,6 +7057,105 @@ enableTimer("hunt")</script>
 		</TimerGroup>
 	</TimerPackage>
 	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>send-text-to-all-games</name>
+			<script></script>
+			<command></command>
+			<packageName>send-text-to-all-games</packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>Send text to all games with :</name>
+				<script>-- prefix with : to send text or run an alias in all open profiles that have this script installed
+-- for example - :hi or :follow bob
+local matchedText = matches[2]
+expandAlias(matchedText)
+raiseGlobalEvent("sysSendAllProfiles", matchedText)
+</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^:(.*)$</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>deleteOldProfiles</name>
+			<script></script>
+			<command></command>
+			<packageName>deleteOldProfiles</packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>delete old profiles</name>
+				<script>deleteOldProfiles(matches[3], matches[2]=="maps")
+
+--Syntax examples: "delete old profiles"  -&gt; deletes profiles older than 31 days
+--					"delete old maps 10"	-&gt; deletes maps older than 10 days</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^delete old (profiles|maps)(?: (\d+))?$</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>echo</name>
+			<script></script>
+			<command></command>
+			<packageName>echo</packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>`echo</name>
+				<script>local s = matches[2]
+
+s = string.gsub(s, "%$", "\n")
+feedTriggers("\n" .. s .. "\n")
+echo("\n")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>`echo (.+)</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>run-lua-code-v4</name>
+			<script></script>
+			<command></command>
+			<packageName>run-lua-code-v4</packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>run lua code</name>
+				<script>local f, e = loadstring("return "..matches[2])
+if not f then
+  f, e = assert(loadstring(matches[2]))
+end
+
+local r =
+  function(...)
+    if not table.is_empty({...}) then
+      display(...)
+    end
+  end
+r(f())</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^lua (.*)$</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>xaosui</name>
+			<script></script>
+			<command></command>
+			<packageName>xaosui</packageName>
+			<regex></regex>
+			<Alias isActive="no" isFolder="no">
+				<name>updateui</name>
+				<script>downloadUpdate()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^(U|u)(P|p)(D|d)(A|a)(T|t)(E|e)(U|u)(I|i)$</regex>
+			</Alias>
+			<Alias isActive="no" isFolder="no">
+				<name>bootui</name>
+				<script>bootUI()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^(B|b)(O|o)(O|o)(T|t)(U|u)(I|i)$</regex>
+			</Alias>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>UI</name>
 				<script></script>
@@ -7237,6 +7361,15 @@ ncom(message)</script>
 						<command></command>
 						<packageName></packageName>
 						<regex>^(u|U)(i|I)(c|C)(o|O)(l|L)(o|O)(r|R)(s|S)$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>UIFontSize</name>
+						<script>local fontSize = matches[12]
+UI.theme.FontSize = fontSize
+expandAlias(UIForce)</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(u|U)(i|I)(f|F)(o|O)(n|N)(t|T)(s|S)(i|i)(z|Z)(e|E)\s(\d+)$</regex>
 					</Alias>
 				</AliasGroup>
 				<AliasGroup isActive="yes" isFolder="yes">
@@ -7957,6 +8090,83 @@ end</script>
 	</AliasPackage>
 	<ActionPackage />
 	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>send-text-to-all-games</name>
+			<packageName>send-text-to-all-games</packageName>
+			<script></script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>sysSendAllProfiles</name>
+				<packageName></packageName>
+				<script>function sysSendAllProfiles(_, text)
+  expandAlias(text)
+end</script>
+				<eventHandlerList>
+					<string>sysSendAllProfiles</string>
+				</eventHandlerList>
+			</Script>
+		</ScriptGroup>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>deleteOldProfiles</name>
+			<packageName>deleteOldProfiles</packageName>
+			<script></script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>deleteOldProfiles script</name>
+				<packageName></packageName>
+				<script>function deleteOldProfiles(keepdays_arg, delete_maps)
+
+--[[
+	Deletes old profiles/maps in the "current"/"map" folders of the Mudlet home directory.
+	The following files are NOT deleted:
+	- Files newer than the amount of days specified as an argument to deleteOldProfiles(), or 31 days if not specified.
+	- One file for every month before that. Specifically: The first available file of every month prior to this.
+	Setting the second argument to true will delete maps instead of profiles. (e.g. deleteOldProfiles(10, true))
+--]]
+
+	local keepdays = tonumber(keepdays_arg) or 31
+	local profile_table = {}
+	local used_last_mod_months = {}
+	local slash = (string.char(getMudletHomeDir():byte()) == "/") and "/" or "\\"
+	local dirpath = getMudletHomeDir()..slash..(delete_maps and "map" or "current")
+	local delnum = 0
+
+	-- Traverse the profiles folder and create a table of files:
+	for filename in lfs.dir(dirpath) do
+		if filename~="." and filename~=".." then
+			profile_table[#profile_table+1] = {name = filename, last_mod = lfs.attributes(dirpath..slash..filename, "modification")}
+		end
+	end
+
+	-- Sort the table according to last modification date from old to new:
+	table.sort(profile_table, function (a,b) return a.last_mod &lt; b.last_mod end)
+
+	echo(string.format("\nDeleting old %s. Files newer than %d days and one profile for every month before that will be kept.", delete_maps and "maps" or "profiles", keepdays))
+	for i,v in ipairs(profile_table) do
+		local days = math.floor(os.difftime(os.time(), v.last_mod)/86400)
+		local last_mod_month = os.date("%Y/%m", v.last_mod)
+		if days &gt; keepdays then
+			-- For profiles older than X days, check if we already kept a table for this month:
+			if not table.contains(used_last_mod_months, last_mod_month) then
+				-- If not, do nothing and mark this month as "kept".
+				used_last_mod_months[#used_last_mod_months+1] = last_mod_month
+			else
+				-- Otherwise remove the file:
+				local success, errorstring = os.remove(dirpath..slash..v.name)
+				if success then
+					delnum = delnum + 1
+				else
+					cecho("\n&lt;red&gt;ERROR: "..errorstring)
+				end
+			end
+		end
+	end
+	echo(string.format("\nDeletion complete. %d/%d files were removed successfully.", delnum, #profile_table))
+end
+</script>
+				<eventHandlerList />
+			</Script>
+		</ScriptGroup>
 		<ScriptGroup isActive="yes" isFolder="yes">
 			<name>xaosui</name>
 			<packageName>xaosui</packageName>
@@ -10668,7 +10878,6 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. UNARMEDBLOCK .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
     };
   local PrimaryParryRoll =
     {
@@ -10679,7 +10888,7 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. PRIMARYPARRY .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
+
     };
   local SecondaryParryRoll =
     {
@@ -10697,7 +10906,6 @@ end</script>
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. SECONDARYPARRY .. "&lt;/td&gt;",
-      "&lt;/tr&gt;",
     };
   local TailParryRoll =
     {
@@ -10726,9 +10934,10 @@ end</script>
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. LOWERRIGHTPARRY .. "&lt;/td&gt;",
     };
-  local ShieldBlockRoll =
+   local ShieldBlockRoll =
     {
-      "&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
+      "&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
+			"&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
       C2 ..
       ";\"&gt;Shield Block&lt;span style=\"color: " ..
       C1 ..
@@ -10737,6 +10946,7 @@ end</script>
     };
   local PhaseRoll =
     {
+      "&lt;td&gt;&amp;nbsp;&lt;/td&gt;",
       "&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
       C2 ..
       ";\"&gt;Phase&lt;span style=\"color: " ..
@@ -11925,7 +12135,7 @@ end</script>
 			<Script isActive="no" isFolder="no">
 				<name>uiLauncher</name>
 				<packageName></packageName>
-				<script>version = "2.0.0.7"
+				<script>version = "2.0.0.6"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")
@@ -11934,7 +12144,7 @@ downloadPath = "https://raw.githubusercontent.com/nsweeting2/XaosUI/master"
 
 files = {[[/boons.lua]], [[/boonsDetail.lua]], [[/casting.lua]], [[/character.lua]],
  	[[/colors.lua]], [[/defenses.lua]],	[[/equipment.lua]],	[[/items.lua]],	[[/name.lua]],
-	[[/offense.lua]], [[/party.lua]] [[/scripter.lua]], [[/theme.lua]], [[/traits.lua]],
+	[[/offense.lua]], [[/scripter.lua]], [[/theme.lua]], [[/traits.lua]],
 	[[/traitsDetail.lua]], [[/xPrompt.lua]], [[/xaosui.xml]],}
 
 registerAnonymousEventHandler("sysConnectionEvent", "eventHandler")
@@ -11949,6 +12159,8 @@ function downloadVersions()
 	if not io.exists(path) then lfs.mkdir(path) end
 	downloading = true
 	downloadFile(path .. file, downloadPath .. file)
+
+
 end
 
 function checkVersions()
@@ -11958,13 +12170,14 @@ function checkVersions()
 	table.load(path, versions)
 	local pos = table.index_of(versions, version) or 0
 	if pos ~= #versions then
-		enableAlias("installui")
+		enableAlias("updateui")
+    enableAlias("bootui")
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is out of date, enter &lt;white&gt;updateui&lt;DarkSlateGrey&gt; to install!")
+    cecho("\n&lt;BlueViolet&gt;[ Reldi ]&lt;DarkSlateGrey&gt; - To continue using the current version, enter &lt;white&gt;bootui&lt;DarkSlateGrey&gt; to boot!")
 	else
 		cecho("\n&lt;BlueViolet&gt;[ Noax ]&lt;DarkSlateGrey&gt; - XaosUI is up to date, continuing with boot.")
-		--raiseEvent("bootUI")
+		raiseEvent("bootUI")
 	end
-  raiseEvent("bootUI")
 end
 
 function installUpdate()
@@ -11990,6 +12203,8 @@ function downloadUpdate()
 		downloadFile(path..v, downloadPath..v)
 	end
 	--cecho("&lt;DarkSlateGrey&gt;from\n           "..downloadPath)
+  disableAlias("updateui")
+  disableAlias("bootui")
 end
 
 function coreDownloadFinished()
@@ -12015,7 +12230,8 @@ function bootUI()
 	tempTimer(1,[[questing.Initialize()]])
 	tempTimer(1.25,[[scripter.Initialize()]])
 	tempTimer(1.5,[[UI.Initialized()]])
-
+	disableAlias("updateui")
+  disableAlias("bootui")
 end
 
 function eventHandler(event,...)
