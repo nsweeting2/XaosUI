@@ -7831,6 +7831,7 @@ end</script>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
 							<string>^\s{0,1}(.*) Party\:$</string>
+							<string>^\s{0,1}(.*) party\:$</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
