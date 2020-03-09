@@ -11188,7 +11188,7 @@ end</script>
       "&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;",
       "&lt;td align=\"right\"&gt;&lt;span style=\"color: " ..
       C2 ..
-      ";\"&gt;Hits&lt;span style=\"color: " ..
+      ";\"&gt;Dings&lt;span style=\"color: " ..
       C1 ..
       ";\"&gt;:&lt;/td&gt;",
       "&lt;td&gt;" .. tendings .. "&lt;/td&gt;",
