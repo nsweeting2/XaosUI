@@ -17,5 +17,4 @@ return {{
   [ [[Soup]] ] = [[true]],
   [ [[Skin]] ] = [[false]],
   [ [[Party]] ] = [[Off]],
-  [ [[Leader]] ] = [[none]],
 },}
