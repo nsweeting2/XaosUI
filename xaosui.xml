@@ -93,8 +93,10 @@
 								<regexCodeList>
 									<string>Your pulse speeds up, but nothing happens.</string>
 									<string>You feel your pulse slow down.</string>
+									<string>You fail to enter a deeper rage.</string>
 								</regexCodeList>
 								<regexCodePropertyList>
+									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
 								</regexCodePropertyList>
@@ -114,8 +116,10 @@
 								<colorTriggerBgColor>#000000</colorTriggerBgColor>
 								<regexCodeList>
 									<string>You are already at maximum adrenaline!</string>
+									<string>You are in a rancor, it must bass before the rage can start again!</string>
 								</regexCodeList>
 								<regexCodePropertyList>
+									<integer>0</integer>
 									<integer>0</integer>
 								</regexCodePropertyList>
 							</Trigger>
@@ -213,7 +217,7 @@
 						<regexCodeList />
 						<regexCodePropertyList />
 						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-							<name>qolBerserk</name>
+							<name>qolResolve</name>
 							<script></script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
@@ -227,30 +231,28 @@
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList />
 							<regexCodePropertyList />
-							<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>berserk</name>
-								<script>expandAlias("Berserk",false)</script>
+							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+								<name>resolve</name>
+								<script>expandAlias("resolve",false)</script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
 								<mStayOpen>0</mStayOpen>
 								<mCommand></mCommand>
 								<packageName></packageName>
-								<mFgColor>#ff0000</mFgColor>
-								<mBgColor>#ffff00</mBgColor>
+								<mFgColor>#00ff00</mFgColor>
+								<mBgColor>#000000</mBgColor>
 								<mSoundFile></mSoundFile>
 								<colorTriggerFgColor>#000000</colorTriggerFgColor>
 								<colorTriggerBgColor>#000000</colorTriggerBgColor>
 								<regexCodeList>
-									<string>Your pulse speeds up, but nothing happens.</string>
-									<string>You feel your pulse slow down.</string>
+									<string>Your incredible resolve fades!</string>
 								</regexCodeList>
 								<regexCodePropertyList>
-									<integer>0</integer>
 									<integer>0</integer>
 								</regexCodePropertyList>
 							</Trigger>
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>Max</name>
+								<name>Hardened</name>
 								<script>  deleteLine()</script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
@@ -263,86 +265,10 @@
 								<colorTriggerFgColor>#000000</colorTriggerFgColor>
 								<colorTriggerBgColor>#000000</colorTriggerBgColor>
 								<regexCodeList>
-									<string>You are already at maximum adrenaline!</string>
+									<string>You have already hardened your resolve.</string>
 								</regexCodeList>
 								<regexCodePropertyList>
 									<integer>0</integer>
-								</regexCodePropertyList>
-							</Trigger>
-						</TriggerGroup>
-						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-							<name>qolCenter</name>
-							<script></script>
-							<triggerType>0</triggerType>
-							<conditonLineDelta>0</conditonLineDelta>
-							<mStayOpen>0</mStayOpen>
-							<mCommand></mCommand>
-							<packageName></packageName>
-							<mFgColor>#ff0000</mFgColor>
-							<mBgColor>#ffff00</mBgColor>
-							<mSoundFile></mSoundFile>
-							<colorTriggerFgColor>#000000</colorTriggerFgColor>
-							<colorTriggerBgColor>#000000</colorTriggerBgColor>
-							<regexCodeList />
-							<regexCodePropertyList />
-							<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>center</name>
-								<script>expandAlias("center", false)</script>
-								<triggerType>0</triggerType>
-								<conditonLineDelta>0</conditonLineDelta>
-								<mStayOpen>0</mStayOpen>
-								<mCommand></mCommand>
-								<packageName></packageName>
-								<mFgColor>#ff0000</mFgColor>
-								<mBgColor>#ffff00</mBgColor>
-								<mSoundFile></mSoundFile>
-								<colorTriggerFgColor>#000000</colorTriggerFgColor>
-								<colorTriggerBgColor>#000000</colorTriggerBgColor>
-								<regexCodeList>
-									<string>You lose your focus\.$</string>
-									<string>You fail to center yourself\.$</string>
-								</regexCodeList>
-								<regexCodePropertyList>
-									<integer>1</integer>
-									<integer>1</integer>
-								</regexCodePropertyList>
-							</Trigger>
-						</TriggerGroup>
-						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-							<name>qolWarcry</name>
-							<script></script>
-							<triggerType>0</triggerType>
-							<conditonLineDelta>0</conditonLineDelta>
-							<mStayOpen>0</mStayOpen>
-							<mCommand></mCommand>
-							<packageName></packageName>
-							<mFgColor>#ff0000</mFgColor>
-							<mBgColor>#ffff00</mBgColor>
-							<mSoundFile></mSoundFile>
-							<colorTriggerFgColor>#000000</colorTriggerFgColor>
-							<colorTriggerBgColor>#000000</colorTriggerBgColor>
-							<regexCodeList />
-							<regexCodePropertyList />
-							<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>warcry</name>
-								<script>expandAlias("Warcry", false)</script>
-								<triggerType>0</triggerType>
-								<conditonLineDelta>0</conditonLineDelta>
-								<mStayOpen>0</mStayOpen>
-								<mCommand></mCommand>
-								<packageName></packageName>
-								<mFgColor>#ff0000</mFgColor>
-								<mBgColor>#ffff00</mBgColor>
-								<mSoundFile></mSoundFile>
-								<colorTriggerFgColor>#000000</colorTriggerFgColor>
-								<colorTriggerBgColor>#000000</colorTriggerBgColor>
-								<regexCodeList>
-									<string>The effects of the warcry die.$</string>
-									<string>You couldn't wrap your tongue around those yells.$</string>
-								</regexCodeList>
-								<regexCodePropertyList>
-									<integer>1</integer>
-									<integer>1</integer>
 								</regexCodePropertyList>
 							</Trigger>
 						</TriggerGroup>
@@ -1406,7 +1332,13 @@ command = "notMeh"</script>
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>is here!</name>
-						<script>if scripter.On and scripter.Kill then
+						<script>if scripter.Party == "follow" then
+  disableTimer("hunt")
+  scripter.On = false
+  if tostring(UI.CurrentExtras) == "Scripter" then
+    UI.UpdateLabelScripter()
+  end
+elseif scripter.On and scripter.Kill then
   send("kill " .. scripter.Target)
 end</script>
 						<triggerType>0</triggerType>
@@ -1430,7 +1362,7 @@ end</script>
 						<name>is direction from here</name>
 						<script>if scripter.On then
   local dir = matches[3]
-  send(dir)
+  send(dir,false)
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2042,7 +1974,7 @@ end</script>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList />
 					<regexCodePropertyList />
-					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party request</name>
 						<script>local pc = matches[2]
 if scripter.Party == "lead" then
@@ -2066,12 +1998,13 @@ end</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
-					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party offer</name>
 						<script>local pc = matches[2]
-if scripter.Party == "follow" then
+if scripter.Party == "none" then
   send("party join " .. pc)
   feedManager(pc .. " has invited you to their party")
+  scripter.Party = "follow"
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2114,12 +2047,13 @@ end</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
-					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party beckon</name>
 						<script>local pc = matches[2]
-if scripter.Party == "follow" then
-  send("party join " .. pc)
-  feedManager(pc .. " has invited you to their party")
+if scripter.Party == "none" then
+  send("follow " .. pc)
+  feedManager(pc .. " has asked you to follow")
+  scripter.Party = "follow"
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -2221,6 +2155,178 @@ killTimer("nextHunt")</script>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Catchup</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>catchup</name>
+						<script>local leaver = matches[2]
+if string.lower(leaver) == string.lower(scripter.Leader) then
+	scripter.dir = matches[4]
+	catchupLeave2 = tempTimer(tonumber(scripter.Rate-1), [[send(scripter.dir)]])
+	catchupLeave = tempTimer(scripter.Rate,[[expandAlias("catchup",false)]])
+end</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^\s{0,1}(\w+)\s(leaves|swims|crawls|sneaks|flies)\s(north|south|east|west|up|down)\.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>arrival</name>
+						<script>local arriver = matches[2]
+if string.lower(arriver) == string.lower(scripter.Leader) then
+	if scripter.Party == "follow" then
+		killTimer(catchupLeave)
+		killTimer(catchupLeave2)
+		killTimer(catchUpLeft)
+		killTimer(catchup)
+    scripter.On = false
+    if tostring(UI.CurrentExtras) == "Scripter" then
+      UI.UpdateLabelScripter()
+    end
+	end
+end </script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^(\w+)\s(arrives|swims|crawls|sneaks|flies)\sfrom\sthe\s(north|south|east|west|up|down)\.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>follow leader</name>
+						<script>if scripter.Party == "follow" then
+	killTimer(catchupLeave)
+	killTimer(catchupLeave2)
+	killTimer(catchupLeft)
+	killTimer(catchup)
+	if scripter.Kill then
+		scripter.Kill = false
+	end
+  scripter.On = false
+	scripter.Leader = matches[2]
+  if tostring(UI.CurrentExtras) == "Scripter" then
+    UI.UpdateLabelScripter()
+  end
+end</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>You follow (\.*)\.</string>
+							<string>You now follow (\.*)\.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>caught</name>
+						<script>if string.lower(matches[5])==string.lower(scripter.Leader) then
+	send("bclear",false)
+	killTimer(catchupLeave)
+	killTimer(catchupLeave2)
+	killTimer(catchupLeft)
+	killTimer(catchup)
+  scripter.On = false
+  if tostring(UI.CurrentExtras) == "Scripter" then
+    UI.UpdateLabelScripter()
+  end
+end</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^\[(E|M|H|S)\]\s+\[(.*)\](\s\(.*\)|)\s+(.*)\sis\shere(.*)\.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>left behind</name>
+						<script>local person = tostring(matches[2])
+killTimer(catchupLeave2)
+if scripter.Party == "follow" then
+  if scripter.Leader == person then
+    send(scripter.dir,false)
+    killTimer(catchupLeave)
+    catchupLeft = tempTimer(1, [[expandAlias("catchup", false)]])
+  end
+  if tostring(UI.CurrentExtras) == "Scripter" then
+    UI.UpdateLabelScripter()
+  end
+ end
+</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>You try to follow (.+) but they are moving too quickly\.$</string>
+							<string>You try to follow, but (.+) is moving too quickly\.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
 				</TriggerGroup>
@@ -7810,11 +7916,7 @@ end</script>
 UI.party.Minions = 0
 UI.party.MaxMinions = 0
 local leader = matches[2]
-if leader == "Your" then
-  UI.party.Leader = UI.name.Name
-else
-  UI.party.Leader = leader
-end
+UI.party.Leader = leader
 tempTimer(1.5, function() UI.UpdateLabelParty() end)
 if gagmode == true then
   deleteLine()
@@ -7834,6 +7936,7 @@ end</script>
 							<string>^\s{0,1}(.*) party\:$</string>
 						</regexCodeList>
 						<regexCodePropertyList>
+							<integer>1</integer>
 							<integer>1</integer>
 						</regexCodePropertyList>
 						<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -8059,6 +8162,34 @@ disableTimer("atQuestmaster")</script>
 				</Timer>
 			</TimerGroup>
 			<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+				<name>qolWithReldi</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<time>00:00:00.000</time>
+				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<name>qolFailsafe</name>
+					<script>if qolWithReldi.classes.barbarian.resolving then
+  expandAlias("resolve",false)
+end
+if qolWithReldi.classes.theif.trancing then
+  expandAlias("trance",false)
+end
+if qolWithReldi.classes.warrior.berserking then
+  expandAlias("berserk",false)
+end
+if qolWithReldi.classes.warrior.centering then
+  expandAlias("center",false)
+end
+if qolWithReldi.classes.warrior.warcrying then
+  expandAlias("warcry",false)
+end</script>
+					<command></command>
+					<packageName></packageName>
+					<time>00:30:00.000</time>
+				</Timer>
+			</TimerGroup>
+			<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
 				<name>UI</name>
 				<script></script>
 				<command></command>
@@ -8231,17 +8362,28 @@ end</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>hunt</name>
 					<script>local threshold = scripter.Threshold
-local current = xPrompt.hp
+local currentHP = xPrompt.hp
+local currentMana = xPrompt.mana
 local rate = tonumber(scripter.Rate) - 2
 local target = scripter.Target
-if combat == false then
+local tempVar = false
+if not combat then
 	if scripter.On and scripter.Target ~= "none" then
-		if tonumber(current) &gt;= tonumber(threshold) then
-			send("hunt " .. target)
+		if tonumber(currentHP) &gt;= tonumber(threshold) then
+      tempVar = true
+      if tonumber(currentMana)&gt;= tonumber(threshold)/2 then
+        send("hunt " .. target, false)
+      end
 		else
-			ncom("Scripter is waiting for hp to regen")
-			feedManager("Scripter is waiting for hp to regen")
-			send("\n",false)
+      if tempVar then
+  			ncom("Scripter is waiting for mana to regen")
+  			feedManager("Scripter is waiting for mana to regen")
+  			send("\n",false)
+      else
+        ncom("Scripter is waiting for hp to regen")
+  			feedManager("Scripter is waiting for hp to regen")
+  			send("\n",false)
+      end
 		end
 		nextHunt = tempTimer(rate,[[enableTimer("hunt")]])
 	end
@@ -8283,13 +8425,22 @@ end</script>
 					<packageName></packageName>
 					<time>00:03:50.000</time>
 				</Timer>
+				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<name>catchupFailsafe</name>
+					<script>if scripter.Party == "follow" then
+  expandAlias("catchup")
+end</script>
+					<command></command>
+					<packageName></packageName>
+					<time>00:08:00.000</time>
+				</Timer>
 				<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
 					<name>Feed</name>
 					<script></script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.000</time>
-					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>HourlyReport</name>
 						<script>local total = expPerTerm(3600)
 local dings = math.floor(tonumber(total) / 100000)
@@ -8310,7 +8461,10 @@ feedManager("Hourly exp report: " .. total .. "exp \(" .. dings .. " dings\).")<
 					<name>failsafe</name>
 					<script>-- makes sure scripter doesn't fall idle by not knowinig if your in combat or not
 combat = false
-enableTimer("hunt")</script>
+if scripter.On then
+	enableTimer("hunt")
+end
+</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:05:00.000</time>
@@ -9302,6 +9456,26 @@ end</script>
 						<regex>^(S|s)(C|c)(R|r)(I|i)(P|p)(T|t)(E|e)(R|r)(P|p)(A|a)(R|r)(T|t)(Y|y)\s(\w+)$</regex>
 					</Alias>
 				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>Catchup</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>catchup</name>
+						<script>if scripter.On == false then
+  scripter.On = true
+end
+if scripter.Kill then
+  scripter.Kill = false
+end
+enableTimer("hunt")</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^(c|C)(a|A)(t|T)(c|C)(h|H)(u|U)(p|P)$</regex>
+					</Alias>
+				</AliasGroup>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>qolWithReldi</name>
@@ -9347,12 +9521,14 @@ if arg == "on" then
   enableTrigger("resolve")
   rcom("Auto resolve is now &lt;white&gt;On")
   feedManager("Auto resolve is now &lt;white&gt;On")
+  qolWithReldi.classes.barbarian.resolving = true
 elseif arg == "off" then
   disableAlias("resolve")
   disableTimer("resolve")
   disableTrigger("resolve")
   rcom("Auto resolve is now &lt;white&gt;Off")
   feedManager("Auto resolve is now &lt;white&gt;Off")
+  qolWithReldi.classes.barbarian.resolving = false
 else
   rcom(
     "Syntax: &lt;white&gt;Resolve &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;use '&lt;white&gt;help resolve&lt;DarkSlateGrey&gt;' to learn what it does."
@@ -9399,11 +9575,13 @@ if arg == "on" then
   enableTrigger("trance")
   rcom("Auto trance is now &lt;white&gt;On")
   feedManager("Auto trance is now &lt;white&gt;On")
+  qolWithReldi.classes.thief.trancing = true
 elseif arg == "off" then
   disableAlias("trance")
   disableTrigger("trance")
   rcom("Auto trance is now &lt;white&gt;Off")
   feedManager("Auto trance is now &lt;white&gt;Off")
+  qolWithReldi.classes.thief.trancing = false
 else
   rcom(
     "Syntax: &lt;white&gt;trance &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;use '&lt;white&gt;help trance&lt;DarkSlateGrey&gt;' to learn what it does."
@@ -9427,7 +9605,7 @@ end</script>
 							<command></command>
 							<packageName></packageName>
 							<regex></regex>
-							<Alias isActive="no" isFolder="no">
+							<Alias isActive="yes" isFolder="no">
 								<name>berserk</name>
 								<script>if combat then
   send("berserk",false)
@@ -9447,12 +9625,14 @@ if arg == "on" then
   enableTrigger("berserk")
   rcom("Auto Berserk is now &lt;white&gt;On")
   feedManager("Auto berserk is now &lt;white&gt;On")
+  qolWithReldi.classes.warrior.berserking = true
 elseif arg == "off" then
   disableAlias("berserk")
   disableTimer("berserk")
   disableTrigger("berserk")
   rcom("Auto Berserk is now &lt;white&gt;Off")
   feedManager("Auto berserk is now &lt;white&gt;Off")
+  qolWithReldi.classes.warrior.berserking = false
 else
   rcom(
     "Syntax: &lt;white&gt;Berserk &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;use '&lt;white&gt;help berserk&lt;DarkSlateGrey&gt;' to learn what it does."
@@ -9491,8 +9671,9 @@ end</script>
 disableAlias("warcry arg")
 disableTimer("warcry")
 disableTrigger("warcry")
-  rcom("Auto warcry is now &lt;white&gt;Off")
-  feedManager("Auto warcry is now &lt;white&gt;Off")</script>
+rcom("Auto warcry is now &lt;white&gt;Off")
+feedManager("Auto warcry is now &lt;white&gt;Off")
+qolWithReldi.classes.warrior.centering = false</script>
 								<command></command>
 								<packageName></packageName>
 								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(O|o)(F|f)(F|f)$</regex>
@@ -9503,8 +9684,9 @@ disableTrigger("warcry")
 enableAlias("warcry arg")
 enableTimer("warcry")
 enableTrigger("warcry")
-  rcom("Auto warcry is now &lt;white&gt;On")
-  feedManager("Auto warcry is now &lt;white&gt;On")</script>
+rcom("Auto warcry is now &lt;white&gt;On")
+feedManager("Auto warcry is now &lt;white&gt;On")
+qolWithReldi.classes.warrior.warcrying = true</script>
 								<command></command>
 								<packageName></packageName>
 								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(O|o)(N|n)$</regex>
@@ -9529,7 +9711,7 @@ end</script>
 							<command></command>
 							<packageName></packageName>
 							<regex></regex>
-							<Alias isActive="no" isFolder="no">
+							<Alias isActive="yes" isFolder="no">
 								<name>center</name>
 								<script>if not combat then
   send("center",false)
@@ -9549,12 +9731,14 @@ if arg == "on" then
   enableTrigger("center")
   rcom("Auto center is now &lt;white&gt;On")
   feedManager("Auto center is now &lt;white&gt;On")
+  qolWithReldi.classes.warrior.centering = true
 elseif arg == "off" then
   disableAlias("center")
   disableTimer("center")
   disableTrigger("center")
   rcom("Auto center is now &lt;white&gt;Off")
   feedManager("Auto center is now &lt;white&gt;Off")
+  qolWithReldi.classes.warrior.centering = false
 else
   rcom(
     "Syntax: &lt;white&gt;Center &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;use '&lt;white&gt;help center&lt;DarkSlateGrey&gt;' to learn what it does."
@@ -10443,15 +10627,19 @@ end</script>
   end
   if tostring(UI.CurrentExtras) == "Feed" then
     UI.UpdateLabelFeed()
-
+    disableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Damage" then
     UI.UpdateLabelDamage()
+    enableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Party" then
     UI.UpdateLabelParty()
+    disableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Questing" then
     --UI.UpdateLabelQuesting()
+    disableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Scripter" then
     UI.UpdateLabelScripter()
+    disableTimer("StupidDps")
   end
   UI[UI.CurrentExtras]:show()
   UI[UI.CurrentExtras .. "tab"]:setStyleSheet(UI.ActiveTabStyleSheet)
@@ -10771,7 +10959,7 @@ end</script>
       "; font-size: " ..
       tonumber(SIZE) +
       3 ..
-      "px; font-weight: bold;\"&gt;".. leader .. "'s Party&lt;/span&gt;&lt;/center&gt;",
+      "px; font-weight: bold;\"&gt;".. leader .. " Party&lt;/span&gt;&lt;/center&gt;",
       };
   table.insert(PartyCard, table.concat(PartyCardHead, ""))
 
@@ -10857,6 +11045,7 @@ end</script>
   table.insert(PartyCard, table.concat(PartyEndCard, ""))
 
   echo("UI.Party", table.concat(PartyCard, ""))
+  enableTimer("StupidDps")
 end</script>
 					<eventHandlerList />
 				</Script>
@@ -10912,13 +11101,13 @@ end</script>
     sixtydamageDealt, sixtystrikes, sixtydps, sixtydamageTaken, sixtyhits, sixtydph = UI.DPSCalc(3600)
 
 
-    minuteexp = expPerTerm(3600)
+    minuteexp = expPerTerm(60)
     minutedings = math.floor(tonumber(minuteexp) / 100000)
 		if not minuteexp then
 			minuteexp = 0
 			minutedings = 0
 		end
-    tenexp = expPerTerm(3600)
+    tenexp = expPerTerm(600)
     tendings = math.floor(tonumber(tenexp) / 100000)
 		if not tenexp then
 			tenexp = 0
@@ -14350,7 +14539,7 @@ end</script>
 			<Script isActive="no" isFolder="no">
 				<name>uiLauncher</name>
 				<packageName></packageName>
-				<script>version = "2.0.0.6"
+				<script>version = "2.0.0.8"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")
