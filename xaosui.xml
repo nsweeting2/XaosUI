@@ -10019,6 +10019,7 @@ function UI.ConfigLoad()
       [[name]],
       [[offense]],
       [[party]],
+			[[qolWithReldi]],
       [[theme]],
       [[traits]],
       [[traitsDetail]],
@@ -14350,7 +14351,7 @@ end</script>
 			<Script isActive="no" isFolder="no">
 				<name>uiLauncher</name>
 				<packageName></packageName>
-				<script>version = "2.0.0.6"
+				<script>version = "2.0.0.7"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")
@@ -14359,7 +14360,7 @@ downloadPath = "https://raw.githubusercontent.com/nsweeting2/XaosUI/master"
 
 files = {[[/boons.lua]], [[/boonsDetail.lua]], [[/casting.lua]], [[/character.lua]],
  	[[/colors.lua]], [[/defenses.lua]],	[[/equipment.lua]],	[[/items.lua]],	[[/name.lua]],
-	[[/offense.lua]], [[/party.lua]],[[/scripter.lua]], [[/theme.lua]], [[/traits.lua]],
+	[[/offense.lua]], [[/party.lua]], [[/qolWithReldi.lua]], [[/scripter.lua]], [[/theme.lua]], [[/traits.lua]],
 	[[/traitsDetail.lua]], [[/xPrompt.lua]], [[/xaosui.xml]],}
 
 registerAnonymousEventHandler("sysConnectionEvent", "eventHandler")
