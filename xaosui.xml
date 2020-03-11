@@ -8465,7 +8465,7 @@ end</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>catchupFailsafe</name>
 					<script>if scripter.Party == "follow" then
-  expandAlias("catchup")
+  expandAlias("catchup",false)
 end</script>
 					<command></command>
 					<packageName></packageName>
