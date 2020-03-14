@@ -14808,6 +14808,7 @@ end</script>
 					<packageName></packageName>
 					<script>function qolWithReldi.Initialize()
   qolWithReldi.ConfigLoad()
+	qolWithReldi.ShowAll = 	qolWithReldi.ShowAll or false
 end
 
 
@@ -14820,7 +14821,6 @@ function qolWithReldi.ConfigLoad()
     loadError = true
     return
   end
-	qolWithReldi.ShowAll = false
 end</script>
 					<eventHandlerList />
 				</Script>
