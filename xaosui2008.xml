@@ -78,8 +78,8 @@
 							<regexCodeList />
 							<regexCodePropertyList />
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>resolving</name>
-								<script>expandAlias("resolving",false)</script>
+								<name>resolve</name>
+								<script>expandAlias("resolve",false)</script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
 								<mStayOpen>0</mStayOpen>
@@ -204,8 +204,8 @@
 							<regexCodeList />
 							<regexCodePropertyList />
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>berserking</name>
-								<script>expandAlias("Berserking",false)</script>
+								<name>berserk</name>
+								<script>expandAlias("Berserk",false)</script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
 								<mStayOpen>0</mStayOpen>
@@ -249,27 +249,6 @@
 									<integer>1</integer>
 								</regexCodePropertyList>
 							</Trigger>
-							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>berserker</name>
-								<script>expandAlias("Berserking",false)
-</script>
-								<triggerType>0</triggerType>
-								<conditonLineDelta>0</conditonLineDelta>
-								<mStayOpen>0</mStayOpen>
-								<mCommand></mCommand>
-								<packageName></packageName>
-								<mFgColor>#00aaff</mFgColor>
-								<mBgColor>#000000</mBgColor>
-								<mSoundFile></mSoundFile>
-								<colorTriggerFgColor>#000000</colorTriggerFgColor>
-								<colorTriggerBgColor>#000000</colorTriggerBgColor>
-								<regexCodeList>
-									<string>Your pulse races as you are consumed by rage!$</string>
-								</regexCodeList>
-								<regexCodePropertyList>
-									<integer>1</integer>
-								</regexCodePropertyList>
-							</Trigger>
 						</TriggerGroup>
 						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>qolCenter</name>
@@ -287,8 +266,8 @@
 							<regexCodeList />
 							<regexCodePropertyList />
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>centering</name>
-								<script>expandAlias("centering", false)
+								<name>center</name>
+								<script>expandAlias("center", false)
 </script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
@@ -346,8 +325,8 @@
 							<regexCodeList />
 							<regexCodePropertyList />
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-								<name>warcrying</name>
-								<script>expandAlias("Warcrying", false)</script>
+								<name>warcry</name>
+								<script>expandAlias("Warcry", false)</script>
 								<triggerType>0</triggerType>
 								<conditonLineDelta>0</conditonLineDelta>
 								<mStayOpen>0</mStayOpen>
@@ -860,7 +839,7 @@
 							<name>Asked for Heal</name>
 							<script>--You can change the healVar with the alias.
 			local target = matches[2]
-			local healVar = qolWithReldi.healword or "heal"
+			local healVar = qolWithReldi.healWord or "heal"
 			local theText = "C " .. healVar .." " .. target
 			send (theText)</script>
 							<triggerType>0</triggerType>
@@ -1378,24 +1357,15 @@ command = "notMeh"</script>
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>is here!</name>
-						<script>local extras = tostring(UI.CurrentExtras)
-local boolVar =  qolWithReldi.ShowAll
-if string.lower(tostring(scripter.Party)) == "follow" then
-  send("bclear",boolVar)
+						<script>if scripter.Party == "follow" then
+  disableTimer("hunt")
   scripter.On = false
-  killTimer(nextHunt)
-  disableTimer(hunt)
-	killTimer(catchupLeave)
-	killTimer(catchupLeave2)
-	killTimer(catchupLeft)
-  killTimer(dirTimer)
-	killTimer(catchup)
-elseif scripter.On and scripter.Kill then
-  send("kill " .. scripter.Target, boolVar)
-end
-  if extras == "Scripter" then
+  if tostring(UI.CurrentExtras) == "Scripter" then
     UI.UpdateLabelScripter()
-  end</script>
+  end
+elseif scripter.On and scripter.Kill then
+  send("kill " .. scripter.Target)
+end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -1415,13 +1385,10 @@ end
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>is direction from here</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-if scripter.On then
-  scripter.dir = matches[3]
-  --send(scripter.dir,boolVar)
-  dirTimer = tempTimer(0.5, [[send(scripter.dir, ]].. tostring(boolVar)..[[)]])
-end
-</script>
+						<script>if scripter.On then
+  local dir = matches[3]
+  send(dir,false)
+end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -1457,12 +1424,10 @@ end
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>disarmed</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
---]].. tostring(boolVar)..[[)]]
-ncom("Disarm detected, attempting to wield " .. scripter.Disarm)
+						<script>ncom("Disarm detected, attempting to wield " .. scripter.Disarm)
 feedManager("You were disarmed")
 for i = 1, 5 do
-  tempTimer(i, [[send("wield " .. scripter.Disarm,]].. tostring(boolVar)..[[)]])
+  tempTimer(i, [[send("wield " .. scripter.Disarm)]])
 end</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
@@ -1651,13 +1616,12 @@ disableTrigger("emergencyaction arg")</script>
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>skinning and butcher</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-if scripter.on then
+						<script>if scripter.on then
   if scripter.Butcher then
-    send("butcher cor", boolVar)
+    send("butcher cor")
   end
   if scripter.Skin then
-    send("skin cor", boolVar)
+    send("skin cor")
   end
 end</script>
 						<triggerType>0</triggerType>
@@ -2037,16 +2001,15 @@ end</script>
 					<regexCodePropertyList />
 					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party request</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local pc = matches[2]
+						<script>local pc = matches[2]
 if scripter.Party == "lead"  then
-  send("party invite " .. pc, boolVar)
+  send("party invite " .. pc)
   feedManager("You invited " .. pc .. " to your party")
 end
 
 if scripter.Party == "open"  then
-  send("party form", boolVar)
-  send("party invite " .. pc, boolVar)
+  send("party form")
+  send("party invite " .. pc)
   feedManager("You invited " .. pc .. " to your party")
   scripter.Party = "lead"
 end</script>
@@ -2069,10 +2032,9 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party offer</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local pc = matches[2]
+						<script>local pc = matches[2]
 if scripter.Party == "open" then
-  send("party join " .. pc, boolVar)
+  send("party join " .. pc)
   feedManager(pc .. " has invited you to their party")
   scripter.Party = "follow"
 end</script>
@@ -2095,16 +2057,15 @@ end</script>
 					</Trigger>
 					<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party follow</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local pc = matches[2]
+						<script>local pc = matches[2]
 if scripter.Party == "lead" then
-  send("party invite " .. pc, boolVar)
+  send("party invite " .. pc)
   feedManager("You invited " .. pc .. " to your party")
 end
 
 if scripter.Party == "open"  then
   send("party form")
-  send("party invite " .. pc, BoolVar)
+  send("party invite " .. pc)
   feedManager("You invited " .. pc .. " to your party")
   scripter.Party = "lead"
 end</script>
@@ -2127,10 +2088,9 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>party beckon</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local pc = matches[2]
+						<script>local pc = matches[2]
 if scripter.Party == "open" then
-  send("follow " .. pc, boolVar)
+  send("follow " .. pc)
   feedManager(pc .. " has asked you to follow")
   scripter.Party = "follow"
 end</script>
@@ -2254,11 +2214,10 @@ killTimer("nextHunt")</script>
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>catchup</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local leaver = matches[2]
+						<script>local leaver = matches[2]
 if string.lower(leaver) == string.lower(scripter.Leader) then
 	scripter.dir = matches[4]
-	catchupLeave2 = tempTimer(tonumber(scripter.Rate-1.5), [[send(scripter.dir,]].. tostring(boolVar)..[[)]])
+	catchupLeave2 = tempTimer(tonumber(scripter.Rate-1), [[send(scripter.dir)]])
 	catchupLeave = tempTimer(scripter.Rate,[[expandAlias("catchup",false)]])
 end</script>
 						<triggerType>0</triggerType>
@@ -2287,9 +2246,6 @@ if string.lower(arriver) == string.lower(scripter.Leader) then
 		killTimer(catchupLeave2)
 		killTimer(catchUpLeft)
 		killTimer(catchup)
-    killTimer(dirTimer)
-    killTimer(nextHunt)
-    disableTimer(hunt)
     scripter.On = false
     if tostring(UI.CurrentExtras) == "Scripter" then
       UI.UpdateLabelScripter()
@@ -2323,13 +2279,11 @@ if party == "follow" then
 	killTimer(catchupLeave2)
 	killTimer(catchupLeft)
 	killTimer(catchup)
-  killTimer(dirTimer)
-  killTimer(nextHunt)
-  disableTimer(hunt)
-  scripter.On = false
 	if scripter.Kill then
 		scripter.Kill = false
 	end
+  scripter.On = false
+  rcom(scripter.Leader)
   if tostring(UI.CurrentExtras) == "Scripter" then
     UI.UpdateLabelScripter()
   end
@@ -2360,13 +2314,8 @@ end</script>
 	killTimer(catchupLeave)
 	killTimer(catchupLeave2)
 	killTimer(catchupLeft)
-  killTimer(dirTimer)
 	killTimer(catchup)
-  killTimet(dirTimer)
-  disableTimer(hunt)
-  killTimer(nextHunt)
   scripter.On = false
-
   if tostring(UI.CurrentExtras) == "Scripter" then
     UI.UpdateLabelScripter()
   end
@@ -2390,12 +2339,11 @@ end</script>
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>left behind</name>
-						<script>local boolVar =  qolWithReldi.ShowAll
-local person = tostring(matches[2])
+						<script>local person = tostring(matches[2])
 killTimer(catchupLeave2)
 if scripter.Party == "follow" then
   if scripter.Leader == person then
-    send(scripter.dir,boolVar)
+    send(scripter.dir,false)
     killTimer(catchupLeave)
     catchupLeft = tempTimer(1, [[expandAlias("catchup", false)]])
   end
@@ -8185,11 +8133,10 @@ end</script>
 --it is activated by the timer atQuestmaster.
 
 --cecho("\n&lt;:red&gt;&lt;black&gt;getNewQuests Timer\n")
-local boolVar =  qolWithReldi.ShowAll
 
 enableTrigger("newQuests")
 
-send("Quest List All", boolVar)
+send("Quest List All")
 
 disableTimer("newQuests")</script>
 					<command></command>
@@ -8202,10 +8149,10 @@ disableTimer("newQuests")</script>
 --it is activated by the timer atQuestmaster.
 
 --cecho("\n&lt;:red&gt;&lt;black&gt;updateQuests Timer\n")
-local boolVar =  qolWithReldi.ShowAll
+
 enableTrigger("updateQuests")
 
-send("Quest Current", boolVar)
+send("Quest Current")
 
 disableTimer("updateQuests")</script>
 					<command></command>
@@ -8218,9 +8165,9 @@ disableTimer("updateQuests")</script>
 --it is activated by the timer atQuestmaster.
 
 --cecho("&lt;:red&gt;&lt;black&gt;completeQuests Timer")
-local boolVar =  qolWithReldi.ShowAll
+
 for i=1, #questing.QuestsCompleted do
-	send("Quest complete " ..questing.QuestsCompleted[i], boolVar)
+	send("Quest complete " ..questing.QuestsCompleted[i])
 
 end
 
@@ -8259,21 +8206,20 @@ disableTimer("atQuestmaster")</script>
 				<time>00:00:00.000</time>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>qolFailsafe</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-if qolWithReldi.Resolving then
-  expandAlias("resolve",boolVar)
+					<script>if qolWithReldi.Resolving then
+  expandAlias("resolve",false)
 end
 if qolWithReldi.Trancing then
-  expandAlias("trance",boolVar)
+  expandAlias("trance",false)
 end
 if qolWithReldi.Berserking then
-  expandAlias("berserk",boolVar)
+  expandAlias("berserk",false)
 end
 if qolWithReldi.Centering then
-  expandAlias("center",boolVar)
+  expandAlias("center",false)
 end
 if qolWithReldi.Warcrying then
-  expandAlias("warcry",boolVar)
+  expandAlias("warcry",false)
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -8292,7 +8238,7 @@ end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.000</time>
-					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>OOCFlash</name>
 						<script>UI.OOCtab:flash()</script>
 						<command></command>
@@ -8328,22 +8274,20 @@ end</script>
 						<time>00:00:02.000</time>
 					</Timer>
 				</TimerGroup>
-				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>StupidDataPull</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
---]].. tostring(boolVar)..[[)]]
-if loggedin then
+					<script>if loggedin then
   gagmode = true
   tempTimer(
     .5,
     [[
-	send("Score",]].. tostring(boolVar)..[[)
-	send("Effects",]].. tostring(boolVar)..[[)
-	send("Affects",]].. tostring(boolVar)..[[)
-	send("Equip", ]].. tostring(boolVar)..[[)
-	send("Inven", ]].. tostring(boolVar)..[[)
-	send("hero empower", ]].. tostring(boolVar)..[[)
-	send("Party", ]].. tostring(boolVar)..[[)
+	send("Score",false)
+	send("Effects",false)
+	send("Affects",false)
+	send("Equip", false)
+	send("Inven", false)
+	send("hero empower", false)
+	send("Party",false)
 ]]
   )
   tempTimer(7, [[gagmode = false]])
@@ -8445,9 +8389,8 @@ end</script>
 				<time>00:00:00.000</time>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>Soup</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-if scripter.Soup == true then
-	send("drink soup", boolVar)
+					<script>if scripter.Soup == true then
+	send("drink soup")
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -8455,8 +8398,7 @@ end</script>
 				</Timer>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>hunt</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-local threshold = scripter.Threshold
+					<script>local threshold = scripter.Threshold
 local currentHP = xPrompt.hp
 local currentMana = xPrompt.mana
 local rate = tonumber(scripter.Rate) - 2
@@ -8467,7 +8409,7 @@ if not combat then
 		if tonumber(currentHP) &gt;= tonumber(threshold) then
       tempVar = true
       if tonumber(currentMana)&gt;= tonumber(threshold)/2 then
-        send("hunt " .. target, boolVar)
+        send("hunt " .. target, false)
       end
 		else
       if tempVar then
@@ -8503,18 +8445,17 @@ tempTimer(rate,[[enableTimer("offauto")]])</script>
 				</Timer>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>pledge</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-local pledge = scripter.Pledge or "none"
+					<script>local pledge = scripter.Pledge or "none"
 if scripter.On and tostring(pledge) ~= "none" then
   if string.lower(tostring(pledge)) == "yakone" then
     local mana = xPrompt.mana
     if mana &gt; 60 then
-      send("cast resan", boolVar)
+      send("cast resan")
     else
-      send("cast renovi", boolVar)
+      send("cast renovi")
     end
   else
-  send("cast " .. pledge, boolVar)
+  send("cast " .. pledge)
   end
 end</script>
 					<command></command>
@@ -8524,7 +8465,7 @@ end</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>catchupFailsafe</name>
 					<script>if scripter.Party == "follow" then
-  expandAlias("catchup", false)
+  expandAlias("catchup",false)
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -8646,18 +8587,17 @@ ncom("UI data and configuration has been loaded")</script>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
 					<name>UIForce</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-gagmode = true
+					<script>gagmode = true
 tempTimer(
   .5,
   [[
-	send("Score",]].. tostring(boolVar)..[[)
-	send("Effects",]].. tostring(boolVar)..[[)
-	send("Affects",]].. tostring(boolVar)..[[)
-	send("Equip", ]].. tostring(boolVar)..[[)
-	send("Inven", ]].. tostring(boolVar)..[[)
-	send("hero empower",]].. tostring(boolVar)..[[)
-	send("Party",]].. tostring(boolVar)..[[)
+	send("Score",false)
+	send("Effects",false)
+	send("Affects",false)
+	send("Equip", false)
+	send("Inven", false)
+	send("hero empower", false)
+	send("Party",false)
 ]]
 )
 tempTimer(5, [[gagmode = false]])
@@ -9499,7 +9439,6 @@ if string.lower(Party) == "follow" then
     scripter.On = true
   end
   if string.lower(scripterTarget) == "none" then
-    scripter.Rate = 3
     scripter.Target = partyLeader
   end
   if scripter.Kill then
@@ -9540,34 +9479,28 @@ end</script>
 							<packageName></packageName>
 							<regex></regex>
 							<Alias isActive="yes" isFolder="no">
-								<name>resolving</name>
-								<script>local party = scripter.Party
-local boolVar =  qolWithReldi.ShowAll
-if party == "follow" then
-  if combat then
-    send("resolve",boolVar)
-  else
-    resolveTimer = tempTimer(1, [[expandAlias("resolving",false)]])
-  end
+								<name>resolve</name>
+								<script>if combat then
+  send("resolve",false)
 else
-  send("resolve",boolVar)
+  resolveTimer = tempTimer(1, [[expandAlias("resolve",false)]])
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(R|r)(E|e)(S|s)(O|o)(L|l)(V|v)(I|i)(N|n)(G|g)$</regex>
+								<regex>^(R|r)(E|e)(S|s)(O|o)(L|l)(V|v)(E|e)$</regex>
 							</Alias>
 							<Alias isActive="yes" isFolder="no">
-								<name>resolving arg</name>
-								<script>local arg = string.lower(tostring(matches[11]))
+								<name>resolve arg</name>
+								<script>local arg = string.lower(tostring(matches[9]))
 if arg == "on" then
-  enableAlias("resolving")
+  enableAlias("resolve")
   enableTimer("qolFailsafe")
-  enableTrigger("resolving")
+  enableTrigger("resolve")
   rcom("Auto resolve is now &lt;white&gt;On")
   feedManager("Auto resolve is now &lt;white&gt;On")
   qolWithReldi.Resolving = true
 elseif arg == "off" then
-  disableAlias("resolving")
+  disableAlias("resolve")
   rcom("Auto resolve is now &lt;white&gt;Off")
   feedManager("Auto resolve is now &lt;white&gt;Off")
   qolWithReldi.Resolving = false
@@ -9578,7 +9511,7 @@ else
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(R|r)(E|e)(S|s)(O|o)(L|l)(V|v)(I|i)(N|n)(G|g)\s(\w+)$</regex>
+								<regex>^(R|r)(E|e)(S|s)(O|o)(L|l)(V|v)(E|e)\s(\w+)$</regex>
 							</Alias>
 						</AliasGroup>
 					</AliasGroup>
@@ -9595,35 +9528,26 @@ end</script>
 							<packageName></packageName>
 							<regex></regex>
 							<Alias isActive="no" isFolder="no">
-								<name>trancing</name>
-								<script>local party = scripter.Party
-local boolVar =  qolWithReldi.ShowAll
-if party == "follow" then
-  if combat then
-    send("trance",boolVar)
-  else
-    tranceTimer = tempTimer(1, [[expandAlias("trancing",false]])
-  end
-else
-  send("trance",boolVar)
-end</script>
+								<name>trance</name>
+								<script>  send("trance",false)
+</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(T|t)(R|r)(A|a)(N|n)(C|c)(I|i)(N|n)(G|g)$</regex>
+								<regex>^(T|t)(R|r)(A|a)(N|n)(C|c)(E|e)$</regex>
 							</Alias>
 							<Alias isActive="yes" isFolder="no">
-								<name>trancing arg</name>
-								<script>local arg = tostring(string.lower(matches[10]))
+								<name>trance arg</name>
+								<script>local arg = tostring(string.lower(matches[8]))
 if arg == "on" then
-  enableAlias("trancing")
+  enableAlias("trance")
   enableTimer("qolFailsafe")
-  enableTrigger("trancing")
+  enableTrigger("trance")
   rcom("Auto trance is now &lt;white&gt;On")
   feedManager("Auto trance is now &lt;white&gt;On")
   qolWithReldi.Trancing = true
 elseif arg == "off" then
-  disableAlias("trancing")
-  disableTrigger("trancing")
+  disableAlias("trance")
+  disableTrigger("trance")
   rcom("Auto trance is now &lt;white&gt;Off")
   feedManager("Auto trance is now &lt;white&gt;Off")
   qolWithReldi.Trancing = false
@@ -9634,7 +9558,7 @@ else
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(T|t)(R|r)(A|a)(N|n)(C|c)(I|i)(N|n)(G|g)\s(\w+)$</regex>
+								<regex>^(T|t)(R|r)(A|a)(N|n)(C|c)(E|e)\s(\w+)$</regex>
 							</Alias>
 						</AliasGroup>
 					</AliasGroup>
@@ -9651,44 +9575,36 @@ end</script>
 							<packageName></packageName>
 							<regex></regex>
 							<Alias isActive="yes" isFolder="no">
-								<name>berserking</name>
-								<script>local party = scripter.Party
-local boolVar =  qolWithReldi.ShowAll
-if party == "follow" then
-  if combat then
-    send("berserk",boolVar)
+								<name>berserk</name>
+								<script>if combat then
+local class = string.lower(tostring(UI.name.Class))
+local berserker = string.find(class, "berserker")
+  if berserker then
+  send("berserk", false)
+  send("berserk", false)
   else
-    berserkTimer = tempTimer(1, [[expandAlias("berserking",false]])
+  send("berserk",false)
   end
 else
-  send("berserk",boolVar)
+  berserkTimer = tempTimer(1, [[expandAlias("berserk",false)]])
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(B|b)(E|e)(R|r)(S|s)(E|e)(R|r)(K|k)(I|i)(N|n)(G|g)$</regex>
+								<regex>^(B|b)(E|e)(R|r)(S|s)(E|e)(R|r)(K|k)$</regex>
 							</Alias>
 							<Alias isActive="yes" isFolder="no">
-								<name>berserking arg</name>
-								<script>local arg = tostring(string.lower(matches[12]))
-local Berserker = false
-local class = tostring(string.lower(UI.name.Class))
-if string.match(class, "berserker") then
-  Berserker = true
-end
+								<name>berserk arg</name>
+								<script>local arg = tostring(string.lower(matches[9]))
 if arg == "on" then
-  enableAlias("berserking")
+  enableAlias("berserk")
   enableTimer("qolFailsafe")
-  enableTrigger("berserking")
-  if Berserker then
-    enableTrigger("berserker")
-  end
+  enableTrigger("berserk")
   rcom("Auto berserk is now &lt;white&gt;On")
   feedManager("Auto berserk is now &lt;white&gt;On")
   qolWithReldi.Berserking = true
 elseif arg == "off" then
-  disableAlias("berserking")
-  disableTrigger("berserking")
-  disableTrigger("berserker")
+  disableAlias("berserk")
+  disableTrigger("berserk")
   rcom("Auto berserk is now &lt;white&gt;Off")
   feedManager("Auto berserk is now &lt;white&gt;Off")
   qolWithReldi.Berserking = false
@@ -9699,7 +9615,7 @@ else
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(B|b)(E|e)(R|r)(S|s)(E|e)(R|r)(K|k)(I|i)(N|n)(G|g)\s(\w+)$</regex>
+								<regex>^(B|b)(E|e)(R|r)(S|s)(E|e)(R|r)(K|k)\s(\w+)$</regex>
 							</Alias>
 						</AliasGroup>
 						<AliasGroup isActive="yes" isFolder="yes">
@@ -9709,30 +9625,29 @@ end</script>
 							<packageName></packageName>
 							<regex></regex>
 							<Alias isActive="yes" isFolder="no">
-								<name>centering</name>
-								<script>local boolVar =  qolWithReldi.ShowAll
-if not combat then
-  send("center", boolVar)
+								<name>center</name>
+								<script>if not combat then
+  send("center",false)
 else
-  centerTimer = tempTimer(1, [[expandAlias("centering",false]])
+  centerTimer = tempTimer(1, [[expandAlias("center",false)]])
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(C|c)(E|e)(N|n)(T|t)(E|e)(R|r)(I|i)(N|n)(G|g)$</regex>
+								<regex>^(C|c)(E|e)(N|n)(T|t)(E|e)(R|r)$</regex>
 							</Alias>
 							<Alias isActive="yes" isFolder="no">
-								<name>centering arg</name>
-								<script>local arg = tostring(string.lower(matches[11]))
+								<name>center arg</name>
+								<script>local arg = tostring(string.lower(matches[8]))
 if arg == "on" then
-  enableAlias("centering")
+  enableAlias("center")
   enableTimer("qolFailsafe")
-  enableTrigger("centering")
+  enableTrigger("center")
   rcom("Auto center is now &lt;white&gt;On")
   feedManager("Auto center is now &lt;white&gt;On")
   qolWithReldi.Centering = true
 elseif arg == "off" then
-  disableAlias("centering")
-  disableTrigger("centering")
+  disableAlias("center")
+  disableTrigger("center")
   rcom("Auto center is now &lt;white&gt;Off")
   feedManager("Auto center is now &lt;white&gt;Off")
   qolWithReldi.Centering = false
@@ -9743,7 +9658,7 @@ else
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(C|c)(E|e)(N|n)(T|t)(E|e)(R|r)(I|i)(N|n)(G|g)\s(\w+)$</regex>
+								<regex>^(C|c)(E|e)(N|n)(T|t)(E|e)(R|r)\s(\w+)$</regex>
 							</Alias>
 						</AliasGroup>
 						<AliasGroup isActive="yes" isFolder="yes">
@@ -9753,38 +9668,58 @@ end</script>
 							<packageName></packageName>
 							<regex></regex>
 							<Alias isActive="yes" isFolder="no">
-								<name>warcrying</name>
-								<script>local boolVar =  qolWithReldi.ShowAll
-local party = scripter.Party
-if party == "follow" then
-  if combat then
-    local arg = qolWithReldi.Warcry
-    if string.lower(arg) ~= "none" then
-      send("warcry "..arg,boolVar)
-    else
-      send("warcry",boolVar)
-    end
+								<name>warcry</name>
+								<script>if combat then
+  local arg = qolWithReldi.Warcry
+  if string.lower(arg) ~= "none" then
+    send("warcry "..arg,false)
   else
-    warcryTimer = tempTimer(1, [[expandAlias("warcrying",false]])
+    send("warcry",false)
   end
+else
+  warcryTimer = tempTimer(1, [[expandAlias("warcry",false)]])
 end</script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(I|i)(N|n)(G|g)$</regex>
+								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)$</regex>
+							</Alias>
+							<Alias isActive="no" isFolder="no">
+								<name>warcry off</name>
+								<script>disableAlias("warcry")
+disableAlias("warcry arg")
+disableTrigger("warcry")
+rcom("Auto warcry is now &lt;white&gt;Off")
+feedManager("Auto warcry is now &lt;white&gt;Off")
+qolWithReldi.Warcrying = false</script>
+								<command></command>
+								<packageName></packageName>
+								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(O|o)(F|f)(F|f)$</regex>
+							</Alias>
+							<Alias isActive="no" isFolder="no">
+								<name>warcry on</name>
+								<script>enableAlias("warcry")
+enableAlias("warcry arg")
+enableTrigger("warcry")
+rcom("Auto warcry is now &lt;white&gt;On")
+feedManager("Auto warcry is now &lt;white&gt;On")
+qolWithReldi.Warcrying = true</script>
+								<command></command>
+								<packageName></packageName>
+								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(O|o)(N|n)$</regex>
 							</Alias>
 							<Alias isActive="yes" isFolder="no">
-								<name>warcrying arg</name>
-								<script>local arg = tostring(matches[11])
+								<name>warcry arg</name>
+								<script>local arg = tostring(matches[8])
 if string.lower(arg) == "off" then
-  disableAlias("warcrying")
-  disableTrigger("warcrying")
+  disableAlias("warcry")
+  disableTrigger("warcry")
   rcom("Auto warcry is now &lt;white&gt;Off")
   feedManager("Auto warcry is now &lt;white&gt;Off")
   qolWithReldi.Warcrying = false
 elseif string.lower(arg) == "on" then
-  enableAlias("warcrying")
+  enableAlias("warcry")
   enableTimer("qolFailsafe")
-  enableTrigger("warcrying")
+  enableTrigger("warcry")
   rcom("Auto warcry is now &lt;white&gt;On")
   feedManager("Auto warcry is now &lt;white&gt;On")
   qolWithReldi.Warcrying = true
@@ -9804,7 +9739,7 @@ end
 </script>
 								<command></command>
 								<packageName></packageName>
-								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)(I|i)(N|n)(G|g)\s(\w+)$</regex>
+								<regex>^(W|w)(A|a)(R|r)(C|c)(R|r)(Y|y)\s(\w+)$</regex>
 							</Alias>
 						</AliasGroup>
 					</AliasGroup>
@@ -9819,9 +9754,8 @@ end
 						<name>QuestComplete</name>
 						<script>--This trigger will try to complete all quests it can.
 --Syntax: "QuestComplete"
-local boolVar =  qolWithReldi.ShowAll
 for i=1, #questing.QuestsCompleted do
-	send("Quest complete " ..questing.QuestsCompleted[i], boolVar)
+	send("Quest complete " ..questing.QuestsCompleted[i])
 
 end</script>
 						<command></command>
@@ -9839,12 +9773,11 @@ end</script>
 							<script>--This trigger will try to empower the argument five (5) times.
 --Syntax: "HeroEmpowerment arg"
 local empower = matches[17]
-local boolVar =  qolWithReldi.ShowAll
 for i = 1,5 do
-	send("hero empower "..empower, boolVar)
+	send("hero empower "..empower)
 end
 
-send("hero empower", boolVar)</script>
+send("hero empower")</script>
 							<command></command>
 							<packageName></packageName>
 							<regex>^(H|h)(E|e)(R|r)(O|o)(E|e)(M|m)(P|p)(O|o)(W|w)(E|e)(R|r)(M|m)(E|e)(N|n)(T|t)\s(.*)$</regex>
@@ -9861,37 +9794,6 @@ rcom(
 							<regex>^(H|h)(E|e)(R|r)(O|o)(E|e)(M|m)(P|p)(O|o)(W|w)(E|e)(R|r)(M|m)(E|e)(N|n)(T|t)$</regex>
 						</Alias>
 					</AliasGroup>
-					<Alias isActive="yes" isFolder="no">
-						<name>showall arg</name>
-						<script>local arg = string.lower(tostring(matches[9]))
-if arg == "on" then
-  rcom("Showing all commands sent by the UI")
-  feedManager("Showing all commands sent by the UI")
-  qolWithReldi.ShowAll = true
-elseif arg == "off" then
-  rcom("Hiding all commands sent by the UI")
-  feedManager("Hiding all commands sent by the UI")
-  qolWithReldi.ShowAll = false
-else
-  rcom(
-    "Syntax: &lt;white&gt;Showall &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;This will show or hide all commands automatically sent to the mud by the UI."
-  )
-end</script>
-						<command></command>
-						<packageName></packageName>
-						<regex>^(S|s)(H|h)(O|o)(W|w)(A|a)(L|l)(L|l)\s{0,1}(\w+)$</regex>
-					</Alias>
-					<Alias isActive="yes" isFolder="no">
-						<name>qolHelp</name>
-						<script>local message =
-  [[QOL commands: &lt;white&gt;Resolving&lt;DarkSlateGrey&gt;, &lt;white&gt;Trancing&lt;DarkSlateGrey&gt;, &lt;white&gt;Berserking&lt;DarkSlateGrey&gt;, &lt;white&gt;Centering&lt;DarkSlateGrey&gt;, &lt;white&gt;Warcrying&lt;DarkSlateGrey&gt;,
-            &lt;white&gt;PartyHeal&lt;DarkSlateGrey&gt;, &lt;white&gt;PartyHealWord&lt;DarkSlateGrey&gt;, &lt;white&gt;PartyGuard&lt;DarkSlateGrey&gt;, &lt;white&gt;PartyRescue&lt;DarkSlateGrey&gt;, &lt;white&gt;QuestComplete
-            &lt;white&gt;HeroEmpowerment&lt;DarkSlateGrey&gt;, &lt;white&gt;ShowAll&lt;DarkSlateGrey&gt;, and &lt;white&gt;QOLHelp]]
-rcom(message)</script>
-						<command></command>
-						<packageName></packageName>
-						<regex>^(q|Q)(o|O)(l|L)\s{0,1}(h|H)(e|E)(l|L)(p|P)$</regex>
-					</Alias>
 				</AliasGroup>
 				<AliasGroup isActive="yes" isFolder="yes">
 					<name>party</name>
@@ -9912,12 +9814,10 @@ if arg == "on" then
   enableTrigger("partyguard")
   rcom("You will now attempt to guard when asked.")
   feedManager("You will now attempt to guard when asked.")
-  qolWithReldi.partyguard = "On"
 elseif arg == "off" then
   disableTrigger("partyguard")
   rcom("You will no longer attempt to guard when asked.")
   feedManager("You will no longer attempt to guard when asked.")
-  qolWithReldi.partyguard = "Off"
 else
   rcom(
     "Syntax: &lt;white&gt;PartyGuard &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;Toggles whether or not you will attemtpt to guard."
@@ -9925,7 +9825,7 @@ else
 end</script>
 							<command></command>
 							<packageName></packageName>
-							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(G|g)(U|u)(A|a)(R|r)(D|d)\s{0,1}(\w+)$</regex>
+							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(G|g)(U|u)(A|a)(R|r)(D|d)\s(\w+)$</regex>
 						</Alias>
 					</AliasGroup>
 					<AliasGroup isActive="yes" isFolder="yes">
@@ -9938,15 +9838,15 @@ end</script>
 							<name>partyheal arg</name>
 							<script>local arg = tostring(string.lower(matches[11]))
 if arg == "on" then
+  enableTimer("partyheal")
   enableTrigger("partyheal")
   rcom("You will now attempt to heal when asked.")
   feedManager("You will now attempt to heal when asked.")
-  qolWithReldi.partyheal = "On"
 elseif arg == "off" then
+  disableTimer("partyheal")
   disableTrigger("partyheal")
   rcom("You will no longer attempt to heal when asked.")
   feedManager("You will no longer attempt to heal when asked.")
-  qolWithReldi.partyheal = "Off"
 else
   rcom(
     "Syntax: &lt;white&gt;PartyHeal &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;Toggles whether or not you will attemtpt to heal.\n            &lt;DarkSlateGrey&gt;Use &lt;white&gt;PartyHealWord Arg&lt;DarkSlateGrey&gt; to modify the spell attempted."
@@ -9954,7 +9854,7 @@ else
 end</script>
 							<command></command>
 							<packageName></packageName>
-							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)\s{0,1}(\w+)$</regex>
+							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)\s(\w+)$</regex>
 						</Alias>
 						<Alias isActive="yes" isFolder="no">
 							<name>partyhealword arg</name>
@@ -9964,17 +9864,17 @@ if arg == "reset" or arg == "heal"then
   arg = "heal"
   rcom("You new heal word is " ..arg..".")
   feedManager("You new heal word is " ..arg..".")
-  qolWithReldi.healword = arg
+  qolWithReldi.HealWord = arg
 elseif arg == "revitalize" then
   arg = "revitalize"
   rcom("You new heal word is " ..arg..".")
   feedManager("You new heal word is " ..arg..".")
-  qolWithReldi.healword = arg
+  qolWithReldi.HealWord = arg
 elseif arg == "mend" then
   arg = "mend"
   rcom("You new heal word is " ..arg..".")
   feedManager("You new heal word is " ..arg..".")
-  qolWithReldi.healword = arg
+  qolWithReldi.HealWord = arg
 else
   Change = false
   rcom(
@@ -9984,7 +9884,7 @@ end
 </script>
 							<command></command>
 							<packageName></packageName>
-							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)(W|w)(O|o)(R|r)(D|d)\s{0,1}(\w+)$</regex>
+							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)(W|w)(O|o)(R|r)(D|d)\s(\w+)$</regex>
 						</Alias>
 					</AliasGroup>
 					<AliasGroup isActive="yes" isFolder="yes">
@@ -9994,26 +9894,56 @@ end
 						<packageName></packageName>
 						<regex></regex>
 						<Alias isActive="yes" isFolder="no">
-							<name>partyrescue arg</name>
-							<script>local arg = tostring(string.lower(matches[13]))
+							<name>partyheal arg</name>
+							<script>local arg = tostring(string.lower(matches[11]))
 if arg == "on" then
-  enableTrigger("partyrescue")
-  rcom("You will now attempt to rescue when asked.")
-  feedManager("You will now attempt to rescue when asked.")
-  qolWithReldi.partyrescue = "On"
+  enableTimer("partyheal")
+  enableTrigger("partyheal")
+  rcom("You will now attempt to heal when asked.")
+  feedManager("You will now attempt to heal when asked.")
 elseif arg == "off" then
-  disableTrigger("partyrescue")
-  rcom("You will no longer attempt to rescue when asked.")
-  feedManager("You will no longer attempt to rescue when asked.")
-  qolWithReldi.partypescue = "Off"
+  disableTimer("partyheal")
+  disableTrigger("partyheal")
+  rcom("You will no longer attempt to heal when asked.")
+  feedManager("You will no longer attempt to heal when asked.")
 else
   rcom(
-    "Syntax: &lt;white&gt;PartyRescue &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;Toggles whether or not you will attemtpt to rescue.\n            &lt;DarkSlateGrey&gt;Use &lt;white&gt;PartyHealWord Arg&lt;DarkSlateGrey&gt; to modify the spell attempted."
+    "Syntax: &lt;white&gt;PartyHeal &lt;on|off&gt;\n            &lt;DarkSlateGrey&gt;Toggles whether or not you will attemtpt to heal.\n            &lt;DarkSlateGrey&gt;Use &lt;white&gt;PartyHealWord Arg&lt;DarkSlateGrey&gt; to modify the spell attempted."
   )
 end</script>
 							<command></command>
 							<packageName></packageName>
-							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(R|r)(E|e)(S|s)(C|c)(U|u)(E|e)\s{0,1}(\w+)$</regex>
+							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)\s(\w+)$</regex>
+						</Alias>
+						<Alias isActive="yes" isFolder="no">
+							<name>partyhealword arg</name>
+							<script>local arg = tostring(string.lower(matches[15]))
+local Change = true
+if arg == "reset" or arg == "heal"then
+  arg = "heal"
+  rcom("You new heal word is " ..arg..".")
+  feedManager("You new heal word is " ..arg..".")
+  qolWithReldi.HealWord = arg
+elseif arg == "revitalize" then
+  arg = "revitalize"
+  rcom("You new heal word is " ..arg..".")
+  feedManager("You new heal word is " ..arg..".")
+  qolWithReldi.HealWord = arg
+elseif arg == "mend" then
+  arg = "mend"
+  rcom("You new heal word is " ..arg..".")
+  feedManager("You new heal word is " ..arg..".")
+  qolWithReldi.HealWord = arg
+else
+  Change = false
+  rcom(
+    "Syntax: &lt;white&gt;PartyHealWord &lt;Heal|Mend|Revitalize|Reset&gt;."
+  )
+end
+</script>
+							<command></command>
+							<packageName></packageName>
+							<regex>^(P|p)(A|a)(R|r)(T|t)(Y|y)(H|h)(E|e)(A|a)(L|l)(W|w)(O|o)(R|r)(D|d)\s(\w+)$</regex>
 						</Alias>
 					</AliasGroup>
 				</AliasGroup>
@@ -10072,6 +10002,7 @@ end</script>
 			</AliasGroup>
 		</AliasGroup>
 	</AliasPackage>
+	<ActionPackage />
 	<ScriptPackage>
 		<ScriptGroup isActive="yes" isFolder="yes">
 			<name>xaosui</name>
@@ -10633,7 +10564,7 @@ end</script>
 					<name>UI.UIExtras</name>
 					<packageName></packageName>
 					<script>function UI.UIExtras()
-  UI.ExtrasTabs = {"Feed", "Damage", "Party", "Questing", "QOL", "Scripter"}
+  UI.ExtrasTabs = {"Feed", "Damage", "Party", "Questing", "Scripter"}
   UI.CurrentExtras = UI.CurrentExtras or UI.ExtrasTabs[1]
   UI.ExtrasHeader =
     Geyser.HBox:new(
@@ -10709,9 +10640,6 @@ end</script>
     disableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Questing" then
     --UI.UpdateLabelQuesting()
-    disableTimer("StupidDps")
-  elseif tostring(UI.CurrentExtras) == "QOL" then
-    UI.UpdateLabelQOL()
     disableTimer("StupidDps")
   elseif tostring(UI.CurrentExtras) == "Scripter" then
     UI.UpdateLabelScripter()
@@ -11005,197 +10933,6 @@ end</script>
   table.insert(ScripterCard, table.concat(AutomationCard, ""))
   echo("UI.Scripter", table.concat(ScripterCard, ""))
 end</script>
-					<eventHandlerList />
-				</Script>
-				<Script isActive="no" isFolder="no">
-					<name>UI.UpdateLabelQOL</name>
-					<packageName></packageName>
-					<script>
-function UI.UpdateLabelQOL()
-  if UI.name.Name == "Tim" then
-    return
-  end
-  local C1 = UI.theme.Color2
-  local C2 = UI.theme.Color6
-  local FONT = UI.theme.Font
-  local SIZE = UI.theme.FontSize
-
-  local resolve
-  if qolWithReldi.Resolving then
-    resolve = "on"
-  else
-    resolve = "off"
-  end
-
-  local trance
-  if  qolWithReldi.Trancing then
-    trance ="on"
-  else
-    trance ="off"
-  end
-
-  local berserk
-  if qolWithReldi.Berserking then
-    berserk = "on"
-  else
-    berserk =  "off"
-  end
-
-  local center
-  if qolWithReldi.Centering then
-    center = "on"
-  else
-    center = "off"
-  end
-
-  local warcrying
-  if qolWithReldi.Warcrying then
-    warcrying = "on"
-  else
-    warcrying = "off"
-  end
-
-  local warcry = qolWithReldi.Warcry or "none"
-  local guard = qolWithReldi.partyguard or "off"
-  local rescue = qolWithReldi.partyrescue or "off"
-  local heal = qolWithReldi.partyheal or "off"
-  local healword = qolWithReldi.healword or "off"
-
-
-  local QOLCard = {}
-  local QOLCardCharacterActions =
-     {
-      "&lt;center&gt;&lt;span style=\"color: " ..
-      C2 ..
-      "; Font-family: " ..
-      FONT ..
-      "; font-size: " ..
-      tonumber(SIZE) +
-      2 ..
-      "px; font-weight: bold;\"&gt;Character Auto Actions",
-      "&lt;/span&gt;&lt;/center&gt;",
-      "&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
-      "&lt;tbody style=\"color: " ..
-      C1 ..
-      "; Font-family: " ..
-      FONT ..
-      "; font-size: " ..
-      SIZE ..
-      "px; font-weight: bold;\"&gt;",
-      "&lt;tr&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Resolving&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(resolve) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Trancing&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(trance) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Berserking&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(berserk) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Centering&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(center) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;/tr&gt;",
-       "&lt;tr&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Warcrying&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(warcrying) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Warcry&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      tostring(warcry) ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;/tr&gt;",
-			"&lt;tr&gt;",
-			"&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;",
-			"&lt;/tr&gt;",
-      "&lt;/tbody&gt;",
-      "&lt;/table&gt;&lt;/center&gt;",
-    };
-      local QOLCardPartyActions =
-     {
-      "&lt;center&gt;&lt;span style=\"color: " ..
-      C2 ..
-      "; Font-family: " ..
-      FONT ..
-      "; font-size: " ..
-      tonumber(SIZE) +
-      2 ..
-      "px; font-weight: bold;\"&gt;Party Auto Actions",
-      "&lt;/span&gt;&lt;/center&gt;",
-      "&lt;center&gt;&lt;table style=\"width: 95%;\" &gt;",
-      "&lt;tbody style=\"color: " ..
-      C1 ..
-      "; Font-family: " ..
-      FONT ..
-      "; font-size: " ..
-      SIZE ..
-      "px; font-weight: bold;\"&gt;",
-      "&lt;tr&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Guarding&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      guard ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Rescue&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      rescue ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Heal&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      heal ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;td align=\"center\"&gt;&lt;span style=\"color: " ..
-      C2 ..
-      ";\"&gt;Heal Word&lt;span style=\"color: " ..
-      C1 ..
-      ";\"&gt;:&amp;nbsp;" ..
-      healword ..
-      "&amp;nbsp;&lt;/td&gt;",
-      "&lt;/tr&gt;",
-			"&lt;tr&gt;",
-			"&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;",
-			"&lt;/tr&gt;",
-      "&lt;/tbody&gt;",
-      "&lt;/table&gt;&lt;/center&gt;",
-    };
-
-
-  table.insert(QOLCard, table.concat(QOLCardCharacterActions, ""))
-  table.insert(QOLCard, table.concat(QOLCardPartyActions, ""))
-  echo("UI.QOL", table.concat(QOLCard, ""))
-end
-</script>
 					<eventHandlerList />
 				</Script>
 				<Script isActive="no" isFolder="no">
@@ -13238,42 +12975,42 @@ end</script>
   if UI.name.Name == "Tim" then
     return
   end
-  local ARMORCLASS = tostring(UI.defenses.ArmorClass)
-  local ARMORPERCENT = tostring(UI.defenses.ArmorPerc)
-  local WARDING = tostring(UI.defenses.Warding)
-  local WARDINGPERCENT = tostring(UI.defenses.WardingPerc)
-  local SAVES = tostring(UI.defenses.Saves)
-  local SLASHRES = tostring(UI.defenses.SlashRes)
-  local BASHRES = tostring(UI.defenses.BashRes)
-  local PIERCERES = tostring(UI.defenses.PierceRes)
-  local FIRERES = tostring(UI.defenses.FireRes)
-  local COLDRES = tostring(UI.defenses.ColdRes)
-  local MENTALRES = tostring(UI.defenses.MentalRes)
-  local MAGICRES = tostring(UI.defenses.MagicRes)
-  local LIGHTRES = tostring(UI.defenses.LightRes)
-  local NEGATIVERES = tostring(UI.defenses.NegativeRes)
-  local HOLYRES = tostring(UI.defenses.HolyRes)
-  local UNHOLYRES = tostring(UI.defenses.UnholyRes)
-  local LIGHTNINGRES = tostring(UI.defenses.LightningRes)
-  local SOUNDRES = tostring(UI.defenses.SoundRes)
-  local ACIDRES = tostring(UI.defenses.AcidRes)
-  local POISONRES = tostring(UI.defenses.PoisonRes)
-  local DISEASERES = tostring(UI.defenses.DiseaseRes)
-  local DODGE = tostring(UI.defenses.Dodge)
-  local UNARMEDBLOCK = tostring(UI.defenses.UnarmedBlock)
-  local PRIMARYPARRY = tostring(UI.defenses.Parry)
-  local SECONDARYPARRY = tostring(UI.defenses.SecondaryParry)
-  local TAILPARRY = tostring(UI.defenses.TailParry)
-  local LOWERLEFTPARRY = tostring(UI.defenses.LowerLeftParry)
-  local LOWERRIGHTPARRY = tostring(UI.defenses.LowerRightParry)
-  local SHIELDBLOCK = tostring(UI.defenses.ShieldBlock)
-  local PHASE = tostring(UI.defenses.Phase)
-  local SHIELDCAPACITY = tostring(UI.defenses.ShieldCapacity)
-  local SHIELDRECHARGE = tostring(UI.defenses.ShieldRecharge)
-  local SHIELDREDUCTION = tostring(UI.defenses.ShieldReduction)
-  local HPREGEN = tostring(UI.defenses.HPRegen)
-  local HEALMODIFIER = tostring(UI.defenses.HealMod)
-  local MANAREGEN = tostring(UI.defenses.ManaRegen)
+  local ARMORCLASS = UI.defenses.ArmorClass
+  local ARMORPERCENT = UI.defenses.ArmorPerc
+  local WARDING = UI.defenses.Warding
+  local WARDINGPERCENT = UI.defenses.WardingPerc
+  local SAVES = UI.defenses.Saves
+  local SLASHRES = UI.defenses.SlashRes
+  local BASHRES = UI.defenses.BashRes
+  local PIERCERES = UI.defenses.PierceRes
+  local FIRERES = UI.defenses.FireRes
+  local COLDRES = UI.defenses.ColdRes
+  local MENTALRES = UI.defenses.MentalRes
+  local MAGICRES = UI.defenses.MagicRes
+  local LIGHTRES = UI.defenses.LightRes
+  local NEGATIVERES = UI.defenses.NegativeRes
+  local HOLYRES = UI.defenses.HolyRes
+  local UNHOLYRES = UI.defenses.UnholyRes
+  local LIGHTNINGRES = UI.defenses.LightningRes
+  local SOUNDRES = UI.defenses.SoundRes
+  local ACIDRES = UI.defenses.AcidRes
+  local POISONRES = UI.defenses.PoisonRes
+  local DISEASERES = UI.defenses.DiseaseRes
+  local DODGE = UI.defenses.Dodge
+  local UNARMEDBLOCK = UI.defenses.UnarmedBlock
+  local PRIMARYPARRY = UI.defenses.Parry
+  local SECONDARYPARRY = UI.defenses.SecondaryParry
+  local TAILPARRY = UI.defenses.TailParry
+  local LOWERLEFTPARRY = UI.defenses.LowerLeftParry
+  local LOWERRIGHTPARRY = UI.defenses.LowerRightParry
+  local SHIELDBLOCK = UI.defenses.ShieldBlock
+  local PHASE = UI.defenses.Phase
+  local SHIELDCAPACITY = UI.defenses.ShieldCapacity
+  local SHIELDRECHARGE = UI.defenses.ShieldRecharge
+  local SHIELDREDUCTION = UI.defenses.ShieldReduction
+  local HPREGEN = UI.defenses.HPRegen
+  local HEALMODIFIER = UI.defenses.HealMod
+  local MANAREGEN = UI.defenses.ManaRegen
   local C1 = UI.theme.Color2
   local C2 = UI.theme.Color6
   local FONT = UI.theme.Font
@@ -13652,18 +13389,18 @@ end</script>
   if UI.name.Name == "Tim" then
     return
   end
-  local HITROLL = tostring(UI.offense.Hitroll)
-  local DEFENSEBREAK = tostring(UI.offense.DefenseBreak)
-  local DAMROLL = tostring(UI.offense.Damroll)
-  local DAMAGE = tostring(UI.offense.Damage)
-  local SPEED = tostring(UI.offense.Speed)
-  local TOTALSPEED = tostring(UI.offense.TotalSpeed)
-  local STYLE = tostring(UI.offense.Style)
-  local TACTICS = tostring(UI.offense.Tactics)
-  local CRITCHANCE = tostring(UI.offense.CritChance)
-  local CRITDAMAGE = tostring(UI.offense.CritDamage)
-  local MELEEDAMAGE = tostring(UI.offense.CharacterDamage)
-  local SPELLDAMAGE = tostring(UI.offense.SpellDamage)
+  local HITROLL = UI.offense.Hitroll
+  local DEFENSEBREAK = UI.offense.DefenseBreak
+  local DAMROLL = UI.offense.Damroll
+  local DAMAGE = UI.offense.Damage
+  local SPEED = UI.offense.Speed
+  local TOTALSPEED = UI.offense.TotalSpeed
+  local STYLE = UI.offense.Style
+  local TACTICS = UI.offense.Tactics
+  local CRITCHANCE = UI.offense.CritChance
+  local CRITDAMAGE = UI.offense.CritDamage
+  local MELEEDAMAGE = UI.offense.CharacterDamage
+  local SPELLDAMAGE = UI.offense.SpellDamage
   local C1 = UI.theme.Color2
   local C2 = UI.theme.Color6
   local FONT = UI.theme.Font
@@ -14864,7 +14601,7 @@ end</script>
 			<Script isActive="no" isFolder="no">
 				<name>uiLauncher</name>
 				<packageName></packageName>
-				<script>version = "2.0.0.9"
+				<script>version = "2.0.0.8"
 
 profilePath = getMudletHomeDir()
 profilePath = profilePath:gsub("\\","/")

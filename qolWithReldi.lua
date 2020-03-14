@@ -3,7 +3,11 @@ return {{
   [ [[Trancing]] ] = [[false]],
   [ [[Berserking]] ] = [[false]],
   [ [[Warcrying]] ] = [[false]],
-  [ [[Warcry]] ] = [[off]],
+  [ [[Warcry]] ] = [[none]],
   [ [[Centering]] ] = [[false]],
-  [ [[HealWord]] ] = [[heal]],
+  [ [[healword]] ] = [[heal]],
+  [ [[ShowAll]] ] = [[false]],
+  [ [[partyguard]] ] = [[off]],
+  [ [[partyheal]] ] = [[off]],
+  [ [[partyrescue]] ] = [[off]],
 },}
