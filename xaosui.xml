@@ -14808,7 +14808,8 @@ end</script>
 					<packageName></packageName>
 					<script>function qolWithReldi.Initialize()
   qolWithReldi.ConfigLoad()
-	qolWithReldi.ShowAll = 	qolWithReldi.ShowAll or false
+	expandAlias("showall off", false)
+	expandAlias("scripterKill off", false)
 end
 
 
