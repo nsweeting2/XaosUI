@@ -8182,16 +8182,16 @@ end</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>newQuests</name>
 					<script>--This should almost always be disabled,
---it is activated by the timer atQuestmaster.
+	--it is activated by the timer atQuestmaster.
 
---cecho("\n&lt;:red&gt;&lt;black&gt;getNewQuests Timer\n")
-local boolVar =  qolWithReldi.ShowAll
+	--cecho("\n&lt;:red&gt;&lt;black&gt;getNewQuests Timer\n")
+	local boolVar =  qolWithReldi.ShowAll
 
-enableTrigger("newQuests")
+	enableTrigger("newQuests")
 
-send("Quest List All", boolVar)
+	send("Quest List All", boolVar)
 
-disableTimer("newQuests")</script>
+	disableTimer("newQuests")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.500</time>
@@ -8199,15 +8199,15 @@ disableTimer("newQuests")</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>updateQuests</name>
 					<script>--This should almost always be disabled,
---it is activated by the timer atQuestmaster.
+	--it is activated by the timer atQuestmaster.
 
---cecho("\n&lt;:red&gt;&lt;black&gt;updateQuests Timer\n")
-local boolVar =  qolWithReldi.ShowAll
-enableTrigger("updateQuests")
+	--cecho("\n&lt;:red&gt;&lt;black&gt;updateQuests Timer\n")
+	local boolVar =  qolWithReldi.ShowAll
+	enableTrigger("updateQuests")
 
-send("Quest Current", boolVar)
+	send("Quest Current", boolVar)
 
-disableTimer("updateQuests")</script>
+	disableTimer("updateQuests")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.500</time>
@@ -8215,16 +8215,16 @@ disableTimer("updateQuests")</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>completeQuests</name>
 					<script>--This should almost always be disabled,
---it is activated by the timer atQuestmaster.
+	--it is activated by the timer atQuestmaster.
 
---cecho("&lt;:red&gt;&lt;black&gt;completeQuests Timer")
-local boolVar =  qolWithReldi.ShowAll
-for i=1, #questing.QuestsCompleted do
+	--cecho("&lt;:red&gt;&lt;black&gt;completeQuests Timer")
+	local boolVar =  qolWithReldi.ShowAll
+	for i=1, #questing.QuestsCompleted do
 	send("Quest complete " ..questing.QuestsCompleted[i], boolVar)
 
-end
+	end
 
-disableTimer("completeQuests")</script>
+	disableTimer("completeQuests")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:01.500</time>
@@ -8232,20 +8232,20 @@ disableTimer("completeQuests")</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>atQuestmaster</name>
 					<script>--This should almost always be disabled,
---it is activated by the trigger atQuestmaster.
+	--it is activated by the trigger atQuestmaster.
 
---cecho("\n&lt;:red&gt;&lt;black&gt;atQuestmaster Timer\n")
+	--cecho("\n&lt;:red&gt;&lt;black&gt;atQuestmaster Timer\n")
 
---cecho("&lt;:red&gt;&lt;black&gt;Command is " ..tostring(command).. " \n")
-if tostring(command) == "meh" then
+	--cecho("&lt;:red&gt;&lt;black&gt;Command is " ..tostring(command).. " \n")
+	if tostring(command) == "meh" then
 
 	enableTimer("newQuests")
 	enableTimer("updateQuests")
 	command = "NotMeh"
 
-end
+	end
 
-disableTimer("atQuestmaster")</script>
+	disableTimer("atQuestmaster")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:01.500</time>
@@ -8260,21 +8260,21 @@ disableTimer("atQuestmaster")</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>qolFailsafe</name>
 					<script>local boolVar =  qolWithReldi.ShowAll
-if qolWithReldi.Resolving then
-  expandAlias("resolve",boolVar)
-end
-if qolWithReldi.Trancing then
-  expandAlias("trance",boolVar)
-end
-if qolWithReldi.Berserking then
-  expandAlias("berserk",boolVar)
-end
-if qolWithReldi.Centering then
-  expandAlias("center",boolVar)
-end
-if qolWithReldi.Warcrying then
-  expandAlias("warcry",boolVar)
-end</script>
+	if qolWithReldi.Resolving then
+	expandAlias("resolve",boolVar)
+	end
+	if qolWithReldi.Trancing then
+	expandAlias("trance",boolVar)
+	end
+	if qolWithReldi.Berserking then
+	expandAlias("berserk",boolVar)
+	end
+	if qolWithReldi.Centering then
+	expandAlias("center",boolVar)
+	end
+	if qolWithReldi.Warcrying then
+	expandAlias("warcry",boolVar)
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:15:00.000</time>
@@ -8292,14 +8292,14 @@ end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.000</time>
-					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>OOCFlash</name>
 						<script>UI.OOCtab:flash()</script>
 						<command></command>
 						<packageName></packageName>
 						<time>00:00:02.000</time>
 					</Timer>
-					<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>RoomFlash</name>
 						<script>UI.Roomtab:flash()</script>
 						<command></command>
@@ -8328,15 +8328,15 @@ end</script>
 						<time>00:00:02.000</time>
 					</Timer>
 				</TimerGroup>
-				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>StupidDataPull</name>
 					<script>local boolVar =  qolWithReldi.ShowAll
---]].. tostring(boolVar)..[[)]]
-if loggedin then
-  gagmode = true
-  tempTimer(
-    .5,
-    [[
+	--]].. tostring(boolVar)..[[)]]
+	if loggedin then
+	gagmode = true
+	tempTimer(
+		.5,
+		[[
 	send("Score",]].. tostring(boolVar)..[[)
 	send("Effects",]].. tostring(boolVar)..[[)
 	send("Affects",]].. tostring(boolVar)..[[)
@@ -8344,20 +8344,20 @@ if loggedin then
 	send("Inven", ]].. tostring(boolVar)..[[)
 	send("hero empower", ]].. tostring(boolVar)..[[)
 	send("Party", ]].. tostring(boolVar)..[[)
-]]
-  )
-  tempTimer(7, [[gagmode = false]])
-  tempTimer(
-    7,
-    function()
-      UI.UINameDisplay()
-      UI.CharClick(UI.CurrentChar)
-      UI.Char2Click(UI.CurrentChar2)
-      UI.Char3Click(UI.CurrentChar3)
-      UI.ExtrasClick(UI.CurrentExtras)
-    end
-  )
-end</script>
+	]]
+	)
+	tempTimer(7, [[gagmode = false]])
+	tempTimer(
+		7,
+		function()
+			UI.UINameDisplay()
+			UI.CharClick(UI.CurrentChar)
+			UI.Char2Click(UI.CurrentChar2)
+			UI.Char3Click(UI.CurrentChar3)
+			UI.ExtrasClick(UI.CurrentExtras)
+		end
+	)
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:01:00.000</time>
@@ -8365,46 +8365,46 @@ end</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>resizeTimer</name>
 					<script>--This should be disabled by default
---Get window size
-local main_width, main_height = getMainWindowSize()
---cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;sysWindowResizeEvent: ".. ResizeMan.main_width .."x".. ResizeMan.main_height .."\n")
---Calculate new console size
-local left = (tonumber(main_width) / 4)
---cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Left Set to "..left.."\n")
-local right = (tonumber(main_width) / 4)
---cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Right Set to "..right.."\n")
-local top = 0
---cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Top Set to "..top.."\n")
-local bottom = (tonumber(main_height) / 10)
---cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Bottom Set to "..bottom.."\n\n")
--- Set Main Window Size
-setBorderBottom(bottom)
-setBorderLeft(left)
-setBorderRight(right)
-setBorderTop(top)
---rewrap miniconoles
-UI.Room:resetAutoWrap()
-UI.Room:reposition()
-UI.Group:resetAutoWrap()
-UI.Group:reposition()
-UI.OOC:resetAutoWrap()
-UI.OOC:reposition()
-UI.IC:resetAutoWrap()
-UI.IC:reposition()
-UI.Tell:resetAutoWrap()
-UI.Tell:reposition()
-UI.Who:resetAutoWrap()
-UI.Who:reposition()
-UI.ItemsList:resetAutoWrap()
-UI.ItemsList:reposition()
-UI.AffectsList:resetAutoWrap()
-UI.AffectsList:reposition()
-UI.FeedList:resetAutoWrap()
-UI.FeedList:reposition()
---Set Main Window Font and Font Size
---setFont("main", UI.Font)
---setFontSize("main", UI.FontSize)
-disableTimer("resizeTimer")</script>
+	--Get window size
+	local main_width, main_height = getMainWindowSize()
+	--cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;sysWindowResizeEvent: ".. ResizeMan.main_width .."x".. ResizeMan.main_height .."\n")
+	--Calculate new console size
+	local left = (tonumber(main_width) / 4)
+	--cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Left Set to "..left.."\n")
+	local right = (tonumber(main_width) / 4)
+	--cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Right Set to "..right.."\n")
+	local top = 0
+	--cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Top Set to "..top.."\n")
+	local bottom = (tonumber(main_height) / 10)
+	--cecho("&lt;firebrick&gt;[ ALERT ] - &lt;white_smoke&gt;Bottom Set to "..bottom.."\n\n")
+	-- Set Main Window Size
+	setBorderBottom(bottom)
+	setBorderLeft(left)
+	setBorderRight(right)
+	setBorderTop(top)
+	--rewrap miniconoles
+	UI.Room:resetAutoWrap()
+	UI.Room:reposition()
+	UI.Group:resetAutoWrap()
+	UI.Group:reposition()
+	UI.OOC:resetAutoWrap()
+	UI.OOC:reposition()
+	UI.IC:resetAutoWrap()
+	UI.IC:reposition()
+	UI.Tell:resetAutoWrap()
+	UI.Tell:reposition()
+	UI.Who:resetAutoWrap()
+	UI.Who:reposition()
+	UI.ItemsList:resetAutoWrap()
+	UI.ItemsList:reposition()
+	UI.AffectsList:resetAutoWrap()
+	UI.AffectsList:reposition()
+	UI.FeedList:resetAutoWrap()
+	UI.FeedList:reposition()
+	--Set Main Window Font and Font Size
+	--setFont("main", UI.Font)
+	--setFontSize("main", UI.FontSize)
+	disableTimer("resizeTimer")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.100</time>
@@ -8412,8 +8412,8 @@ disableTimer("resizeTimer")</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>StupidDps</name>
 					<script>if tostring(UI.CurrentExtras) == "Damage" then
-  UI.UpdateLabelDamage()
-end </script>
+	UI.UpdateLabelDamage()
+	end </script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:03.000</time>
@@ -8422,16 +8422,16 @@ end </script>
 					<name>Hourly Damage Report</name>
 					<script>reporting = UI.reporting or false
 
-if reporting then
-  local sixtydamageDealt, sixtystrikes, sixtydps, sixtydamageTaken, sixtyhits, sixtydph = UI.DPSCalc(3600)
-  send("tell autoarena Total Damage: " ..
-        sixtydamageDealt..
-        " on " ..
-        sixtystrikes ..
-        " Strikes, for an average of "..
-        sixtydps ..
-        " Damage Per Strike.", false)
-end</script>
+	if reporting then
+	local sixtydamageDealt, sixtystrikes, sixtydps, sixtydamageTaken, sixtyhits, sixtydph = UI.DPSCalc(3600)
+	send("tell autoarena Total Damage: " ..
+				sixtydamageDealt..
+				" on " ..
+				sixtystrikes ..
+				" Strikes, for an average of "..
+				sixtydps ..
+				" Damage Per Strike.", false)
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>01:00:00.000</time>
@@ -8446,44 +8446,44 @@ end</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>Soup</name>
 					<script>local boolVar =  qolWithReldi.ShowAll
-if scripter.Soup == true then
+	if scripter.Soup == true then
 	send("drink soup", boolVar)
-end</script>
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:04:15.000</time>
 				</Timer>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>hunt</name>
-					<script>local boolVar =  qolWithReldi.ShowAll
-local threshold = scripter.Threshold
-local currentHP = xPrompt.hp
-local currentMana = xPrompt.mana
-local rate = tonumber(scripter.Rate) - 2
-local target = scripter.Target
-local tempVar = false
-if not combat then
+					<script>local boolVar = qolWithReldi.ShowAll
+	local threshold = scripter.Threshold
+	local currentHP = xPrompt.hp
+	local currentMana = xPrompt.mana
+	local rate = tonumber(scripter.Rate) - 2
+	local target = scripter.Target
+	local tempVar = false
+	if not combat then
 	if scripter.On and scripter.Target ~= "none" then
 		if tonumber(currentHP) &gt;= tonumber(threshold) then
-      tempVar = true
-      if tonumber(currentMana)&gt;= tonumber(threshold)/2 then
-        send("hunt " .. target, boolVar)
-      end
+			tempVar = true
+			if tonumber(currentMana)&gt;= tonumber(threshold)/2 then
+				send("hunt " .. target, boolVar)
+			end
 		else
-      if tempVar then
-  			ncom("Scripter is waiting for mana to regen")
-  			feedManager("Scripter is waiting for mana to regen")
-  			send("\n",false)
-      else
-        ncom("Scripter is waiting for hp to regen")
-  			feedManager("Scripter is waiting for hp to regen")
-  			send("\n",false)
-      end
+			if tempVar then
+				ncom("Scripter is waiting for mana to regen")
+				feedManager("Scripter is waiting for mana to regen")
+				send("\n",false)
+			else
+				ncom("Scripter is waiting for hp to regen")
+				feedManager("Scripter is waiting for hp to regen")
+				send("\n",false)
+			end
 		end
 		nextHunt = tempTimer(rate,[[enableTimer("hunt")]])
 	end
-end
-disableTimer("hunt")</script>
+	end
+	disableTimer("hunt")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:02.000</time>
@@ -8491,12 +8491,12 @@ disableTimer("hunt")</script>
 				<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>offauto</name>
 					<script>local command = scripter.OffAuto
-local rate = scripter.OffRate
-if scripter.On and tostring(command) ~= "none" then
+	local rate = scripter.OffRate
+	if scripter.On and tostring(command) ~= "none" then
 	send(command)
-end
-disableTimer("offauto")
-tempTimer(rate,[[enableTimer("offauto")]])</script>
+	end
+	disableTimer("offauto")
+	tempTimer(rate,[[enableTimer("offauto")]])</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:00:00.500</time>
@@ -8504,19 +8504,19 @@ tempTimer(rate,[[enableTimer("offauto")]])</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>pledge</name>
 					<script>local boolVar =  qolWithReldi.ShowAll
-local pledge = scripter.Pledge or "none"
-if scripter.On and tostring(pledge) ~= "none" then
-  if string.lower(tostring(pledge)) == "yakone" then
-    local mana = xPrompt.mana
-    if mana &gt; 60 then
-      send("cast resan", boolVar)
-    else
-      send("cast renovi", boolVar)
-    end
-  else
-  send("cast " .. pledge, boolVar)
-  end
-end</script>
+	local pledge = scripter.Pledge or "none"
+	if scripter.On and tostring(pledge) ~= "none" then
+	if string.lower(tostring(pledge)) == "yakone" then
+		local mana = xPrompt.mana
+		if mana &gt; 60 then
+			send("cast resan", boolVar)
+		else
+			send("cast renovi", boolVar)
+		end
+	else
+	send("cast " .. pledge, boolVar)
+	end
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:03:50.000</time>
@@ -8524,8 +8524,8 @@ end</script>
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>catchupFailsafe</name>
 					<script>if scripter.Party == "follow" then
-  expandAlias("catchup", false)
-end</script>
+	expandAlias("catchup", false)
+	end</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:05:00.000</time>
@@ -8539,8 +8539,8 @@ end</script>
 					<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 						<name>HourlyReport</name>
 						<script>local total = expPerTerm(3600)
-local dings = math.floor(tonumber(total) / 100000)
-feedManager("Hourly exp report: " .. total .. "exp \(" .. dings .. " dings\).")</script>
+	local dings = math.floor(tonumber(total) / 100000)
+	feedManager("Hourly exp report: " .. total .. "exp \(" .. dings .. " dings\).")</script>
 						<command></command>
 						<packageName></packageName>
 						<time>01:00:00.000</time>
@@ -8556,8 +8556,8 @@ feedManager("Hourly exp report: " .. total .. "exp \(" .. dings .. " dings\).")<
 				<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 					<name>failsafe</name>
 					<script>-- makes sure scripter doesn't fall idle by not knowinig if your in combat or not
-combat = false
-enableTimer("hunt")</script>
+	combat = false
+	enableTimer("hunt")</script>
 					<command></command>
 					<packageName></packageName>
 					<time>00:05:00.000</time>
